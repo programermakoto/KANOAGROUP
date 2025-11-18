@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+
+
+
+
+
+<!--
+supabaseの設定URL紹介
+                         https://supabase.com/docs/guides/auth/server-side/nextjs?queryGroups=router&router=app -->
+<!--
+3D JS環境設定
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 npm install three @react-three/fiber @react-three/drei -->
+
+<!-- 
+      画像生成アプリ
+                          https://playground.com/design -->
+
+<!-- 
+3Dモデルweb用に軽減
+　　　　　　　　　　　　　　フディレクトリはフォルダー名まで移動後 npx gltfjsx シーンの名前(head.glb) --transform -->
