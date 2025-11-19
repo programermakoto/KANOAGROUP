@@ -7,7 +7,7 @@ import PartnerSection from "@/components/ui/PartnerSection";
 import Image from "next/image";
 import { getAllNews } from "../lib/news";
 import Link from "next/link";
-export default async  function Home() {
+export default async function Home() {
 
   const news = await getAllNews();
   return (
@@ -26,8 +26,8 @@ export default async  function Home() {
             height={100}
             className="object-cover block"
           />
-          <span className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-700">
-            KANOA<br></br>GROUP
+          <span className="text-4xl  sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-700">
+            KANOA GROUP
           </span>
 
         </h1>
@@ -36,42 +36,44 @@ export default async  function Home() {
       {/* 企業情報 */}
       <div className="container  w-full ">
         <h1 className="text-3xl my-6 py-5">KANOA GROUP 企業情報 </h1>
-        <section className="my-5 p-6 space-y-6">
-          <h2 className="text-3xl text-center">KANOAGROUP ビジョンについて</h2>
-          <p className="text-1xl text-center">ビジョン</p>
-          <p className="text-1xl text-center">KANOA GROUPは、常にワクワクと自由の中心で、<br></br><br></br>
-            「これは面白い！を創り ∴ 自由を広げる。」を体現し続けます。創造と挑戦を通して、誰もが自由に生きられる社会をつくる」</p>
-          <Link href="/about/#vision" className="mx-auto block text-center w-[10%] p-2 border-1 border-black hover:bg-accent">詳細へ</Link>
+        <section className="space-y-6">
+          <article className=" my-10 space-y-6  text-gray-700">
+            <h2 className="text-3xl text-center">KANOAGROUP ビジョンについて</h2>
+            <p className="text-1xl text-center">Vision</p>
+            <p className="text-1xl text-center">KANOA GROUPは、常にワクワクと自由の中心で、<br></br><br></br>
+              「これは面白い！を創り ∴ 自由を広げる。」を体現し続けます。創造と挑戦を通して、誰もが自由に生きられる社会をつくる」</p>
+            <Link href="/about/#vision" className="mx-auto block text-center w-[10%] p-2 border-1 border-black hover:bg-accent">詳細へ</Link>
 
-          <article className="h-[70vh] my-10  flex flex-row-reverse justify-around  items-center backdrop-blur-md text-gray-700 bg-white/30 border border-white/40 shadow-lg rounded-2xl p-6">
+          </article>
+          <article className="my-10 space-y-6  text-gray-700  flex flex-row-reverse justify-around  items-center">
 
             <Image
               src="/kanoa-logo.png"
               alt="会社ロゴ"
               width={100}
               height={100}
-              className="object-cover block w-1/3"
+              className="object-cover block w-1/3 h-full p-10"
             />
 
             <div className="space-y-4 w-1/2">
               <h2 className="text-3xl text-center">KANOAGROUP 会社概要について</h2>
-              <p className="text-1xl text-center">会社概要</p>
+              <p className="text-1xl text-center">About</p>
               <Link href="/about/#vision" className="mx-auto block text-center w-[30%] p-2 border-1 border-black hover:bg-accent">詳細へ</Link>
             </div>
           </article>
-          <article className="h-[70vh] my-10   flex  justify-around  items-center backdrop-blur-md text-gray-700 bg-white/30 border border-white/40 shadow-lg rounded-2xl p-6">
+          <article className="my-10 space-y-6  text-gray-700  flex   justify-around  items-center">
 
             <Image
               src="/makoto.webp"
               alt="会社ロゴ"
               width={100}
               height={100}
-              className="object-cover block w-1/3"
+              className="object-cover block w-1/3 h-full p-10"
             />
 
             <div className="space-y-4 w-1/2">
               <h2 className="text-3xl text-center">寺内誠将<br></br>KANOA GROUP 代表挨拶</h2>
-              <p className="text-1xl text-center">メッセージ</p>
+              <p className="text-1xl text-center">Message</p>
               <Link href="/about/#vision" className="mx-auto block text-center w-[30%] p-2 border-1 border-black hover:bg-accent">詳細へ</Link>
             </div>
           </article>
@@ -125,7 +127,7 @@ export default async  function Home() {
           width={200}
           height={150}
           src="/school.png"
-          className="w-1/2 object-cover mx-auto block" />
+          className="w-1/2 object-cover mx-auto block " />
         <h1 className="text-center text-4xl text-gray-700">最高なチームで誰もが自由にもっとシンプルな社会をつくる</h1>
         <p className="text-1xl text-center w-1/2 mx-auto text-gray-700">
           KANOA GROUPでは裁量権を持って事業を推し進めていける方を募集しております。<br></br>
@@ -136,11 +138,6 @@ export default async  function Home() {
       <Mission />
       {/* お問い合わせ */}
       <ForContact />
-      <div className="w-full">
-        <RenderModel>
-          <WorldModel position={[2, 0, 0]} />
-        </RenderModel>
-      </div>
     </>
 
 
