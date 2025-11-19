@@ -5,6 +5,7 @@ import React, { JSX } from 'react';
 
 // replace icons with your own if needed
 import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from 'react-icons/fi';
+
 export interface CarouselItem {
   title: string;
   description: string;
@@ -80,6 +81,8 @@ export default function Carousel({
   const [isResetting, setIsResetting] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Hover
   useEffect(() => {
     if (pauseOnHover && containerRef.current) {
       const container = containerRef.current;
@@ -94,16 +97,13 @@ export default function Carousel({
     }
   }, [pauseOnHover]);
 
+  // Autoplay
   useEffect(() => {
     if (autoplay && (!pauseOnHover || !isHovered)) {
       const timer = setInterval(() => {
         setCurrentIndex(prev => {
-          if (prev === items.length - 1 && loop) {
-            return prev + 1;
-          }
-          if (prev === carouselItems.length - 1) {
-            return loop ? 0 : prev;
-          }
+          if (prev === items.length - 1 && loop) return prev + 1;
+          if (prev === carouselItems.length - 1) return loop ? 0 : prev;
           return prev + 1;
         });
       }, autoplayDelay);
@@ -126,28 +126,26 @@ export default function Carousel({
     const offset = info.offset.x;
     const velocity = info.velocity.x;
     if (offset < -DRAG_BUFFER || velocity < -VELOCITY_THRESHOLD) {
-      if (loop && currentIndex === items.length - 1) {
-        setCurrentIndex(currentIndex + 1);
-      } else {
-        setCurrentIndex(prev => Math.min(prev + 1, carouselItems.length - 1));
-      }
+      if (loop && currentIndex === items.length - 1) setCurrentIndex(currentIndex + 1);
+      else setCurrentIndex(prev => Math.min(prev + 1, carouselItems.length - 1));
     } else if (offset > DRAG_BUFFER || velocity > VELOCITY_THRESHOLD) {
-      if (loop && currentIndex === 0) {
-        setCurrentIndex(items.length - 1);
-      } else {
-        setCurrentIndex(prev => Math.max(prev - 1, 0));
-      }
+      if (loop && currentIndex === 0) setCurrentIndex(items.length - 1);
+      else setCurrentIndex(prev => Math.max(prev - 1, 0));
     }
   };
 
   const dragProps = loop
     ? {}
     : {
-        dragConstraints: {
-          left: -trackItemOffset * (carouselItems.length - 1),
-          right: 0
-        }
+        dragConstraints: { left: -trackItemOffset * (carouselItems.length - 1), right: 0 }
       };
+
+  // ---- TOP-LEVEL TRANSFORMS ----
+  const rotateYs = carouselItems.map((_, index) => {
+    const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
+    const outputRange = [90, 0, -90];
+    return useTransform(x, range, outputRange, { clamp: false });
+  });
 
   return (
     <div
@@ -155,10 +153,7 @@ export default function Carousel({
       className={`relative overflow-hidden p-4 ${
         round ? 'rounded-full border border-white' : 'rounded-[24px] border border-[#222]'
       }`}
-      style={{
-        width: `${baseWidth}px`,
-        ...(round && { height: `${baseWidth}px` })
-      }}
+      style={{ width: `${baseWidth}px`, ...(round && { height: `${baseWidth}px` }) }}
     >
       <motion.div
         className="flex"
@@ -176,39 +171,36 @@ export default function Carousel({
         transition={effectiveTransition}
         onAnimationComplete={handleAnimationComplete}
       >
-        {carouselItems.map((item, index) => {
-          const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
-          const outputRange = [90, 0, -90];
-          const rotateY = useTransform(x, range, outputRange, { clamp: false });
-          return (
-            <motion.div
-              key={index}
-              className={`relative shrink-0 flex flex-col ${
-                round
-                  ? 'items-center justify-center text-center bg-[#060010] border-0'
-                  : 'items-start justify-between bg-[#222] border border-[#222] rounded-[12px]'
-              } overflow-hidden cursor-grab active:cursor-grabbing`}
-              style={{
-                width: itemWidth,
-                height: round ? itemWidth : '100%',
-                rotateY: rotateY,
-                ...(round && { borderRadius: '50%' })
-              }}
-              transition={effectiveTransition}
-            >
-              <div className={`${round ? 'p-0 m-0' : 'mb-4 p-5'}`}>
-                <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
-                  {item.icon}
-                </span>
-              </div>
-              <div className="p-5">
-                <div className="mb-1 font-black text-lg text-white">{item.title}</div>
-                <p className="text-sm text-white">{item.description}</p>
-              </div>
-            </motion.div>
-          );
-        })}
+        {carouselItems.map((item, index) => (
+          <motion.div
+            key={index}
+            className={`relative shrink-0 flex flex-col ${
+              round
+                ? 'items-center justify-center text-center bg-[#060010] border-0'
+                : 'items-start justify-between bg-[#222] border border-[#222] rounded-[12px]'
+            } overflow-hidden cursor-grab active:cursor-grabbing`}
+            style={{
+              width: itemWidth,
+              height: round ? itemWidth : '100%',
+              rotateY: rotateYs[index],
+              ...(round && { borderRadius: '50%' })
+            }}
+            transition={effectiveTransition}
+          >
+            <div className={`${round ? 'p-0 m-0' : 'mb-4 p-5'}`}>
+              <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
+                {item.icon}
+              </span>
+            </div>
+            <div className="p-5">
+              <div className="mb-1 font-black text-lg text-white">{item.title}</div>
+              <p className="text-sm text-white">{item.description}</p>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
+
+      {/* Dots */}
       <div className={`flex w-full justify-center ${round ? 'absolute z-20 bottom-12 left-1/2 -translate-x-1/2' : ''}`}>
         <div className="mt-4 flex w-[150px] justify-between px-8">
           {items.map((_, index) => (
@@ -223,9 +215,7 @@ export default function Carousel({
                     ? 'bg-[#555]'
                     : 'bg-[rgba(51,51,51,0.4)]'
               }`}
-              animate={{
-                scale: currentIndex % items.length === index ? 1.2 : 1
-              }}
+              animate={{ scale: currentIndex % items.length === index ? 1.2 : 1 }}
               onClick={() => setCurrentIndex(index)}
               transition={{ duration: 0.15 }}
             />
