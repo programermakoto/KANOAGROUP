@@ -1,15 +1,16 @@
 "use client"
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+// ファイル頭に追加
+import Image from "next/image";
 
 export default function Service() {
 
     return (
         <div className='container'>
             <div className="flex justify-center my-[50px]">
-                <img src="/scroll-movie.gif" alt="スクロールバー"
+                <Image src="/scroll-movie.gif" alt="スクロールバー"
                     width={300}
                     height={150}
                     className="rotate-90"
@@ -50,7 +51,7 @@ export default function Service() {
                 </div>
             </section>
             <div className="flex justify-center my-[50px]">
-                <img src="/scroll-movie.gif" alt="スクロールバー"
+                <Image src="/scroll-movie.gif" alt="スクロールバー"
                     width={300}
                     height={150}
                     className="rotate-90"
@@ -94,7 +95,7 @@ export default function Service() {
                 </div>
             </section>
             <div className="flex justify-center my-[50px]">
-                <img src="/scroll-movie.gif" alt="スクロールバー"
+                <Image src="/scroll-movie.gif" alt="スクロールバー"
                     width={300}
                     height={150}
                     className="rotate-90"
@@ -137,7 +138,7 @@ export default function Service() {
                 </div>
             </section>
             <div className="flex justify-center my-[50px]">
-                <img src="/scroll-movie.gif" alt="スクロールバー"
+                <Image src="/scroll-movie.gif" alt="スクロールバー"
                     width={300}
                     height={150}
                     className="rotate-90"
@@ -181,7 +182,7 @@ export default function Service() {
                 </div>
             </section>
             <div className="flex justify-center my-[50px]">
-                <img src="/scroll-movie.gif" alt="スクロールバー"
+                <Image src="/scroll-movie.gif" alt="スクロールバー"
                     width={300}
                     height={150}
                     className="rotate-90"

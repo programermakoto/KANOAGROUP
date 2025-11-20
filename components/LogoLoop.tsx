@@ -52,12 +52,24 @@ const cx = (...parts: Array<string | false | null | undefined>) => parts.filter(
 // 型ガード
 const isNodeItem = (item: LogoItem): item is { node: React.ReactNode } => 'node' in item;
 
+/**
+ * useResizeObserver
+ * - callback は呼び出し元で useCallback 化して渡すこと（安定化を期待）
+ * - elements は Ref 配列（Ref の identity は安定している想定）
+ * - useEffect の依存配列は配列リテラルに限定（ESLint OK）
+ */
 const useResizeObserver = (
   callback: () => void,
-  elements: Array<React.RefObject<Element | null>>,
-  dependencies: React.DependencyList
+  elements: Array<React.RefObject<Element | null>>
 ) => {
+  const elementsRef = useRef(elements);
   useEffect(() => {
+    elementsRef.current = elements;
+  }, [elements]);
+
+  useEffect(() => {
+    // callback を唯一の依存にする（呼び出し元で useCallback にしておく）
+    if (!window || !('document' in window)) return;
     if (!window.ResizeObserver) {
       const handleResize = () => callback();
       window.addEventListener('resize', handleResize);
@@ -65,8 +77,8 @@ const useResizeObserver = (
       return () => window.removeEventListener('resize', handleResize);
     }
 
-    const observers = elements.map(ref => {
-      if (!ref.current) return null;
+    const observers = elementsRef.current.map(ref => {
+      if (!ref?.current) return null;
       const observer = new ResizeObserver(callback);
       observer.observe(ref.current);
       return observer;
@@ -77,13 +89,18 @@ const useResizeObserver = (
     return () => {
       observers.forEach(observer => observer?.disconnect());
     };
-  }, dependencies);
+  }, [callback]);
 };
 
+/**
+ * useImageLoader
+ * - seqRef: UL ref
+ * - onLoad: 呼び出し元で useCallback 化して渡すこと
+ * - 依存配列は onLoad のみ
+ */
 const useImageLoader = (
   seqRef: React.RefObject<HTMLUListElement | null>,
-  onLoad: () => void,
-  dependencies: React.DependencyList
+  onLoad: () => void
 ) => {
   useEffect(() => {
     const images = seqRef.current?.querySelectorAll('img') ?? [];
@@ -117,9 +134,13 @@ const useImageLoader = (
         img.removeEventListener('error', handleImageLoad);
       });
     };
-  }, dependencies);
+  }, [onLoad, seqRef]);
 };
 
+/**
+ * useAnimationLoop
+ * - ここの useEffect は依存配列をリテラルにしているため ESLint 問題なし
+ */
 const useAnimationLoop = (
   trackRef: React.RefObject<HTMLDivElement | null>,
   targetVelocity: number,
@@ -196,7 +217,7 @@ const useAnimationLoop = (
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical]);
+  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef]);
 };
 
 export const LogoLoop = React.memo<LogoLoopProps>((props) => {
@@ -273,8 +294,9 @@ export const LogoLoop = React.memo<LogoLoopProps>((props) => {
     }
   }, [isVertical]);
 
-  useResizeObserver(updateDimensions, [containerRef, seqRef], [updateDimensions]);
-  useImageLoader(seqRef, updateDimensions, [updateDimensions]);
+  // 呼び出し側で updateDimensions を useCallback しているので依存は安定
+  useResizeObserver(updateDimensions, [containerRef, seqRef]);
+  useImageLoader(seqRef, updateDimensions);
   useAnimationLoop(trackRef, targetVelocity, seqWidth, seqHeight, isHovered, effectiveHoverSpeed, isVertical);
 
   const handleMouseEnter = useCallback(() => {
