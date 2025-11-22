@@ -1,8 +1,8 @@
-import ForContact from '@/components/ui/forContact'
+import ForContact from '@/components/ForContact'
 import Image from 'next/image'
 import React from 'react'
 import Carousel from './compnents/Carousel'
-import Mission from '@/components/ui/Mission'
+import Mission from '@/components/Mission'
 
 export default function Recruitment() {
   return (

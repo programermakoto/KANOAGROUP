@@ -1,13 +1,13 @@
 "use client";
 
-import ForContact from '@/components/ui/forContact'
+import ForContact from '@/components/ForContact'
 import React from 'react'
 import President from './components/President';
 import Logo from './components/Logo';
 import CompanyProfile from './components/CompanyProfile';
 import Philosophy from './components/Philosophy';
 import Access from './components/Access';
-import Mission from '@/components/ui/Mission';
+import Mission from '@/components/Mission';
 
 
 export default function about() {

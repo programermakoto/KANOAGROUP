@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './components/hero'
 import Service from './components/service'
-import ForContact from '@/components/ui/forContact'
+import ForContact from '@/components/ForContact'
 
 export default function service() {
   return (

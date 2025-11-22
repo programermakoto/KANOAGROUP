@@ -9,13 +9,6 @@ export default function Service() {
 
     return (
         <div className='container'>
-            <div className="flex justify-center my-[50px]">
-                <Image src="/scroll-movie.gif" alt="スクロールバー"
-                    width={300}
-                    height={150}
-                    className="rotate-90"
-                />
-            </div>
             <section className='flex items-center  w-9/10 mx-auto h-96 gap-6 my-[50px]'>
                 <div className='w-1/2  p-[18px] h-full flex flex-col justify-center'>
                     <div>
