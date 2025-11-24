@@ -44,7 +44,7 @@ function ButtonLink({
 function NewsList({ items }: { items: NewsItem[] }) {
   return (
     <section aria-labelledby="news-heading" className="container py-10 space-y-6">
-      <h2 id="news-heading" className="text-3xl font-bold mb-6">
+      <h2 id="news-heading" className="text-1xl md:text-3xl text-center mb-6">
         お知らせ
       </h2>
 
@@ -67,17 +67,16 @@ function NewsList({ items }: { items: NewsItem[] }) {
             </div>
 
             <div className="w-full sm:w-[80%]">
-              <p className="font-bold text-lg">{item.title}</p>
+              <p className=" text-lg">{item.title}</p>
               <small className="text-gray-500 block mb-2">{item.date}</small>
               {item.summary && <p className="text-sm text-gray-600 line-clamp-2">{item.summary}</p>}
             </div>
           </Link>
         ))}
       </div>
-
-        <Button className="text-center mt-6 mx-auto block">
-          <Link href="/news">お知らせ一覧を見る</Link>
-        </Button>
+      <div className=' mx-auto mt-6 text-center'>
+        <Link className=' mx-auto px-6 py-2 rounded-full text-white bg-sky-600  hover:bg-orange-500 transition duration-[500ms] text-center font-medium' href="/news">お知らせ一覧を見る</Link>
+      </div>
     </section>
   );
 }
@@ -93,7 +92,6 @@ export default async function Home() {
           <RenderModel>
             <WorldModel position={[2, 0, 0]} />
           </RenderModel>
-
           <Hero />
         </div>
         {/* 企業情報 */}

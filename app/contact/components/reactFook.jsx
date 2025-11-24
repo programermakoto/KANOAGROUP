@@ -64,7 +64,7 @@ export default function ReactHookFormComponent() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="max-w-md w-full mx-auto my-20 flex justify-center flex-col items-center space-y-4"
+      className="max-w-md w-full  mx-auto my-20 flex justify-center flex-col items-center space-y-4"
     >
       <input
         type="text"

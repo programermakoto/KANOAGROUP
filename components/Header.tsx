@@ -13,12 +13,12 @@ export default function Header() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="h-16 flex items-center">
                     {/* ロゴ */}
-                    <div className="flex items-center">
+                    <h1 className="flex items-center">
                         <Link href="/" className="flex items-center gap-3">
                             <div className="w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12 relative flex-shrink-0">
                                 <Image
                                     src="/kanoa-logo.PNG"
-                                    alt="KANOA GROUP ロゴ"
+                                    alt="KANOAGROUP 企業ロゴ"
                                     fill
                                     style={{ objectFit: "contain" }}
                                     sizes="(max-width: 640px) 36px, (max-width: 1024px) 40px, 48px"
@@ -29,7 +29,7 @@ export default function Header() {
                                 KANOA GROUP
                             </span>
                         </Link>
-                    </div>
+                    </h1>
 
                     {/* spacer */}
                     <div className="flex-1" />

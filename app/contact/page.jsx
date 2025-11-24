@@ -23,8 +23,8 @@ export default function Contact() {
       </div>
 
       <article className="relative w-full flex  flex-col items-center justify-center space-y-8">
-        <div className='my-10 flex flex-col items-center justify-center space-y-6 w-3/4'>
-          <h1 className='text-gray-700 font-bold text-center text-xs md:text-4xl capitalize'>平均 28秒 でお問合せ完了。
+        <div className='my-10 flex flex-col items-center justify-center space-y-6 px-2 md:px-0 w-full md:w-3/4'>
+          <h1 className='text-gray-700 font-bold text-center text-xl md:text-4xl capitalize'>平均 28秒 でお問合せ完了。
             <br></br>ちょっとしたご相談から本格的なご依頼まで、お気軽にどうぞ！</h1>
           <p className='text-xs md:text-xl text-center'>
             株式会社KANOA GROUPにご興味をお持ちいただき、誠にありがとうございます。<br></br>
@@ -35,6 +35,7 @@ export default function Contact() {
         </div>
       </article>
 
+
       <article className="relative flex flex-col md:flex-row w-full">
         {/* フォーム（手前に出す） */}
         <div className="relative z-10 w-full md:w-1/2 p-4 md:p-0">
@@ -42,7 +43,7 @@ export default function Contact() {
         </div>
 
         {/* モデル背景（スマホで絶対配置、PCは横並び） */}
-        <div className="absolute top-0 left-0 w-full h-full md:relative md:w-1/2 z-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full md:relative md:w-1/2 md:h-[80vh] z-0 pointer-events-none opacity-30 md:opacity-100">
           <RenderModel>
             <WorldModel />
           </RenderModel>

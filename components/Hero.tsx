@@ -7,13 +7,13 @@ export default function Hero() {
             <div className="flex-col flex mx-auto md:mx-0  md:flex-row items-center gap-4 max-w-4xl">
                 <Image
                     src="/kanoa-logo.PNG"
-                    alt="KANOA GROUP ロゴ"
+                    alt="KANOAGROUP会社ロゴ"
                     width={120}
                     height={120}
-                    className="object-cover  opacity-60  md:opacity-100"
+                    className="object-cover  opacity-80  md:opacity-100"
                     priority
                 />
-                <h1 className="text-5xl opacity-60  md:opacity-100  lg:text-6xl font-extrabold  text-sky-600 leading-tight">
+                <h1 className="text-5xl opacity-80 md:opacity-100  lg:text-6xl font-extrabold  text-sky-600 leading-tight">
                     KANOA GROUP
                 </h1>
             </div>

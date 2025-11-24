@@ -14,7 +14,7 @@ export default function Service() {
                 {/* テキスト */}
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
                     <div>
-                        <h1 className='text-gray-700 text-3xl font-bold'>宅内光ファイバー開通業務</h1>
+                        <h1 className='text-gray-700 text-2xl md:text-3xl font-bold'>宅内光ファイバー開通業務</h1>
                         <small className='block text-gray-700 text-sm mb-2'>EO光のWi-Fi訪問設定サポート</small>
                         <p className='text-gray-700 mb-6 leading-relaxed'>
                             お客様宅に訪問し、光ファイバーインターネット（EO光）の開通に伴うWi-Fi設定や通信環境の最適化を行うサービスです。
@@ -58,7 +58,7 @@ export default function Service() {
             <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
                 {/* テキスト */}
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
-                    <h1 className='text-3xl text-gray-700 font-bold'>未来塾</h1>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>未来塾</h1>
                     <small className='block text-gray-700 text-sm mb-2'>プログラミングスクール</small>
                     <p className='text-gray-700 mb-6 leading-relaxed'>
                         未来塾は、プログラミング・マーケティング・デザイン・動画編集など、
@@ -97,7 +97,7 @@ export default function Service() {
             <section className='flex flex-col-reverse md:flex-row items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
                 {/* テキスト */}
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
-                    <h1 className='text-3xl text-gray-700 font-bold'>HP-CREATE</h1>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>HP-CREATE</h1>
                     <small className='block text-gray-700 text-sm mb-2'>ホームページ制作事業</small>
                     <p className='text-gray-700 mb-6 leading-relaxed'>
                         KANOA GROUPのホームページ制作事業では、最短1週間で高クオリティなWebサイトを提供しています。
@@ -135,7 +135,7 @@ export default function Service() {
             <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
                 {/* テキスト */}
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
-                    <h1 className='text-3xl text-gray-700 font-bold'>システムアプリ開発事業</h1>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>システムアプリ開発事業</h1>
                     <small className='block text-gray-700 text-sm mb-2'>オーダーメイドの開発</small>
                     <p className='text-gray-700 mb-6 leading-relaxed'>
                         クライアントの課題や目的に合わせた、完全オリジナルのアプリ・システムを開発しています。
@@ -174,11 +174,11 @@ export default function Service() {
             <section className='flex flex-col-reverse md:flex-row items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
                 {/* テキスト */}
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
-                    <h1 className='text-3xl text-gray-700 font-bold'>GK-Uオンラインスクール</h1>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>GK-Uオンラインスクール</h1>
                     <small className='block text-gray-700 text-sm mb-2'>生徒にお金を支払う不思議なスクール</small>
                     <p className='text-gray-700 mb-6 leading-relaxed'>
-                        塾に行く交通費用や時間は不必要。この「GK-U」アプリひとつで
-                        「Webマーケティング・サイト制作・アプリ開発・ADOBE」を学習できます。
+                        スキル毎にと打つ日や移動時間にお金支払う必要なし。この「GK-U」アプリひとつで
+                        「Web/SNSマーケティング・プログラミング・デザイン・財務・AI・資産運用」を学習できます。
                     </p>
 
                     <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>

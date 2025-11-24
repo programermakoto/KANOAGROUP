@@ -134,3 +134,61 @@
   list-style: none;
   text-decoration: none;
 }
+
+/* CONTACTのボタン用アニメーション */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+.animate-shake {
+  animation: shake 0.5s infinite;
+}
+
+
+
+
+/* テキストアニメーション */
+/* フェードイン＋スライドアップアニメーション */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  250% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-30px);
+  }
+}
+
+
+
+.animate {
+  transition: opacity 2s, transform 2s;
+  opacity: 0;
+}
+.animate.sr {
+  transform:translateX(+200px);
+}
+
+.animate.sl {
+  transform:translateX(-200px);
+}
+.animate.delay {
+  animation-name: floatUpDown;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-timing-function: ease-out;
+}
+
+.animate.appear {
+  opacity: 1;
+  transform:none;
+}

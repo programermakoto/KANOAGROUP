@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Recruitment() {
     return (
         <section aria-labelledby="recruit" className="container w-full space-y-10 py-12">
-            <h2 id="recruit" className="text-3xl my-6">
+            <h2 id="recruit" className="text-3xl text-center my-6">
                 採用情報
             </h2>
 
@@ -22,10 +22,10 @@ export default function Recruitment() {
                 <p className="text-base text-gray-700 mb-6">
                     KANOA GROUPでは裁量権を持って事業を推し進めていける方を募集しております。リーダーとしてチームを引っ張っていきたい方、エンジニアを目指している方、上昇志向のある学生、新規事業の企画開発に興味のある方はぜひお問い合わせください。
                 </p>
-                <Button>
-                    <Link href="/recruitment">採用情報を見る</Link>
-                </Button>
 
+                <div className=' mx-auto mt-6 text-center'>
+                    <Link className=' mx-auto px-6 py-2 rounded-full text-white bg-sky-600  hover:bg-orange-500 transition duration-[500ms] text-center font-medium' href="/recruitment">採用情報を見る</Link>
+                </div>
             </div>
         </section>
     )

@@ -18,7 +18,7 @@ export default function ForContact() {
                 </div>
 
                 {/* ボタン部分 */}
-                <div className='w-full md:w-1/3 flex justify-center md:justify-end px-4'>
+                {/* <div className='w-full md:w-1/3 flex justify-center md:justify-end px-4'>
                     <Link
                         href="/contact"
                         className='border-1 border-black rounded-full w-50 h-50 flex items-center justify-center 
@@ -26,8 +26,18 @@ export default function ForContact() {
                     >
                         CONTACT
                     </Link>
-                </div>
+                </div> */}
 
+                <div className='w-full md:w-1/3 flex justify-center md:justify-end px-4'>
+                    <Link
+                        href="/contact"
+                        className='border border-black rounded-full w-50 h-50 flex items-center justify-center 
+        px-7.5 py-7.5 hover:text-white hover:bg-orange-500 transition duration-[500ms] hover:scale-110
+        animate-shake'
+                    >
+                        CONTACT
+                    </Link>
+                </div>
 
             </div>
 

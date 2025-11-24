@@ -9,7 +9,7 @@ export default function Recruitment() {
     <section className='container w-full space-y-20'>
 
       {/* ヘッダー画像＋重ねテキスト（PCは完全にそのまま、SPは縦並びで中央寄せ） */}
-      <article className='w-full relative py-18 text-gray-700'>
+      <article className='w-full relative py-10 text-gray-700'>
         {/* SP: w-full & center, PC: w-1/2 ml-auto (元のPC見た目を md: で再現) */}
         <div className='w-full md:w-1/2 md:ml-auto flex flex-col md:block items-center md:items-stretch'>
           <div className='w-full relative'>
@@ -40,7 +40,7 @@ export default function Recruitment() {
       </article>
 
       {/* 説明文（SPは中央寄せ、PCは従来どおり） */}
-      <article className='text-1xl text-center md:text-left w-full md:w-1/2 mx-auto text-gray-700 px-4'>
+      <article className='text-xl text-center md:text-left w-full md:w-1/2 mx-auto text-gray-700 px-4'>
         <p className='leading-relaxed'>
           KANOA GROUPでは裁量権を持って事業を推し進めていける方を募集しております。<br />
           リーダーとしてチームを引っ張っていきたい方、エンジニアを目指している方、上昇志向のある学生、新規事業の企画開発に興味のある方はぜひお問い合わせください。
@@ -69,8 +69,8 @@ export default function Recruitment() {
 
       {/* 職種グリッド：SPは1列→見やすく、SMは2列、PCは4列（PCは従来通り） */}
       <article className='my-[20%] space-y-2 px-4'>
-        <h2 className='text-center text-gray-700 text-2xl'>あなたは何になりたいですか？！</h2>
-        <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center p-4'>
+        <h2 className='text-center text-gray-700 text-xl md:text-2xl'>あなたは何になりたいですか？！</h2>
+        <div className='w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center p-4'>
           <div className='border aspect-square flex items-center justify-center p-4'>総合職・秘書・運転手</div>
           <div className='border aspect-square flex items-center justify-center p-4'>Webエンジニア</div>
           <div className='border aspect-square flex items-center justify-center p-4'>動画クリエイター</div>
