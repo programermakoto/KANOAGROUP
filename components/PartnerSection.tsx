@@ -72,7 +72,7 @@ export default function PartnerSection() {
 
   return (
     <div className="container pb-40 h-auto w-full relative overflow-hidden flex flex-col space-y-5 items-center justify-center">
-      <h1 className="text-1xl md:text-3xl my-6 py-5">KANOA GROUPと関わる企業一覧</h1>
+      <h1 className="text-1xl md:text-3xl my-6 py-5 animate delay">KANOA GROUPと関わる企業一覧</h1>
 
       <div className="w-full overflow-hidden relative">
         <div ref={trackRef} className="track flex whitespace-nowrap items-center">

@@ -11,7 +11,6 @@ import Mission from "@/components/Mission";
 import Recruitment from "@/components/Recruitment";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
-import { Button } from "@/components/ui/button";
 
 
 type NewsItem = {
@@ -44,7 +43,7 @@ function ButtonLink({
 function NewsList({ items }: { items: NewsItem[] }) {
   return (
     <section aria-labelledby="news-heading" className="container py-10 space-y-6">
-      <h2 id="news-heading" className="text-1xl md:text-3xl text-center mb-6">
+      <h2 id="news-heading" className=" animate deray text-1xl md:text-3xl text-center mb-6">
         お知らせ
       </h2>
 

@@ -85,11 +85,17 @@ export default function CompanyProfile() {
             事業内容
           </p>
           <p className="p-2 w-full md:w-3/4 border text-left">
-            ・宅内光ファイバー設置業務<br />
+            【IT教育】<br />
             ・プログラミングスクール<br />
-            ・システム開発<br />
-            ・アプリケーション開発<br />
-            ・ホームページ制作と保守
+            ・アプリ教育[GK-U]<br /><br />
+
+            【WEB制作】<br />
+            ・ホームページ制作<br />
+            ・システム・アプリ開発<br /><br />
+
+            【通信インフラ】<br />
+            ・宅内光ファイバー業務<br />
+            ・電気通信工事<br />
           </p>
         </div>
 
@@ -99,7 +105,7 @@ export default function CompanyProfile() {
           </p>
           <p className="p-2 w-full md:w-3/4 border break-words text-center md:text-left">
             <Link href="https://page.line.me/527qtybu?oat_content=url&openQrModal=true">
-             公式LINEはKANOAGROUPの全事業の統括者が管理してますので全て質問可能です
+              公式LINEはKANOAGROUPの全事業の統括者が管理してますので全て質問可能です
             </Link>
           </p>
         </div>
