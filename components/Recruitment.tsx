@@ -15,7 +15,7 @@ export default function Recruitment() {
                     <Image alt="リクルート画像" src="/school.png" fill style={{ objectFit: "cover" }} />
                 </div>
 
-                <h3 className="text-1xl font-bold lg:text-2xl text-gray-700 mb-4">
+                <h3 className="text-1xl font-bold md::text-2xl text-gray-700 mb-4">
                     最高なチームで誰もが自由にもっとシンプルな社会をつくる
                 </h3>
 

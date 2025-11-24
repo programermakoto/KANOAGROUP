@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function ForContact() {
     return (
-        <div className='container h-[50vh]  flex justify-center items-center'>
+        <div className='container my-30 h-auto md:h-[50vh]  flex justify-center items-center'>
             <div className='container flex flex-col md:flex-row items-center md:items-start justify-center gap-10'>
 
                 {/* テキスト部分 */}
@@ -11,7 +11,7 @@ export default function ForContact() {
                     <h3 className='text-4xl sm:text-5xl md:text-6xl text-gray-700 mb-6 md:mb-8'>
                         Let&apos;s Have a<br />Conversation!
                     </h3>
-                    <p className="text-lg sm:text-xl md:text-2xl text-gray-700">
+                    <p className="text-xs  md:text-2xl text-gray-700">
                         Webサービスやアプリ開発のご相談、協業パートナーや取材など<br />
                         その他のお問い合わせはこちらから。
                     </p>

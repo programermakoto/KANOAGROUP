@@ -56,7 +56,7 @@ export default function Recruitment() {
           {/* wrapper: SP は左右余白を確保して中央に、PC は max-w で既存見た目を維持 */}
           <div className='w-full max-w-[1200px] h-auto md:h-[600px]'>
             <Carousel
-              baseWidth={400} /* PC に影響しないよう既定値のまま。必要なら responsive 対応できます */
+              baseWidth={300} /* PC に影響しないよう既定値のまま。必要なら responsive 対応できます */
               autoplay={true}
               autoplayDelay={3000}
               pauseOnHover={true}

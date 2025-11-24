@@ -18,19 +18,19 @@ export function WorldModel(props) {
   useFrame((state, delta) => {
     // 地球：右下方向に軸回転（一定方向）
     if (group.current) {
-      group.current.rotation.y += delta * 0.2; // Y軸で右回転
-      group.current.rotation.x += delta * 0.15; // X軸で下方向に傾ける
+      group.current.rotation.y += delta * 0.1; // Y軸で右回転
+      group.current.rotation.x += delta * 0.075; // X軸で下方向に傾ける
     }
 
     // 雲：cloudOrbit を回して「公転」させる（左回転にしたければマイナス）
     if (cloudOrbit.current) {
-      cloudOrbit.current.rotation.y -= delta * 0.2; // ← 左回転（公転）
+      cloudOrbit.current.rotation.y -= delta * -0.0991; // ← 左回転（公転）
     }
 
     // 飛行機：横にループ移動（例）
     if (planeRef.current) {
       planeRef.current.position.x += delta * 0.6;
-      if (planeRef.current.position.x > 10) planeRef.current.position.x = -10;
+      if (planeRef.current.position.x > 10) planeRef.current.position.x = 10;
     }
   });
 
