@@ -59,7 +59,7 @@ export default function About() {
               <Image
                 src="/kanoa-logo.PNG"
                 alt="KANOA GROUP ロゴ"
-                width={100}
+                width={300}
                 height={100}
                 className=' animate sl w-full h-full object-cover'
               />
@@ -88,7 +88,7 @@ export default function About() {
               <Image
                 src="/makoto.webp"
                 alt="寺内誠将（代表）"
-                width={100}
+                width={300}
                 height={100}
                 className='w-full h-full object-cover'
               />

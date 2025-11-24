@@ -29,13 +29,13 @@ export default function President() {
 
           {/* 画像＋署名ブロック（スマホは幅100%で中央寄せ、画像は小さめ） */}
           <div className="w-full md:w-1/3 flex flex-col items-center justify-start gap-4 p-5">
-            <div className="w-36 h-36 md:w-full md:h-full relative overflow-hidden rounded-full md:rounded-none">
+            <div className="w-36 h-36 md:w-full md:h-full relative overflow-hidden ">
               <Image
                 src="/makoto.webp"
                 className="opacity-40 object-cover"
                 alt="寺内誠将"
                 fill={false}
-                width={160}
+                width={400}
                 height={160}
               />
             </div>
