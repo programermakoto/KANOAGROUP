@@ -2,8 +2,6 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, PanInfo, useMotionValue, useTransform } from "motion/react";
 import React, { JSX } from "react";
-
-// replace icons with your own if needed
 import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from "react-icons/fi";
 
 export interface CarouselItem {
@@ -41,21 +39,21 @@ const DEFAULT_ITEMS: CarouselItem[] = [
   {
     title: "Distribution",
     description:
-      "株式会社は株主のものです。よって従業員が作った利益も株主に流れる。だから普通の会社ではどんなに結果を出しても従業員への配分は低くなるこれでは前述の「自由の尊重」に矛盾します。だからこそ、KANOAは外部投資家や株主は​一切入れずに仲間だけで株を守り続けて給与や報酬の高水準で仲間を尊重します。",
+      "株式会社は株主のものです。従業員が作った利益も株主に流れる。普通の会社では従業員への配分は低くなるので、KANOAは仲間だけで株を守り続けます。",
     id: 3,
     icon: <FiLayers className="h-[16px] w-[16px] text-white" />,
   },
   {
     title: "Joy First",
     description:
-      "前述した、仲間の自由を守るために外部株主を入れないという事は創業者や経営者が一番儲けられる行為「株式売却」を行わないということ。KANOAは利益やお金だけを優先した経営ではなく「楽しさ」を優先した経営を大切にしていく事。​楽しい事への挑戦を徹底的に支援します。",
+      "仲間の自由を守るために外部株主を入れず、利益だけを優先せず「楽しさ」を優先する経営を徹底します。",
     id: 4,
     icon: <FiLayout className="h-[16px] w-[16px] text-white" />,
   },
   {
     title: "Challenge",
     description:
-      "23歳で地元の仲間が集まり始まった会社梅田の1R室から始まった会社。僕らは元々は何もなかったんです。オフィスで寝る日々も経験しデータベースバグ発生で数社のクレーム嵐も経験しました。それでも若さとノリを武器に鉄人のように成長し続けここまで大きくなった会社です。これからも「イカれた会社」で居続けます。",
+      "23歳で地元の仲間が集まり始めた会社。データベースバグやクレームも経験しつつ、若さとノリで成長し続けています。",
     id: 5,
     icon: <FiCode className="h-[16px] w-[16px] text-white" />,
   },
@@ -64,7 +62,15 @@ const DEFAULT_ITEMS: CarouselItem[] = [
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
 const GAP = 16;
-const SPRING_OPTIONS: any = { type: 'spring', stiffness: 300, damping: 30 };
+
+type SpringOptions = {
+  type: "spring";
+  stiffness?: number;
+  damping?: number;
+  duration?: number;
+};
+
+const SPRING_OPTIONS: SpringOptions = { type: "spring", stiffness: 300, damping: 30 };
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
@@ -116,7 +122,9 @@ export default function Carousel({
     }
   }, [autoplay, autoplayDelay, isHovered, loop, items.length, carouselItems.length, pauseOnHover]);
 
-  const effectiveTransition: any = isResetting ? { duration: 0 } : SPRING_OPTIONS;
+  const effectiveTransition: SpringOptions = isResetting
+    ? { ...SPRING_OPTIONS, duration: 0 }
+    : SPRING_OPTIONS;
 
   const handleAnimationComplete = () => {
     if (loop && currentIndex === carouselItems.length - 1) {
@@ -145,16 +153,7 @@ export default function Carousel({
         dragConstraints: { left: -trackItemOffset * (carouselItems.length - 1), right: 0 },
       };
 
-  // ----- 子コンポーネント化して各アイテムごとに useTransform を使う -----
-  // Hooks をループ内で直接呼ばない運用にするため、ItemCard を作成する
-  function ItemCard({
-    item,
-    index,
-  }: {
-    item: CarouselItem;
-    index: number;
-  }): JSX.Element {
-    // ここはコンポーネント本体なので Hooks 使用OK（順序は固定）
+  function ItemCard({ item, index }: { item: CarouselItem; index: number }): JSX.Element {
     const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
     const rotateY = useTransform(x, range, [90, 0, -90], { clamp: false });
 
@@ -169,7 +168,7 @@ export default function Carousel({
           rotateY,
           ...(round && { borderRadius: "50%" }),
         }}
-        transition={effectiveTransition as any}
+        transition={effectiveTransition}
       >
         <div className={`${round ? "p-0 m-0" : "mb-4 p-5"}`}>
           <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
@@ -187,7 +186,7 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`relative mx-auto overflow-hidden p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#222]"}`}
+      className={`relative overflow-hidden p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#222]"}`}
       style={{ width: `${baseWidth}px`, ...(round && { height: `${baseWidth}px` }) }}
     >
       <motion.div
