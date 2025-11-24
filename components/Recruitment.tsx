@@ -15,15 +15,17 @@ export default function Recruitment() {
                     <Image alt="リクルート画像" src="/school.png" fill style={{ objectFit: "cover" }} />
                 </div>
 
-                <h3 className="text-2xl text-gray-700 mb-4">
+                <h3 className="text-1xl font-bold lg:text-2xl text-gray-700 mb-4">
                     最高なチームで誰もが自由にもっとシンプルな社会をつくる
                 </h3>
 
                 <p className="text-base text-gray-700 mb-6">
                     KANOA GROUPでは裁量権を持って事業を推し進めていける方を募集しております。リーダーとしてチームを引っ張っていきたい方、エンジニアを目指している方、上昇志向のある学生、新規事業の企画開発に興味のある方はぜひお問い合わせください。
                 </p>
+                <Button>
+                    <Link href="/recruitment">採用情報を見る</Link>
+                </Button>
 
-                <Link href="/recruitment">採用情報を見る</Link>
             </div>
         </section>
     )

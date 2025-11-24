@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import { motion, PanInfo, useMotionValue, useTransform } from "motion/react";
-import type { Transition } from "motion"; // 型を明示的にインポート
 import React, { JSX } from "react";
 
 // replace icons with your own if needed
@@ -65,9 +64,7 @@ const DEFAULT_ITEMS: CarouselItem[] = [
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
 const GAP = 16;
-
-// motion の Transition 型を使って型安全に定義
-const SPRING_OPTIONS: Transition = { type: "spring", stiffness: 300, damping: 30 };
+const SPRING_OPTIONS: any = { type: 'spring', stiffness: 300, damping: 30 };
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
@@ -119,7 +116,7 @@ export default function Carousel({
     }
   }, [autoplay, autoplayDelay, isHovered, loop, items.length, carouselItems.length, pauseOnHover]);
 
-  const effectiveTransition: Transition = isResetting ? { duration: 0 } as Transition : SPRING_OPTIONS;
+  const effectiveTransition: any = isResetting ? { duration: 0 } : SPRING_OPTIONS;
 
   const handleAnimationComplete = () => {
     if (loop && currentIndex === carouselItems.length - 1) {
@@ -148,7 +145,8 @@ export default function Carousel({
         dragConstraints: { left: -trackItemOffset * (carouselItems.length - 1), right: 0 },
       };
 
-  // 子コンポーネント化して各アイテムごとに useTransform を使う
+  // ----- 子コンポーネント化して各アイテムごとに useTransform を使う -----
+  // Hooks をループ内で直接呼ばない運用にするため、ItemCard を作成する
   function ItemCard({
     item,
     index,
@@ -156,6 +154,7 @@ export default function Carousel({
     item: CarouselItem;
     index: number;
   }): JSX.Element {
+    // ここはコンポーネント本体なので Hooks 使用OK（順序は固定）
     const range = [-(index + 1) * trackItemOffset, -index * trackItemOffset, -(index - 1) * trackItemOffset];
     const rotateY = useTransform(x, range, [90, 0, -90], { clamp: false });
 
@@ -170,7 +169,7 @@ export default function Carousel({
           rotateY,
           ...(round && { borderRadius: "50%" }),
         }}
-        transition={effectiveTransition}
+        transition={effectiveTransition as any}
       >
         <div className={`${round ? "p-0 m-0" : "mb-4 p-5"}`}>
           <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#060010]">
@@ -188,7 +187,7 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#222]"}`}
+      className={`relative mx-auto overflow-hidden p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#222]"}`}
       style={{ width: `${baseWidth}px`, ...(round && { height: `${baseWidth}px` }) }}
     >
       <motion.div

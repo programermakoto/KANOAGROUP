@@ -11,6 +11,7 @@ import Mission from "@/components/Mission";
 import Recruitment from "@/components/Recruitment";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import { Button } from "@/components/ui/button";
 
 
 type NewsItem = {
@@ -74,9 +75,9 @@ function NewsList({ items }: { items: NewsItem[] }) {
         ))}
       </div>
 
-      <div className="text-center mt-6">
-        <ButtonLink href="/news">お知らせ一覧を見る</ButtonLink>
-      </div>
+        <Button className="text-center mt-6 mx-auto block">
+          <Link href="/news">お知らせ一覧を見る</Link>
+        </Button>
     </section>
   );
 }

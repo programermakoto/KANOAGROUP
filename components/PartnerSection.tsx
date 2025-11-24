@@ -8,7 +8,7 @@ type Logo = { src: string; alt?: string; href?: string };
 const logos: Logo[] = [
   { src: "/co-logo/book-co.jpeg", alt: "KANOA", href: "https://www.daikouseihonsho.com/" },
   { src: "/co-logo/logo-bk.svg", alt: "KANOA", href: "https://master-key.co.jp/" },
-  { src: "/kanoa-logo.png", alt: "KANOA", href: "https://kanoagroup.jp" },
+  { src: "/kanoa-logo.PNG", alt: "KANOA", href: "https://kanoagroup.jp" },
   { src: "/co-logo/aozora.jpg", alt: "KANOA", href: "https://gmo-aozora.com/" },
 ];
 
