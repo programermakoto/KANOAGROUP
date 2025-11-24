@@ -24,7 +24,7 @@ export default async function NewsDetailPage({ params }) {
 
       <article className="bg-white rounded-2xl shadow p-6">
         <header className="space-y-2">
-          <h1 className="text-3xl font-bold">{item.title}</h1>
+          <h1 className="text-xl md:text-3xl font-bold">{item.title}</h1>
           <time className="text-sm text-gray-500">{item.date}</time>
         </header>
 
@@ -33,10 +33,11 @@ export default async function NewsDetailPage({ params }) {
             <Image src={item.image} alt={item.title} width={1200} height={700} className="object-cover w-full h-full" />
           </div>
 
-          <p className="mt-6 text-lg text-gray-700">{item.description}</p>
+          <p className="mt-6 text-xl font-bold md:text-lg text-gray-700">{item.description}</p>
 
+         
           <section className="mt-6 prose max-w-none text-gray-700">
-            <p>{item.body}</p>
+            <p className="leading-loose">{item.body}</p>
           </section>
         </div>
       </article>

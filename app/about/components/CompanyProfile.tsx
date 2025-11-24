@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CompanyProfile() {
   return (
     <section id="about" className="pt-[10%] container space-y-8">
-      <h2 className="w-[50%] text-4xl font-bold border-b-2 border-black text-gray-700">
+      <h2 className="w-[50%] text-2xl md:text-4xl font-bold border-b-2 border-black text-gray-700">
         会社概要
       </h2>
       <small className="block w-[50%] text-sm text-gray-700">
@@ -99,7 +99,7 @@ export default function CompanyProfile() {
           </p>
           <p className="p-2 w-full md:w-3/4 border break-words text-center md:text-left">
             <Link href="https://page.line.me/527qtybu?oat_content=url&openQrModal=true">
-              https://page.line.me/527qtybu?oat_content=url&openQrModal=true
+             公式LINEはKANOAGROUPの全事業の統括者が管理してますので全て質問可能です
             </Link>
           </p>
         </div>

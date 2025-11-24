@@ -22,7 +22,7 @@ export default async function NewsPage() {
             </div>
 
             <div className="w-3/4">
-              <p className="font-bold text-lg">{item.title}</p>
+              <p className="font-bold text-xs md:text-lg">{item.title}</p>
               <small className="text-gray-500">{item.date}</small>
               <p className="text-sm text-gray-700 mt-2 line-clamp-2">{item.description}</p>
             </div>

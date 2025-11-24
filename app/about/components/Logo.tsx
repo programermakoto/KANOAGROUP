@@ -4,9 +4,9 @@ import React from 'react'
 export default function Logo() {
   return (
     <section id="value" className="pt-20 container mx-auto space-y-8 text-gray-700">
-      
+
       {/* 大見出し */}
-      <h1 className="w-full md:w-[50%] text-4xl font-bold border-b-2 border-black text-gray-700">
+      <h1 className="w-full md:w-[50%] text-2xl md:text-4xl font-bold border-b-2 border-black text-gray-700">
         KANOA GROUP 名称とロゴの由来
       </h1>
       <small className="block w-full md:w-[50%] text-sm">The origin of the KANOA GROUP name and logo</small>
@@ -32,12 +32,18 @@ export default function Logo() {
         <h2 className="text-2xl font-semibold">ロゴに込めた意味</h2>
 
         {/* モバイルでは縦並び、PCでは横並び */}
-        <div className="flex flex-col md:flex-row md:items-center md:gap-6">
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-            <Image src="/kanoa-logo.PNG" alt="KANOAGROUPロゴ画像" width={100} height={100} className="my-4" />
+        <div className="flex flex-col md:flex-row md:items-center md:gap-4"> {/* gap-6 → gap-4 に縮める */}
+          <div className="w-full md:w-2/5 flex justify-center md:justify-start"> {/* md:w-1/2 → md:w-2/5 に調整 */}
+            <Image
+              src="/kanoa-logo.PNG"
+              alt="KANOAGROUPロゴ画像"
+              width={300}
+              height={100}
+              className="my-4"
+            />
           </div>
 
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-3/5"> {/* md:w-1/2 → md:w-3/5 に調整 */}
             <p className="leading-relaxed w-full md:w-full">
               ロゴ中央の青い「K」は、KANOA GROUPを象徴。三角を基調とし、3つの頂点はグループを支える基盤事業を表します。
             </p>
@@ -53,6 +59,7 @@ export default function Logo() {
             </p>
           </div>
         </div>
+
       </div>
     </section>
   )

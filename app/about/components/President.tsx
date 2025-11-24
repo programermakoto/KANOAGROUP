@@ -3,10 +3,10 @@ import React from 'react'
 
 export default function President() {
   return (
-    <section id='message' className="pt-[10%] relative h-screen w-full flex items-center justify-center bg-white text-gray-700">
+    <section id='message' className="pt-[10%] relative h-auto md:h-screen w-full flex items-center justify-center bg-white text-gray-700">
       <article className="container space-y-8">
-        <h2 className="w-[50%] text-4xl font-bold border-b-2 border-black">寺内 誠将 グループ代表挨拶</h2>
-        <small className="block w-[50%] text-sm ">Greetings from Group Representative Makoto Terauchi</small>
+        <h2 className="w-full md:w-[50%] text-2xl md:text-4xl font-bold border-b-2 border-black">寺内 誠将 グループ代表挨拶</h2>
+        <small className="block w-full md:w-[50%] text-sm ">Greetings from Group Representative Makoto Terauchi</small>
 
         {/* レイアウトをスマホで縦並び、PCでは横並びにする */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-around gap-6">

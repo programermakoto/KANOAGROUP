@@ -4,7 +4,7 @@ import React from 'react'
 export default function Access() {
   return (
     <section className="pt-[10%] container space-y-8">
-      <h2 className="w-[50%] text-4xl font-bold border-b-2 border-black text-gray-700">会社アクセス</h2>
+      <h2 className="w-[50%] text-2xl md:text-4xl font-bold border-b-2 border-black text-gray-700">会社アクセス</h2>
       <small className="block w-[50%] text-sm text-gray-700">Company Access</small>
 
       {/* ← ここを丸ごと差し替えてください */}
