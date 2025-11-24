@@ -23,7 +23,6 @@ export default function about() {
       <Access />
       {/* 挨拶 */}
       <President />
-      <Attachment />
       {/* バリュー */}
       <article className='my-[20%] space-y-2'>
         <h2 className='text-center text-gray-700 text-2xl'>バリュー</h2>

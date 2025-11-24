@@ -54,14 +54,14 @@ export default function About() {
         {/* 会社概要 */}
         <article className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12 px-4 lg:px-0 my-50 ">
           {/* 画像 */}
-          <div className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 overflow-hidden">
+          <div className="w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 ">
             <div>
               <Image
                 src="/kanoa-logo.PNG"
                 alt="KANOA GROUP ロゴ"
                 width={300}
                 height={100}
-                className=' animate sl w-full h-full object-cover '
+                className=' animate w-full h-full object-cover '
               />
             </div>
           </div>
@@ -83,14 +83,14 @@ export default function About() {
         {/* 代表挨拶 */}
         <article className="flex flex-col lg:flex-row-reverse items-center lg:items-start gap-6 lg:gap-12 px-4 lg:px-0 my-50 ">
           {/* 画像 */}
-          <div className=" w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 overflow-hidden">
+          <div className=" w-full lg:w-1/2 flex justify-center mb-4 lg:mb-0 ">
             <div>
               <Image
                 src="/makoto.webp"
                 alt="寺内誠将（代表）"
                 width={300}
                 height={100}
-                className='w-full h-full object-cover animate sr'
+                className='w-full h-full object-cover animate '
               />
             </div>
           </div>
