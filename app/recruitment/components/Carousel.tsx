@@ -186,7 +186,7 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`relative overflow-hidden p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#222]"}`}
+      className={`relative overflow-hidden mx-auto p-4 ${round ? "rounded-full border border-white" : "rounded-[24px] border border-[#222]"}`}
       style={{ width: `${baseWidth}px`, ...(round && { height: `${baseWidth}px` }) }}
     >
       <motion.div
