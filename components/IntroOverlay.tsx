@@ -7,21 +7,29 @@ type Props = {
 };
 
 export default function IntroOverlay({ src = "/op.mp4", durationMs = 4000 }: Props) {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false); // 初期は非表示
   const [loaded, setLoaded] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(false), durationMs);
-    return () => clearTimeout(timer);
-  }, [durationMs]);
+    const hasSeen = localStorage.getItem("introPlayed");
+    if (!hasSeen) {
+      setVisible(true);
+      localStorage.setItem("introPlayed", "true");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (visible) {
+      const timer = setTimeout(() => setVisible(false), durationMs);
+      return () => clearTimeout(timer);
+    }
+  }, [visible, durationMs]);
 
   if (!visible) return null;
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
       <video
-        ref={videoRef}
         src={src}
         autoPlay
         muted
