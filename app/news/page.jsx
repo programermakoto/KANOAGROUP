@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getAllNews } from "../../lib/news";
+import Mission from "@/components/Mission";
+import ForContact from "@/components/ForContact";
 
 export default async function NewsPage() {
   const news = await getAllNews();
@@ -29,6 +31,8 @@ export default async function NewsPage() {
           </Link>
         ))}
       </div>
+      <Mission/>
+      <ForContact/>
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function ForContact() {
                         Let&apos;s Have a<br />Conversation!
                     </h3>
                     <p className="text-xs  md:text-2xl text-gray-700">
-                        Webサービスやアプリ開発のご相談、協業パートナーや取材など<br />
+                        Webサービスやアプリ開発のご相談、<br className="sm:hidden"></br>協業パートナーや取材など<br />
                         その他のお問い合わせはこちらから。
                     </p>
                 </div>

@@ -89,7 +89,7 @@ export default async function Home() {
         {/* HERO */}
         <div className="w-full h-screen relative">
           <RenderModel>
-            <WorldModel position={[2, 0, 0]} />
+            <WorldModel position={[1, 0, 1.2]} />
           </RenderModel>
           <Hero />
         </div>

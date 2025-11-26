@@ -1,3 +1,4 @@
+import Mission from '@/components/Mission'
 import React from 'react'
 
 export default function Privacy() {
@@ -111,6 +112,7 @@ export default function Privacy() {
           本規約は日本法を準拠法とし、当社所在地を管轄する裁判所を専属的合意管轄とします。
         </p>
       </section>
+      <Mission/>
     </div>
   )
 }

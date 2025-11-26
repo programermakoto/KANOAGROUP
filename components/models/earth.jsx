@@ -149,7 +149,7 @@ export function WorldModel(props) {
           />
         </group>
         <group ref={cloudOrbit} name="cloudOrbit">
-          <group ref={cloudRef} name="cloud" scale={2.5}>
+          <group ref={cloudRef} name="cloud" scale={2.4}>
             {/* cloud 内のメッシュ群（そのまま） */}
             <group
               name="エンプティ"
@@ -168,7 +168,7 @@ export function WorldModel(props) {
             </group>
             <group
               name="エンプティ"
-              position={[-1.353, -4.022, 3.868]}
+              position={[-1.353, -4.022, 1.868]}
               rotation={[1.572, 0, 0.358]}
               scale={[0.104, 0.112, 0.211]}>
               <mesh

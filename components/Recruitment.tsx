@@ -16,11 +16,11 @@ export default function Recruitment() {
                 </div>
 
                 <h3 className="animate text-1xl font-bold md::text-2xl text-gray-700 mb-4">
-                    最高なチームで誰もが自由にもっとシンプルな社会をつくる
+                    最高なチームで誰もが自由にもっと<br className="sm:hidden"></br>シンプルな社会をつくる
                 </h3>
 
                 <p className="text-base animate text-gray-700 mb-6">
-                    KANOA GROUPでは裁量権を持って事業を推し進めていける方を募集しております。リーダーとしてチームを引っ張っていきたい方、エンジニアを目指している方、上昇志向のある学生、新規事業の企画開発に興味のある方はぜひお問い合わせください。
+                    KANOA GROUPでは裁量権を持って事業を<br className="sm:hidden"></br>推し進めていける方を募集しております。<br className="sm:hidden"></br>リーダーとしてチームを引っ張っていきたい方、エンジニアを目指している方、上昇志向のある学生、新規事業の企画開発に興味のある方はぜひお問い合わせください。
                 </p>
 
                 <div className=' mx-auto mt-6 text-center'>

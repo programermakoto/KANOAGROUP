@@ -7,7 +7,7 @@ export default function Logo() {
 
       {/* 大見出し */}
       <h1 className="w-full md:w-[50%] text-2xl md:text-4xl font-bold border-b-2 border-black text-gray-700">
-        KANOA GROUP 名称とロゴの由来
+        KANOA GROUP 名称と<br className="sm:hidden"></br>ロゴの由来
       </h1>
       <small className="block w-full md:w-[50%] text-sm">The origin of the KANOA GROUP name and logo</small>
 

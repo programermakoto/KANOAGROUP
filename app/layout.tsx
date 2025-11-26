@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import IntroOverlay from "@/components/IntroOverlay";
 
 
 const geistSans = Geist({
@@ -54,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh font-inter select-none`}>
+      <IntroOverlay src="/op.mp4" durationMs={4000} />
         <Header />
         <main className="pt-16 min-h-screen">
           {children}
