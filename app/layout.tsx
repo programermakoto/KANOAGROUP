@@ -11,13 +11,24 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 // Title をページごとに差し替え可能なテンプレートに
 export const metadata: Metadata = {
   title: {
-    default: "ホームページ制作・システム開発｜KANOA GROUP",
+    default: "KANOA GROUP｜ホームページ制作・システム開発",
     template: "%s | KANOA GROUP",
   },
   description:
     "IT会社であるKANOA GROUPは「これは面白い!を創り ∴ 自由を広げる。」をミッションに、ホームページ制作・システム開発で新規ビジネスを支援します。",
+  keywords: [
+    "寺内誠将",
+    "ホームページ制作",
+    "システム開発",
+    "アプリ開発",
+    "KANOA GROUP",
+    "大阪",
+    "Web制作",
+    "IT企業",
+    "3D面白いサイト",
+  ],
   openGraph: {
-    title: "ホームページ制作・システム開発｜KANOA GROUP",
+    title: "KANOA GROUP｜ホームページ制作・システム開発",
     description:
       "KANOA GROUP — ホームページ制作・システム開発で新規ビジネスを支援します。",
     url: "https://kanoa-group.com",
