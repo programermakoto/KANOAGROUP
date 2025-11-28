@@ -8,7 +8,7 @@ export default function Philosophy() {
       aria-labelledby="kanoa-vision-title"
     >
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black/50 backdrop-blur-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/60 to-black/40 backdrop-blur-none" />
       <div className="relative z-10 container mx-auto px-6 py-20 md:py-28 lg:py-36 max-w-4xl text-center">
         <h2 id="kanoa-vision-title" className="text-lg md:text-2xl font-semibold text-white/90 leading-tight">
           KANOA GROUP

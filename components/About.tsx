@@ -40,9 +40,9 @@ export default function About() {
 
       <Attachment />
 
-      <div className="space-y-3 md:space-y-12">
+      <div className="space-y-2 md:space-y-12">
         {/* ビジョン */}
-        <article aria-labelledby="vision" className="prose prose-lg max-w-4xl mx-auto text-gray-700 my-50">
+        <article aria-labelledby="vision" className="prose prose-lg max-w-4xl mx-auto text-gray-700 my-20 md:my-50">
           <h3 id="vision" className="animate delay font-bold text-xl md:text-2xl text-center">
             KANOAGROUP<br className="sm:hidden" />ミッション＆ビジョンについて
           </h3>
@@ -53,12 +53,10 @@ export default function About() {
             を体現し続けます。
             創造と挑戦を通して、誰もが自由に生きられる社会をつくる
           </p>
-          <div className='mx-auto mt-4 text-center'>
+          <div className='mx-auto mt-2 md:mt-4 text-center'>
             <Link className='mx-auto px-6 py-2 rounded-full text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms] font-medium' href="/about/#vision">ビジョン詳細を見る</Link>
           </div>
         </article>
-
-        <Attachment />
 
         {/* 会社概要 */}
         <article className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12 px-4 lg:px-0 my-50">

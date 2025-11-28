@@ -41,7 +41,7 @@ export default function Recruitment() {
 
       {/* 説明文（SPは中央寄せ、PCは従来どおり） */}
       <article className='text-xl text-center md:text-left w-full md:w-1/2 mx-auto text-gray-700 px-4'>
-        <p className='leading-relaxed'>
+        <p className='text-xs md:leading-relaxed'>
           KANOA GROUPでは裁量権を<br className="sm:hidden"></br>
           持って事業を推し進めていける方を<br className="sm:hidden"></br>
           募集しております。<br />
