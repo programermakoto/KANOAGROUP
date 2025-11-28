@@ -95,8 +95,9 @@ export default function WebsiteFourStep({
       </div>
 
       <footer className="mt-8 text-center">
-        <p className="text-sm text-gray-500">このフローは標準的な例です。要件により順序や工程は変動します。</p>
-        <p className="text-sm text-gray-500">3Dモデルやアニメーションなどのオプションは更に+2,3日頂いております。</p>
+        <p className="text-sm text-gray-500">このフローは標準的な例です。<br className="sm:hidden" />要件により順序や工程は変動します。</p>
+        <br className="sm:hidden" />
+        <p className="text-sm text-gray-500">3Dモデルやアニメーションなどの<br className="sm:hidden" />オプションは更に+2,3日頂いております。</p>
       </footer>
     </section>
   );

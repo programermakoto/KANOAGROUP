@@ -23,7 +23,7 @@ export default function About() {
     <section aria-labelledby="company-info" className="container w-full pt-12">
       <div className="text-center mt-10 space-y-1">
         <p className="animate delay text-lg md:text-2xl font-semibold text-gray-700 drop-shadow-md">
-          ようこそ。<br className="sm:hidden" />下へ進むとKANOA GROUPの世界が広がります。
+          ようこそ。<br className="sm:hidden" />下へ進むとKANOA GROUPの世界が<br className="sm:hidden" />広がります。
         </p>
         <p className="animate text-sm md:text-base text-gray-600 tracking-wide drop-shadow">
           Thanks for visiting. Scroll for more.
@@ -40,7 +40,7 @@ export default function About() {
 
       <Attachment />
 
-      <div className="space-y-12">
+      <div className="space-y-3 md:space-y-12">
         {/* ビジョン */}
         <article aria-labelledby="vision" className="prose prose-lg max-w-4xl mx-auto text-gray-700 my-50">
           <h3 id="vision" className="animate delay font-bold text-xl md:text-2xl text-center">

@@ -6,6 +6,7 @@ import PortfolioGrid from './components/PortfolioGrid'
 import WebsiteFourStep from './components/WebsiteFourStep'
 import InfoWebCreate from './components/InfoWebCreate'
 import PricingPlans from './components/PricingPlans'
+import FAQByBusiness from '@/components/FAQByBusiness'
 
 export default function page() {
     return (
@@ -16,6 +17,7 @@ export default function page() {
             <PortfolioGrid />
             <InfoWebCreate/>
             <PricingPlans/>
+            <FAQByBusiness/>
         </section>
     )
 }

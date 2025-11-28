@@ -12,7 +12,7 @@ export default function Recruitment() {
 
             <div className="max-w-3xl mx-auto text-center">
                 <div className="w-full h-56 sm:h-40 relative mb-6">
-                    <Image alt="リクルート画像" src="/school.png" fill style={{ objectFit: "cover" }} />
+                    <Image alt="リクルート画像" src="/recruit.webp" fill style={{ objectFit: "cover" }} />
                 </div>
 
                 <h3 className="animate text-1xl font-bold md::text-2xl text-gray-700 mb-4">
