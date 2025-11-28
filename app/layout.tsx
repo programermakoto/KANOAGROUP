@@ -48,13 +48,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-    other: [{ rel: "manifest", url: "/site.webmanifest" }],
+    other: [{ rel: "manifest", url: "/site.webmanifest" }, { rel: 'icon', url: '/kanoa-logo.PNG', sizes: '192x192' }],
+    
   },
   // Next.js の Metadata 型は twitter プロパティを受け付けます
   // `metadata` を使うと自動で head に入るので便利
   twitter: {
     card: "summary_large_image",
-    title: "ホームページ制作・システム開発｜KANOA GROUP",
+    title: "KANOA GROUP|ホームページ制作・システム開発",
     description:
       "KANOA GROUP — ホームページ制作・システム開発で新規ビジネスを支援します。",
     images: ["https://kanoa-group.com/kanoa-logo.PNG"],
