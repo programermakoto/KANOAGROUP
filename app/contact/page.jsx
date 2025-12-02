@@ -1,9 +1,9 @@
 "use client";
 import React from 'react'
+import RenderModel from '@/components/RenderModel';
 import { WorldModel } from '@/components/models/earth';
 import ReactFook from './components/ReactFook';
 import { Toaster } from "sonner";
-import ReactFook from './components/ReactFook.jsx';
 
 
 export default function Contact() {
