@@ -2,8 +2,8 @@
 import React from 'react'
 import RenderModel from '@/components/RenderModel';
 import { WorldModel } from '@/components/models/earth';
-import ReactFook from './components/ReactFook.jsx';
-import { Toaster } from "sonner";
+// import ReactFook from './components/ReactFook.jsx';
+// import { Toaster } from "sonner";
 
 
 export default function Contact() {
@@ -45,12 +45,12 @@ export default function Contact() {
         </div>
       </article>
 
-      <Toaster position="top-right" />
+      {/* <Toaster position="top-right" /> */}
       <article className="relative flex flex-col md:flex-row w-full">
         {/* フォーム（手前に出す） */}
-        <div className="relative z-10 w-full md:w-1/2 p-4 md:p-0">
+        {/* <div className="relative z-10 w-full md:w-1/2 p-4 md:p-0">
           <ReactFook />
-        </div>
+        </div> */}
 
         {/* モデル背景（スマホで絶対配置、PCは横並び） */}
         <div className="absolute top-0 left-0 w-full h-full md:relative md:w-1/2 md:h-[80vh] z-0 pointer-events-none opacity-30 md:opacity-100">
