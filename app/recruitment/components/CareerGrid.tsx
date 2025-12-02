@@ -70,8 +70,7 @@ export default function CareerGrid() {
     // 他の項目も同様に追加
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null);
-
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   return (
     <article className='my-[20%] space-y-2 px-4'>
       <h2 className='text-center text-gray-700 text-xl md:text-2xl'>あなたは何になりたいですか？！</h2>
