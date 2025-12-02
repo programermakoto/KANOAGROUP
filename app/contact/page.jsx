@@ -1,8 +1,12 @@
 "use client";
 import React from 'react'
-import Reactfook from "./components/reactFook"
+import ReactFook from "./components/ReactFook"
 import RenderModel from '@/components/RenderModel';
 import EarthModel, { WorldModel } from '@/components/models/earth';
+
+import { Toaster } from "sonner";
+
+
 export default function Contact() {
   return (
     <>
@@ -12,12 +16,13 @@ export default function Contact() {
         className='-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-60'
       /> */}
       <div className="w-full h-screen relative">
+        
         <RenderModel >
           <WorldModel />
         </RenderModel>
         <h1 className="absolute inset-0 flex items-center justify-center px-4 md:px-12 lg:px-24">
           <span className="text-4xl text-center text-gray-700 sm:text-5xl md:text-6xl lg:text-7xl font-bold  opacity-80">
-            お問合せ
+           KANOA GROUPへお問い合わせ
           </span>
         </h1>
       </div>
@@ -41,11 +46,11 @@ export default function Contact() {
         </div>
       </article>
 
-
+      <Toaster position="top-right" />
       <article className="relative flex flex-col md:flex-row w-full">
         {/* フォーム（手前に出す） */}
         <div className="relative z-10 w-full md:w-1/2 p-4 md:p-0">
-          <Reactfook />
+          <ReactFook />
         </div>
 
         {/* モデル背景（スマホで絶対配置、PCは横並び） */}

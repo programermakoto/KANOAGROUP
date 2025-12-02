@@ -27,7 +27,10 @@ export default function CompanyProfile() {
             コーポレートサイト
           </p>
           <p className="p-2 w-full md:w-3/4 border text-center md:text-left break-words">
-            https://kanoa-group.com
+            <Link href="https://kanoa-group.com">
+              https://kanoa-group.com
+            </Link>
+
           </p>
         </div>
 
@@ -46,7 +49,7 @@ export default function CompanyProfile() {
           </p>
           <p className="p-2 w-full md:w-3/4 border text-center md:text-left break-words">
             <Link href="https://share.google/z6cwJyIVR4h2igtNO">
-              大阪府大阪市 港区弁天1-2-1 BEI-Tower
+              大阪府大阪市 港区弁天1-2-1 
             </Link>
           </p>
         </div>
@@ -76,7 +79,7 @@ export default function CompanyProfile() {
             資本金
           </p>
           <p className="p-2 w-full md:w-3/4 border text-center md:text-left">
-            10,000,000円
+            1,000,000円
           </p>
         </div>
 

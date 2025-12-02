@@ -109,7 +109,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh font-inter select-none`}>
-        <IntroOverlay src="/op.mp4" durationMs={4000} />
+        <IntroOverlay src="/leaf.mp4" durationMs={4000} />
         <Header />
         <main className="pt-16 min-h-screen">{children}</main>
         <Footer />
