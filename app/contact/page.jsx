@@ -2,7 +2,7 @@
 import React from 'react'
 import RenderModel from '@/components/RenderModel';
 import { WorldModel } from '@/components/models/earth';
-import ReactFook from './components/ReactFook';
+import ReactFook from './components/ReactFook.jsx';
 import { Toaster } from "sonner";
 
 
