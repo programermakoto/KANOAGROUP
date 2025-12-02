@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import Carousel from './components/Carousel'
 import Mission from '@/components/Mission'
+import CareerGrid from './components/CareerGrid'
 
 export default function Recruitment() {
   return (
@@ -17,7 +18,7 @@ export default function Recruitment() {
               alt='リクルート画像'
               width={1200}
               height={600}
-              src="/school.png"
+              src="/model-3.webp"
               className="w-full h-auto object-cover"
             />
             {/* 以下 2つは md:（PC）でのみ表示するのでPCには影響なし */}
@@ -70,19 +71,7 @@ export default function Recruitment() {
       </article>
 
       {/* 職種グリッド：SPは1列→見やすく、SMは2列、PCは4列（PCは従来通り） */}
-      <article className='my-[20%] space-y-2 px-4'>
-        <h2 className='text-center text-gray-700 text-xl md:text-2xl'>あなたは何になりたいですか？！</h2>
-        <div className='w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center p-2 md:p-4'>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>総合職<br className="sm:hidden"></br>・秘書<br className="sm:hidden"></br>・運転手</div>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>Webエンジニア</div>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>動画<br className="sm:hidden"></br>クリエイター</div>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>Webデザイナー</div>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>SNS管理チーム</div>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>宅内自宅<br className="sm:hidden"></br>ファイバー設定係</div>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>セールス<br className="sm:hidden"></br>マネージャー</div>
-          <div className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4'>セールスレップ</div>
-        </div>
-      </article>
+     <CareerGrid/>
 
       <Mission />
       <ForContact />

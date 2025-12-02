@@ -121,7 +121,7 @@ export default function Service() {
 
                 {/* 画像 */}
                 <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
-                    <Image src="/woman.png" alt="彼女 Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
+                    <Image src="/model-3.webp" alt="彼女 Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
                 </div>
             </section>
 

@@ -1,0 +1,120 @@
+"use client";
+import { useState } from "react";
+
+export default function CareerGrid() {
+  const items = [
+    {
+      title: "総合職・秘書・運転手",
+      img: "/model-4.webp",
+      salary: "月給25万円～",
+      days: "週5日",
+      age: "20～26歳",
+      sideJob: "可",
+    },
+    {
+      title: "Webエンジニア",
+      img: "/model-2.webp",
+      salary: "月給30万円～",
+      days: "週5日",
+      age: "20～40歳",
+      sideJob: "可",
+    },
+    {
+      title: "動画クリエイター",
+      img: "/model-7.webp",
+      salary: "月給28万円～",
+      days: "週4～5日",
+      age: "20～35歳",
+      sideJob: "可",
+    },
+    {
+      title: "Webデザイナー",
+      img: "/model-3.webp",
+      salary: "月給25万円～",
+      days: "週5日",
+      age: "20～35歳",
+      sideJob: "可",
+    },
+    {
+      title: "SNS管理チーム",
+      img: "/model-6.webp",
+      salary: "完全具合性",
+      days: "週3日〜",
+      age: "20～35歳",
+      sideJob: "可",
+    },
+    {
+      title: "宅内自宅ファイバー設定係",
+      img: "/eo-image.webp",
+      salary: "月給24万円～70万",
+      days: "週5日",
+      age: "20～40歳",
+      sideJob: "可",
+    },
+    {
+      title: "セールスマネージャー",
+      img: "/model-5.webp",
+      salary: "月給27万円～",
+      days: "週5日",
+      age: "25～40歳",
+      sideJob: "可",
+    },
+    {
+      title: "セールスレップ",
+      img: "/model-1.webp",
+      salary: "月給23万円～",
+      days: "週5日",
+      age: "20～35歳",
+      sideJob: "可",
+    },
+    // 他の項目も同様に追加
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  return (
+    <article className='my-[20%] space-y-2 px-4'>
+      <h2 className='text-center text-gray-700 text-xl md:text-2xl'>あなたは何になりたいですか？！</h2>
+      <div className='w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center p-2 md:p-4'>
+        {items.map((item, index) => (
+          <div key={index} className='relative'>
+            <div
+              className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4 bg-cover bg-center transition-all duration-1000 ease-in-out cursor-pointer'
+              style={{ backgroundImage: `url(${item.img})` }}
+              onClick={() => setActiveIndex(index)}
+            >
+              {item.title.split("・").map((line, i) => (
+                <span key={i}>
+                  {line}
+                  <br className="sm:hidden" />
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* モーダル */}
+      {activeIndex !== null && (
+       <div className='fixed inset-0 z-50 bg-[rgba(65,61,61,0.65)] flex justify-center items-center p-4'>
+       <div className='bg-white rounded-lg max-w-md w-full p-6 relative'>
+         <button
+           className='absolute top-4 right-4 text-gray-600 text-xl font-bold'
+           onClick={() => setActiveIndex(null)}
+         >
+           ×
+         </button>
+         <h3 className='text-xl font-bold mb-4'>{items[activeIndex].title}</h3>
+         <ul className='space-y-2 text-gray-700'>
+           <li><strong>お給料:</strong> {items[activeIndex].salary}</li>
+           <li><strong>勤務日数:</strong> {items[activeIndex].days}</li>
+           <li><strong>年齢:</strong> {items[activeIndex].age}</li>
+           <li><strong>副業参加:</strong> {items[activeIndex].sideJob}</li>
+         </ul>
+       </div>
+     </div>
+     
+      )}
+    </article>
+  );
+}
