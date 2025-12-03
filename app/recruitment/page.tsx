@@ -46,7 +46,9 @@ export default function Recruitment() {
           KANOA GROUPでは裁量権を<br className="sm:hidden"></br>
           持って事業を推し進めていける方を<br className="sm:hidden"></br>
           募集しております。<br />
-          リーダーとしてチームを引っ張っていきたい方、エンジニアを目指している方、上昇志向のある学生、新規事業の企画開発に興味のある方は<br className="sm:hidden"></br>ぜひお問い合わせください。
+          リーダーとしてチームを引っ張っていきたい方、<br className="sm:hidden"></br>
+          エンジニアを目指している方、上昇志向のある学生、<br className="sm:hidden"></br>
+          新規事業の企画開発に興味のある方は<br className="sm:hidden"></br>ぜひお問い合わせください。
         </p>
       </article>
 

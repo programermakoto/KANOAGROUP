@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function ForContact() {
     return (
-        <div className='container my-30 h-auto md:h-[50vh]  flex justify-center items-center'>
+        <div className='container my-30 h-auto md:h-[50vh]  w-full md:w-2/3 mx-auto flex justify-center items-center'>
             <div className='container flex flex-col md:flex-row items-center md:items-start justify-center gap-10'>
 
                 {/* テキスト部分 */}

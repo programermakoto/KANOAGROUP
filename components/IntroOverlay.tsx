@@ -58,6 +58,14 @@ export default function IntroOverlay({ src = "/op.mp4", durationMs = 4000 }: Pro
         src={src}
         autoPlay
         muted
+        style={{
+          objectFit: "cover",        // 中央クロップ（縦長に見せたいなら cover）
+          width: "100%",
+          height: "100%",
+          aspectRatio: "9/16",       // 縦長比を強制（ブラウザ対応）
+          maxHeight: "100vh",
+          transform: "translateZ(0)" // レンダリング安定化
+        }}
         playsInline
         preload="auto"
         onCanPlay={() => setLoaded(true)}

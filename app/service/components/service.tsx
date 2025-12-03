@@ -23,7 +23,7 @@ export default function Service() {
                     </div>
 
                     <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
-                        <Link href="https://on-cloud.jp/" target="_blank" rel="noopener noreferrer">
+                        <Link href="/optical-fiber" target="_blank" rel="noopener noreferrer">
                             <Button className="block bg-lime-500 hover:bg-orange-500 text-white hover:text-white transition duration-[500ms]" variant="outline">
                                 Read More
                             </Button>

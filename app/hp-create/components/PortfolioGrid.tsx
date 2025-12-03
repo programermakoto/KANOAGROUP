@@ -16,11 +16,6 @@ const items: Item[] = [
   { id: 2, title: "運送会社", href: "/works/2", src: "/site-Images/hp-2.webp", alt: "運送会社" },
   { id: 3, title: "アプリLP", href: "", src: "/site-Images/hp-1.webp", alt: "実績3" },
   { id: 4, title: "美容サロン", href: "", src: "/site-Images/hp-1.webp", alt: "実績4" },
-  { id: 5, title: "携帯会社", href: "", src: "/site-Images/hp-1.webp", alt: "実績5" },
-  { id: 6, title: "焼肉屋", href: "", src: "/site-Images/hp-1.webp", alt: "実績6" },
-  { id: 7, title: "通信会社", href: "", src: "/site-Images/hp-1.webp", alt: "実績7" },
-  { id: 8, title: "スクール", href: "", src: "/site-Images/hp-1.webp", alt: "実績8" },
-  { id: 9, title: "キャバクラ", href: "", src: "/site-Images/hp-1.webp", alt: "実績9" },
 ];
 
 export default function PortfolioGrid() {

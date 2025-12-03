@@ -21,8 +21,8 @@ export default function Contact() {
           <WorldModel />
         </RenderModel>
         <h1 className="absolute inset-0 flex items-center justify-center px-4 md:px-12 lg:px-24">
-          <span className="text-4xl text-center text-gray-700 sm:text-5xl md:text-6xl lg:text-7xl font-bold  opacity-80">
-           KANOA GROUPへお問い合わせ
+          <span className="text-4xl text-center text-sky-600 sm:text-5xl md:text-6xl lg:text-7xl font-bold  opacity-80">
+           KANOA GROUPへ<br className="sm:hidden"></br>お問い合わせ
           </span>
         </h1>
       </div>

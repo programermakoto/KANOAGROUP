@@ -38,7 +38,7 @@ export default function CareerGrid() {
     {
       title: "SNS管理チーム",
       img: "/model-6.webp",
-      salary: "完全具合性",
+      salary: "完全歩合制",
       days: "週3日〜",
       age: "20～35歳",
       sideJob: "可",
@@ -78,7 +78,7 @@ export default function CareerGrid() {
         {items.map((item, index) => (
           <div key={index} className='relative'>
             <div
-              className='text-sm md:text-xl border aspect-square flex items-center justify-center p-4 bg-cover bg-center transition-all duration-1000 ease-in-out cursor-pointer'
+              className='text-sm md:text-xl border aspect-square text-white font-bold flex items-center justify-center p-4 bg-cover bg-center transition-all duration-1000 ease-in-out cursor-pointer'
               style={{ backgroundImage: `url(${item.img})` }}
               onClick={() => setActiveIndex(index)}
             >
