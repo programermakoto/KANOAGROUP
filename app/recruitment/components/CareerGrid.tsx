@@ -5,46 +5,52 @@ export default function CareerGrid() {
   const items = [
     {
       title: "総合職・秘書・運転手",
+      description: "スケジュール管理、電話対応、営業、公式LINE&メール対応",
       img: "/model-4.webp",
       salary: "月給25万円～",
-      days: "週5日",
+      days: "週5日",  
       age: "20～26歳",
       sideJob: "可",
     },
     {
       title: "Webエンジニア",
+      description: "Webサイト制作、フロントエンド開発、バックエンド開発、データベース設計、セキュリティ対策",
       img: "/model-2.webp",
-      salary: "月給30万円～",
+      salary: "月給20万円～",
       days: "週5日",
       age: "20～40歳",
       sideJob: "可",
     },
     {
       title: "動画クリエイター",
+      description: "動画制作、編集、配信、広告運用、撮影",
       img: "/model-7.webp",
-      salary: "月給28万円～",
+      salary: "月給10万円～",
       days: "週4～5日",
       age: "20～35歳",
       sideJob: "可",
     },
     {
       title: "Webデザイナー",
+      description: "Webサイトデザイン、デザインガイドライン作成、デザインチェック、デザイン修正",
       img: "/model-3.webp",
-      salary: "月給25万円～",
-      days: "週5日",
+      salary: "月給10万円～",
+      days: "週4～5日",
       age: "20～35歳",
       sideJob: "可",
     },
     {
       title: "SNS管理チーム",
+      description: "SNS運用、ブログ制作、SNS運用、コメント対応",
       img: "/model-6.webp",
       salary: "完全歩合制",
-      days: "週3日〜",
-      age: "20～35歳",
+      days: "週1日〜",
+      age: "20～50歳",
       sideJob: "可",
     },
     {
       title: "宅内自宅ファイバー設定係",
+      description: "宅内自宅ファイバー設定、宅内自宅ファイバー設定チェック、宅内自宅ファイバー設定修正",
       img: "/eo-image.webp",
       salary: "月給24万円～70万",
       days: "週5日",
@@ -53,7 +59,8 @@ export default function CareerGrid() {
     },
     {
       title: "セールスマネージャー",
-      img: "/model-5.webp",
+      description: "通信事業統括、エンジニア統括、電話対応、営業、公式LINE&メール対応",
+      img: "/model-1.webp",
       salary: "月給27万円～",
       days: "週5日",
       age: "25～40歳",
@@ -61,10 +68,11 @@ export default function CareerGrid() {
     },
     {
       title: "セールスレップ",
-      img: "/model-1.webp",
-      salary: "月給23万円～",
-      days: "週5日",
-      age: "20～35歳",
+      description: "アクセサリ販売、人材紹介、プログラミングスクール集客、プログラミング講師、オンラインスクールGK-UP教材制作",
+      img: "/model-5.webp",
+      salary: "歩合制",
+      days: "未定",
+      age: "20～60歳",
       sideJob: "可",
     },
     // 他の項目も同様に追加
@@ -106,6 +114,7 @@ export default function CareerGrid() {
          <h3 className='text-xl font-bold mb-4'>{items[activeIndex].title}</h3>
          <ul className='space-y-2 text-gray-700'>
            <li><strong>お給料:</strong> {items[activeIndex].salary}</li>
+           <li><strong>仕事内容:</strong> {items[activeIndex].description}</li>
            <li><strong>勤務日数:</strong> {items[activeIndex].days}</li>
            <li><strong>年齢:</strong> {items[activeIndex].age}</li>
            <li><strong>副業参加:</strong> {items[activeIndex].sideJob}</li>

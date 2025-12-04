@@ -14,8 +14,7 @@ type Item = {
 const items: Item[] = [
   { id: 1, title: "IT会社", href: "/works/1", src: "/site-Images/hp-1.webp", alt: "IT会社" },
   { id: 2, title: "運送会社", href: "/works/2", src: "/site-Images/hp-2.webp", alt: "運送会社" },
-  { id: 3, title: "アプリLP", href: "", src: "/site-Images/hp-1.webp", alt: "実績3" },
-  { id: 4, title: "美容サロン", href: "", src: "/site-Images/hp-1.webp", alt: "実績4" },
+  { id: 3, title: "アパレルサイト", href: "https://romance-dawn-apparel.com/", src: "/site-Images/hp-3.webp", alt: "アパレルサイト" },
 ];
 
 export default function PortfolioGrid() {

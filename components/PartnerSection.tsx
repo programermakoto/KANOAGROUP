@@ -6,10 +6,11 @@ import React, { useEffect, useRef, useState } from "react";
 type Logo = { src: string; alt?: string; href?: string };
 
 const logos: Logo[] = [
-  { src: "/co-logo/book-co.jpeg", alt: "KANOA", href: "https://www.daikouseihonsho.com/" },
-  { src: "/co-logo/logo-bk.svg", alt: "KANOA", href: "https://master-key.co.jp/" },
-  { src: "/kanoa-logo.PNG", alt: "KANOA", href: "https://kanoagroup.jp" },
-  { src: "/co-logo/aozora.jpg", alt: "KANOA", href: "https://gmo-aozora.com/" },
+  { src: "/co-logo/smbc.webp", alt: "SMBC 三井住友銀行", href: "https://www.smbc.co.jp/" },
+  { src: "/co-logo/logo-bk.svg", alt: "MASTER-KEY", href: "https://master-key.co.jp/" },
+  { src: "/co-logo/aozora.jpg", alt: "あおぞらネット銀行", href: "https://gmo-aozora.com/" },
+  { src: "/co-logo/book-co.jpeg", alt: "有限会社大光製本所", href: "https://www.daikouseihonsho.com/" },
+  { src: "/co-logo/romancedawn.webp", alt: "Romance-Dawn", href: "https://romance-dawn-apparel.com/" },
 ];
 
 export default function PartnerSection() {
