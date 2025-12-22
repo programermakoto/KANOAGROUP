@@ -68,7 +68,7 @@ export default function CompanyProfile() {
             代表者名
           </p>
           <p className="p-2 w-full md:w-3/4 border text-center md:text-left">
-            <Link href="https://next-js-creative-portfolio-website.vercel.app/">
+            <Link href="https://makoto-kanoa-group-co.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAOjPmRleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAafLyEH6SUT_LwPutOJHOOCSa-QlBOGH0UBusg01BGnIB_33n447DNgGBsc1Xw_aem_zBOP7uQr5N6OsCY9uYkt5w">
               寺内誠将
             </Link>
           </p>

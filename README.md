@@ -30,4 +30,4 @@ supabaseの設定URL紹介
 
 <!-- 
 3Dモデルweb用に軽減
-　　　　　　　　　　　　　　フディレクトリはフォルダー名まで移動後 npx gltfjsx シーンの名前(head.glb) --transform -->
+　　　　　　　　　　　　　　ディレクトリはフォルダー名まで移動後 npx gltfjsx シーンの名前(head.glb) --transform -->
