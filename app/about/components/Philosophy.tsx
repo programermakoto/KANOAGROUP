@@ -1,45 +1,108 @@
-import React from 'react'
+"use client";
 
-export default function Philosophy() {
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function DiagonalHeroLang() {
+  const [lang, setLang] = useState<"ja" | "en">("en");
+
+  const content = {
+    en: {
+      smallTitle: "CORPORATE MESSAGE",
+      mainTitle: "Designing the Future\nwith Strategic Vision",
+      body: "We build systems that empower individuals and businesses. Through technology, education, and innovation, we create scalable value for the next generation.",
+      button: "Learn More",
+    },
+    ja: {
+      smallTitle: "企業メッセージ",
+      mainTitle: "未来をデザインする\n戦略的ビジョンで",
+      body: "私たちは、人と企業の可能性を最大化するシステムを構築します。テクノロジー、教育、イノベーションを通じて、次世代にスケーラブルな価値を創造します。",
+      button: "詳しく見る",
+    },
+  };
+
   return (
-    <section
-      id="vision"
-      className="relative bg-[url('/kanoa-home.png')] bg-cover bg-center bg-no-repeat"
-      aria-labelledby="kanoa-vision-title"
-    >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/60 to-black/40 backdrop-blur-none" />
-      <div className="relative z-10 container mx-auto px-6 py-20 md:py-28 lg:py-36 max-w-4xl text-center">
-        <h2 id="kanoa-vision-title" className="text-lg md:text-2xl font-semibold text-white/90 leading-tight">
-          KANOA GROUP
-          <br className="sm:hidden" /> 理念・ビジョン・バリュー
-        </h2>
+    <section className="relative overflow-hidden bg-white py-20 md:py-32">
+      {/* 背景レイヤー */}
+      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-gray-50 to-white" />
+      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-blue-100 rounded-full blur-3xl opacity-40 -z-10" />
 
-        <h1 className="mt-6 text-2xl md:text-4xl font-bold text-white tracking-tight">
-          「創造と挑戦を通して、誰もが自由に生きられる社会をつくる」
-        </h1>
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+        {/* 画像側 */}
+        <motion.div
+          initial={{ opacity: 0, x: -60, rotate: -5 }}
+          animate={{ opacity: 1, x: 0, rotate: -5 }}
+          transition={{ duration: 1 }}
+          className="relative flex justify-center md:justify-start"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 translate-x-6 translate-y-6 bg-gray-200 rounded-3xl -z-10" />
+            <img
+              src="/kanoa-home.webp"
+              alt="Company Vision"
+              className="
+                w-[280px] sm:w-[350px] md:w-[420px]
+                rounded-3xl
+                shadow-2xl
+                transform
+                -rotate-6
+                hover:rotate-0
+                transition duration-500
+              "
+            />
+          </div>
+        </motion.div>
 
-        <p className="mt-6 text-sm md:text-base text-white/90 leading-relaxed md:leading-7 max-w-3xl mx-auto">
-          KANOA GROUPは、創造と挑戦を通じて、誰もが自分らしく自由に生きられる社会を目指します。
-          私たちは、固定概念にとらわれず「自らの力で価値を生み出す人」を増やし、教育・テクノロジー・デザインなどの分野で、
-          個人の可能性を最大化する仕組みを創り出します。
-        </p>
+        {/* テキスト側 */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={lang}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="text-center md:text-left"
+          >
+            {/* 言語切替ボタン */}
+            <div className="flex justify-end gap-2 mb-4">
+              <button
+                onClick={() => setLang("ja")}
+                className={`px-3 py-1 rounded-full border ${
+                  lang === "ja"
+                    ? "bg-gray-900 text-white"
+                    : "bg-white text-gray-900 border-gray-300"
+                } transition`}
+              >
+                日本語
+              </button>
+              <button
+                onClick={() => setLang("en")}
+                className={`px-3 py-1 rounded-full border ${
+                  lang === "en"
+                    ? "bg-gray-900 text-white"
+                    : "bg-white text-gray-900 border-gray-300"
+                } transition`}
+              >
+                English
+              </button>
+            </div>
 
-        <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-white/80 leading-relaxed md:leading-7">
-          <p>
-            そして、私たちが追い求めるのは“これは面白い！”という心が動く瞬間。
-            その「面白さ」を創り続けることこそが、人々の価値観を変え、新しい選択肢と自由を広げていく原動力になると信じています。
-          </p>
+            <h2 className="text-sm tracking-widest text-gray-500 mb-3">
+              {content[lang].smallTitle}
+            </h2>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 whitespace-pre-line">
+              {content[lang].mainTitle}
+            </h1>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto md:mx-0">
+              {content[lang].body}
+            </p>
 
-          <p className="mt-4">
-            KANOA GROUPは、常にワクワクと自由の中心で、
-            「これは面白い！を創り ∴ 自由を広げる。」を体現し続けます。
-          </p>
-        </div>
-
-        {/* Optional small visual divider for larger screens */}
-        <div className="hidden md:block h-0.5 bg-white/20 w-24 mx-auto mt-10 rounded" aria-hidden="true" />
+            <button className="px-8 py-3 bg-black text-white rounded-full text-sm tracking-wide hover:bg-gray-800 transition">
+              {content[lang].button}
+            </button>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
-  )
+  );
 }

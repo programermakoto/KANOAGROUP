@@ -1,32 +1,69 @@
-import Image from 'next/image'
-import React from 'react'
-import { Button } from './ui/button'
-import Link from 'next/link'
+"use client";
 
-export default function Recruitment() {
-    return (
-        <section aria-labelledby="recruit" className="container w-full space-y-10 py-12">
-            <h2 id="recruit" className="animate text-3xl text-center my-6">
-                採用情報
-            </h2>
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
-            <div className="max-w-3xl mx-auto text-center">
-                <div className="w-full h-56 sm:h-40 relative mb-6">
-                    <Image alt="リクルート画像" src="/recruit.webp" fill style={{ objectFit: "cover" }} />
-                </div>
+export default function RecruitmentImpactScroll() {
+  const ref = useRef(null);
 
-                <h3 className="animate text-1xl font-bold md::text-2xl text-gray-700 mb-4">
-                    最高なチームで誰もが自由にもっと<br className="sm:hidden"></br>シンプルな社会をつくる
-                </h3>
+  // スクロール量に応じて文字を大きくする
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
 
-                <p className="text-base animate text-gray-700 mb-6">
-                    KANOA GROUPでは裁量権を持って事業を<br className="sm:hidden"></br>推し進めていける方を募集しております。<br className="sm:hidden"></br>リーダーとしてチームを引っ張っていきたい方、エンジニアを目指している方、上昇志向のある学生、新規事業の企画開発に興味のある方はぜひお問い合わせください。
-                </p>
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 2.2]); // スマホでも大きすぎないよう調整
 
-                <div className=' mx-auto mt-6 text-center'>
-                    <Link className=' mx-auto px-6 py-2 rounded-full text-white bg-sky-600  hover:bg-orange-500 transition duration-[500ms] text-center font-medium' href="/recruitment">採用情報を見る</Link>
-                </div>
-            </div>
-        </section>
-    )
+  return (
+    <section className="relative w-full h-[50vh] md:min-h-[100vh] flex flex-col items-center justify-start overflow-hidden">
+      {/* 背景画像 */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/kanoa-home.png"
+          alt="KANOA背景"
+          fill
+          style={{ objectFit: "cover" }}
+          quality={100}
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30"></div> {/* 少し暗めのオーバーレイ */}
+      </div>
+
+      {/* 上余白 */}
+      <div className="pt-[15vh] sm:pt-[20vh] md:pt-[25vh]"></div>
+
+      {/* インパクト文字 */}
+      <motion.h1
+        ref={ref}
+        style={{ scale }}
+        className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center tracking-tight z-10 px-4 sm:px-6"
+      >
+        お前はどうしたい！
+      </motion.h1>
+
+      {/* サブテキスト */}
+      <p className="text-white pt-8 sm:pt-12 text-sm sm:text-base md:text-lg lg:text-xl mt-4 max-w-3xl text-center z-10 px-4 sm:px-6 leading-relaxed">
+        KANOA GROUPなら裁量権を持って<br className="sm:hidden" />
+        自由に挑戦可能。<br /><br className="sm:hidden" />
+        いつまでやりたいことを我慢して<br className="sm:hidden" />
+        何年経ってる？そんな時間はもう終わりだ！
+      </p>
+
+      {/* CTAボタン */}
+      <Link
+        href="/recruitment"
+        className="
+          relative z-20 mt-8 sm:mt-12 rounded-full px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-semibold text-white bg-gradient-to-r from-sky-600 to-sky-500
+            hover:from-orange-500 hover:to-red-500 transition duration-500 font-medium shadow-lg
+        "
+      >
+        人生が変わるボタン
+      </Link>
+
+      {/* 下余白 */}
+      <div className="pb-[15vh] sm:pb-[20vh] md:pb-[25vh]"></div>
+    </section>
+  );
 }

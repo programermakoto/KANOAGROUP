@@ -225,7 +225,7 @@ export const LogoLoop = React.memo<LogoLoopProps>((props) => {
     logos,
     speed = 120,
     direction = 'left',
-    width = '100%',
+    width = '100vw', 
     logoHeight = 28,
     gap = 32,
     pauseOnHover,

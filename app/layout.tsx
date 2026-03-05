@@ -8,62 +8,54 @@ import IntroOverlay from "@/components/IntroOverlay";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-// Title をページごとに差し替え可能なテンプレートに
 export const metadata: Metadata = {
   title: {
-    default: "KANOA GROUP「これは面白い！を創り ∴ 自由を広げる。」",
+    default: "大阪のWeb制作・アプリ開発・光回線代理店｜KANOA GROUP",
     template: "%s | KANOA GROUP",
   },
   description:
-    "IT会社であるKANOA GROUPは「これは面白い!を創り ∴ 自由を広げる。」をミッションに、ホームページ制作・システム開発で新規ビジネスを支援します。",
-  keywords: [
-    "寺内誠将",
-    "ホームページ制作",
-    "システム開発",
-    "アプリ開発",
-    "KANOA GROUP",
-    "大阪",
-    "Web制作",
-    "IT企業",
-    "3D面白いサイト",
-  ],
+    "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクールを展開。企業の成長支援から人材育成までワンストップ対応。",
   openGraph: {
-    title: "KANOA GROUP「これは面白い！を創り ∴ 自由を広げる。」",
+    title: "大阪のWeb制作・アプリ開発・光回線代理店｜KANOA GROUP",
     description:
-      "ホームページ制作・システム開発・アプリ開発で新規ビジネスを支援します。",
+      "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクールを展開。企業の成長支援から人材育成までワンストップ対応。",
     url: "https://kanoa-group.com",
     siteName: "KANOA GROUP",
-    images: [{ url: "https://kanoa-group.com/kanoa-logo.PNG", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "https://kanoa-group.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
     type: "website",
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-video-preview": -1 },
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+    },
   },
   alternates: {
     canonical: "https://kanoa-group.com",
-    languages: { ja: "/", en: "/en" },
   },
   icons: {
-    icon: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-    other: [{ rel: "manifest", url: "/site.webmanifest" }, { rel: 'icon', url: '/kanoa-logo.PNG', sizes: '192x192' }],
-    
+    icon: "/kanoa-logo.png",
+    apple: "/kanoa-logo.png",
   },
-  // Next.js の Metadata 型は twitter プロパティを受け付けます
-  // `metadata` を使うと自動で head に入るので便利
   twitter: {
     card: "summary_large_image",
-    title: "KANOA GROUP「これは面白い！を創り ∴ 自由を広げる。」",
+    title: "大阪のWeb制作・アプリ開発・光回線代理店｜KANOA GROUP",
     description:
-      "ホームページ制作・システム開発・アプリ開発で新規ビジネスを支援します。",
-    images: ["https://kanoa-group.com/kanoa-logo.PNG"],
+      "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクールを展開。企業の成長支援から人材育成までワンストップ対応。",
+    images: ["https://kanoa-group.com/og-image.jpg"],
   },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  // JSON-LD（構造化データ）
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -72,9 +64,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         "@id": "https://kanoa-group.com/#organization",
         "name": "KANOA GROUP",
         "url": "https://kanoa-group.com",
-        "logo": "https://kanoa-group.com/kanoa-logo.PNG",
-        // "sameAs": ["https://twitter.com/your", "https://www.facebook.com/your"], // SNSあれば追加
-        "description": "ホームページ制作・システム開発で新規ビジネスを支援するIT会社。",
+        "logo": "https://kanoa-group.com/kanoa-logo.png",
+        "description":
+          "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物事業・人材紹介・オンラインスクールを展開。",
       },
       {
         "@type": "WebSite",
@@ -82,7 +74,68 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         "url": "https://kanoa-group.com",
         "name": "KANOA GROUP",
         "publisher": { "@id": "https://kanoa-group.com/#organization" },
-        "inLanguage": "ja"
+        "inLanguage": "ja",
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://kanoa-group.com/#local",
+        "name": "KANOA GROUP",
+        "image": "https://kanoa-group.com/kanoa-logo.png",
+        "url": "https://kanoa-group.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "大阪市",
+          "addressRegion": "大阪府",
+          "addressCountry": "JP"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "日本"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Web制作",
+        "description": "大阪で企業向けホームページ制作を常時受付。",
+        "areaServed": { "@type": "Place", "name": "大阪府" },
+        "provider": { "@id": "https://kanoa-group.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "アプリ開発",
+        "description": "業務効率化や新規事業向けアプリ開発を受託。",
+        "areaServed": { "@type": "Place", "name": "日本" },
+        "provider": { "@id": "https://kanoa-group.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "光回線代理店事業",
+        "description": "個人・法人向け光ファイバー回線を代理店として常時販売。",
+        "areaServed": { "@type": "Place", "name": "日本" },
+        "provider": { "@id": "https://kanoa-group.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "軽貨物事業",
+        "description": "軽貨物配送の受注および業務委託ドライバー募集を実施。",
+        "areaServed": { "@type": "Place", "name": "大阪府" },
+        "provider": { "@id": "https://kanoa-group.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock"
+        }
       }
     ]
   };
@@ -90,25 +143,19 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ja">
       <head>
-        {/* google site verification */}
-        <meta name="google-site-verification" content="kVAsQ8yYYOMQncvuhuXeSYj7XUKvgUhVwo4bf3Z_nzk" />
-
-        {/* Additional favicons / manifest */}
-        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
-        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#ffffff" />
-
-        {/* JSON-LD */}
+        <meta
+          name="google-site-verification"
+          content="kVAsQ8yYYOMQncvuhuXeSYj7XUKvgUhVwo4bf3Z_nzk"
+        />
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
 
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh font-inter select-none`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh`}
+      >
         <IntroOverlay src="/leaf.mp4" durationMs={4000} />
         <Header />
         <main className="pt-16 min-h-screen">{children}</main>

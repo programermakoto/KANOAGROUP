@@ -89,16 +89,20 @@ export default function CompanyProfile() {
           </p>
           <p className="p-2 w-full md:w-3/4 border text-left">
             【IT教育】<br />
-            ・プログラミングスクール<br />
-            ・アプリ教育[GK-U]<br /><br />
+            ・AI教育スクール<br />
+            ・社会人向け教育アプリ<br /><br />
 
             【WEB制作】<br />
             ・ホームページ制作<br />
+            ・LP制作<br />
             ・システム・アプリ開発<br /><br />
 
             【通信インフラ】<br />
             ・宅内光ファイバー業務<br />
             ・電気通信工事<br />
+            ・軽貨物運送<br />
+            ・人材紹介業務<br />
+            ・車載機器取付工事<br />
           </p>
         </div>
 
@@ -108,7 +112,7 @@ export default function CompanyProfile() {
           </p>
           <p className="p-2 w-full md:w-3/4 border break-words text-center md:text-left">
             <Link href="https://page.line.me/527qtybu?oat_content=url&openQrModal=true">
-              公式LINEはKANOAGROUPの全事業の統括者が管理してますので全て質問可能です
+              KANOAGROUPの全事業の統括LINE
             </Link>
           </p>
         </div>

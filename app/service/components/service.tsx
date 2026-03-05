@@ -17,8 +17,7 @@ export default function Service() {
                         <h1 className='text-gray-700 text-2xl md:text-3xl font-bold'>宅内光ファイバー開通業務</h1>
                         <small className='block text-gray-700 text-sm mb-2'>EO光のWi-Fi訪問設定サポート</small>
                         <p className='text-gray-700 mb-6 leading-relaxed'>
-                            お客様宅に訪問し、光ファイバーインターネット（EO光）の開通に伴うWi-Fi設定や通信環境の最適化を行うサービスです。
-                            接続設定から動作確認までを一貫してサポートし、初めての方でも安心してご利用いただけるよう丁寧に対応いたします。
+                        お客様宅に訪問し、光ファイバー（EO光）の開通に伴うWi-Fi設定や通信環境の最適化を行います。接続設定から動作確認まで一貫してサポートし、初めての方でも安心してご利用いただけます。
                         </p>
                     </div>
 
@@ -28,7 +27,7 @@ export default function Service() {
                                 Read More
                             </Button>
                         </Link>
-                        <Link href="https://lin.ee/N8Z79Gm" target="_blank" rel="noopener noreferrer">
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 hover:text-white transition duration-[500ms]" variant="outline">
                                 お問い合わせ
                             </Button>
@@ -63,8 +62,7 @@ export default function Service() {
                     <p className='text-gray-700 mb-6 leading-relaxed'>
                         未来塾は、プログラミング・マーケティング・デザイン・動画編集など、
                         これからの時代に必要とされるスキルを幅広く学べる教育スクールです。
-                        知識を“使える力”へと変える実践型カリキュラムを採用し、
-                        年齢や経験に関係なく、自分の可能性を最大限に伸ばせる学びの場を提供しています。
+                        知識を“実践で使える力”に変えるカリキュラムを採用し、年齢や経験に関係なく、個々の可能性を最大限に伸ばせる学びの場を提供しています。
                     </p>
 
                     <div className='flex justify-center gap-5 items-center'>
@@ -73,7 +71,7 @@ export default function Service() {
                                 Read More
                             </Button>
                         </Link>
-                        <Link href="https://lin.ee/N8Z79Gm" target="_blank" rel="noopener noreferrer">
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
                             </Button>
@@ -111,7 +109,7 @@ export default function Service() {
                                 Read More
                             </Button>
                         </Link>
-                        <Link href="https://lin.ee/N8Z79Gm" target="_blank" rel="noopener noreferrer">
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
                             </Button>
@@ -150,7 +148,7 @@ export default function Service() {
                                 Read More
                             </Button>
                         </Link>
-                        <Link href="https://lin.ee/N8Z79Gm" target="_blank" rel="noopener noreferrer">
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
                             </Button>
@@ -177,8 +175,7 @@ export default function Service() {
                     <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>GK-Uオンラインスクール</h1>
                     <small className='block text-gray-700 text-sm mb-2'>生徒にお金を支払う不思議なスクール</small>
                     <p className='text-gray-700 mb-6 leading-relaxed'>
-                        スキル毎にと打つ日や移動時間にお金支払う必要なし。この「GK-U」アプリひとつで
-                        「Web/SNSマーケティング・プログラミング・デザイン・財務・AI・資産運用」を学習できます。
+                    各スキルの学習に応じた費用や移動時間の負担はありません。この「GK-U」アプリひとつで、「Web/SNSマーケティング・プログラミング・デザイン・財務・AI・資産運用」を学習できます。
                     </p>
 
                     <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
@@ -187,7 +184,7 @@ export default function Service() {
                                 Read More
                             </Button>
                         </Link>
-                        <Link href="https://lin.ee/N8Z79Gm" target="_blank" rel="noopener noreferrer">
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
                             </Button>
@@ -200,7 +197,113 @@ export default function Service() {
                     <Image src="/gku.png" alt="GK-Uオンラインスクール Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
                 </div>
             </section>
+            <div className="flex justify-center my-[50px]">
+                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
+            </div>
+            {/* 軽貨物運送事業 */}
+            <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
+                {/* テキスト */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>軽貨物運送事業</h1>
+                    <small className='block text-gray-700 text-sm mb-2'>ヤマト運輸、佐川急便から軽貨物</small>
+                    <p className='text-gray-700 mb-6 leading-relaxed'>佐川急便から配送業務を受託し、Amazonなどの小口荷物を大阪各エリアでKANOA GROUPのチームが配送します。</p>
 
+                    <div className='flex justify-center gap-5 items-center'>
+                        <Link href="/" target="_blank" rel="noopener noreferrer">
+                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
+                                Read More
+                            </Button>
+                        </Link>
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
+                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
+                                お問い合わせ
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 画像 */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
+                    <Image src="/truck.webp" alt="軽貨物運送Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div className="flex justify-center my-[50px]">
+                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
+            </div>
+
+
+            {/* Cloud Pocket */}
+            <section className='flex flex-col-reverse md:flex-row items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
+                {/* テキスト */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>Cloud Pocket</h1>
+                    <small className='block text-gray-700 text-sm mb-2'>起業サービス</small>
+                    <p className='text-gray-700 mb-6 leading-relaxed'>
+                    個人事業主や新規事業を立ち上げる企業向けに、最先端のサービス提供や協業支援を行うプラットフォームです。
+                    </p>
+
+                    <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
+                        <Link href="/agency" target="_blank" rel="noopener noreferrer">
+                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
+                                Read More
+                            </Button>
+                        </Link>
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
+                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
+                                お問い合わせ
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 画像 */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
+                    <Image src="/cloud.webp" alt="GK-Uオンラインスクール Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
+                </div>
+            </section>
+            <div className="flex justify-center my-[50px]">
+                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
+            </div>
+            {/* 東京海上日動 */}
+            <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
+                {/* テキスト */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>載機器取付工事</h1>
+                    <small className='block text-gray-700 text-sm mb-2'>東京海上日動ドラレコ設置</small>
+                    <p className='text-gray-700 mb-6 leading-relaxed'>お客様宅に訪問して「東京海上日動ドラレコ」を設置します。初めての方でも安心してご利用いただけるよう丁寧に対応します。</p>
+
+                    <div className='flex justify-center gap-5 items-center'>
+                        <Link href="/" target="_blank" rel="noopener noreferrer">
+                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
+                                Read More
+                            </Button>
+                        </Link>
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
+                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
+                                お問い合わせ
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 画像 */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
+                    <Image src="/setting.webp" alt="軽貨物運送Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
+                </div>
+            </section>
+            
         </div>
     )
 }

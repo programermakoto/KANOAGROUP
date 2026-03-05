@@ -6,7 +6,7 @@ export default function Hero() {
         <section className="absolute inset-0 flex items-center px-4 sm:px-12 lg:px-24">
             <div className="flex-col flex mx-auto md:mx-0  md:flex-row items-center gap-4 max-w-4xl">
                 <Image
-                    src="/kanoa-logo.PNG"
+                    src="/kanoa-logo.png"
                     alt="KANOAGROUP会社ロゴ"
                     width={120}
                     height={120}

@@ -7,7 +7,7 @@ export default function Mission() {
       <h2 className='my-4   text-4xl md:text-3xl text-center'>Mission & Vision</h2>
       <h4 className='my-4 text-xs md:text-2xl text-center'>「これは面白い！を創り∴自由を広げる。」</h4>
       <small className='block text-xs text-center'>This is fun! Create it and expand freedom.</small>
-      <Image src="/kanoa-logo.PNG" alt='KANOAGROUPロゴ画像' width={100} height={100} className='my-4'/>
+      <Image src="/kanoa-logo.png" alt='KANOAGROUPロゴ画像' width={100} height={100} className='my-4'/>
 
     </div >
   )

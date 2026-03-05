@@ -3,13 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllNews, getNewsById } from "../../../lib/news";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const all = await getAllNews();
   return all.map(item => ({ id: item.id }));
 }
 
 export default async function NewsDetailPage({ params }) {
-  const item = await getNewsById(params.id);
+  const { id } = await params;          // ← Promise を await
+  const item = await getNewsById(id);   // ← ここが重要
+
   if (!item) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -20,7 +24,9 @@ export default async function NewsDetailPage({ params }) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <Link href="/news" className="text-sm text-gray-500 inline-block mb-4">← 一覧へ戻る</Link>
+      <Link href="/news" className="text-sm text-gray-500 inline-block mb-4">
+        ← 一覧へ戻る
+      </Link>
 
       <article className="bg-white rounded-2xl shadow p-6">
         <header className="space-y-2">
@@ -30,12 +36,19 @@ export default async function NewsDetailPage({ params }) {
 
         <div className="mt-6">
           <div className="w-full h-64 md:h-96 bg-gray-100 overflow-hidden rounded-lg">
-            <Image src={item.image} alt={item.title} width={1200} height={700} className="object-cover w-full h-full" />
+            <Image
+              src={item.image}
+              alt={item.title}
+              width={1200}
+              height={700}
+              className="object-cover w-full h-full"
+            />
           </div>
 
-          <p className="mt-6 text-xl font-bold md:text-lg text-gray-700">{item.description}</p>
+          <p className="mt-6 text-xl font-bold md:text-lg text-gray-700">
+            {item.description}
+          </p>
 
-         
           <section className="mt-6 prose max-w-none text-gray-700">
             <p className="leading-loose">{item.body}</p>
           </section>

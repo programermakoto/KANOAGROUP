@@ -5,19 +5,16 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const posters = [
-  "/co-logo/smbc.webp",
-  "/co-logo/logo-bk.svg",
-  "/co-logo/aozora.jpg",
-  "/co-logo/book-co.jpeg",
-  "/co-logo/romancedawn.webp",
-  "/co-logo/sosui.webp",
+  "/advertisement/advertisement01.webp",
+  "/advertisement/advertisement02.webp",
+  "/advertisement/advertisement03.webp",
 ];
 
-export default function PartnerSection() {
+export default function Service3D() {
   const controls = useAnimationControls();
   const trackRef = useRef<HTMLDivElement>(null);
   const [itemWidth, setItemWidth] = useState(0);
-  const gap = 32;
+  const gap = 24;
 
   useEffect(() => {
     if (!trackRef.current) return;
@@ -42,7 +39,7 @@ export default function PartnerSection() {
       controls.start({
         x: -index * itemWidth,
         transition: {
-          duration: 3,
+          duration: 1.8,
           ease: "easeInOut",
         },
       });
@@ -51,30 +48,19 @@ export default function PartnerSection() {
         setTimeout(() => {
           controls.set({ x: 0 });
           index = 0;
-        }, 3200);
+        }, 2000);
       }
-    }, 4800);
+    }, 3800);
 
     return () => clearInterval(interval);
   }, [itemWidth, controls]);
 
   return (
-    <section className="w-full bg-white py-20 sm:py-28 overflow-hidden select-none">
-      
-      {/* タイトル */}
-      <div className="text-center mb-12 sm:mb-16">
-        <h2 className="text-sm tracking-[0.2em] text-gray-400 mb-3">
-          PARTNERS
-        </h2>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
-          主要取引先
-        </h3>
-      </div>
-
+    <div className="relative w-full overflow-hidden py-20 bg-white select-none">
       <motion.div
         ref={trackRef}
         animate={controls}
-        className="flex gap-8 w-max"
+        className="flex gap-6 w-max"
       >
         {[...posters, ...posters].map((src, i) => (
           <div
@@ -83,32 +69,27 @@ export default function PartnerSection() {
             onContextMenu={(e) => e.preventDefault()} // 右クリック禁止
             className="
               relative
-              flex items-center justify-center
-              bg-white
+              w-[160px]
+              sm:w-[220px]
+              md:w-[280px]
+              aspect-square
               rounded-2xl
-              shadow-sm
-
-              w-[140px] h-[90px]
-              sm:w-[180px] sm:h-[110px]
-              md:w-[220px] md:h-[130px]
-              lg:w-[260px] lg:h-[150px]
+              overflow-hidden
+              shadow-xl
+              bg-white
             "
           >
             <Image
               src={src}
-              alt="主要取引先ロゴ"
+              alt="advertisement"
               fill
               draggable={false} // ドラッグ禁止
-              sizes="(max-width: 640px) 140px,
-                     (max-width: 768px) 180px,
-                     (max-width: 1024px) 220px,
-                     260px"
-              className="object-contain p-4 pointer-events-none"
+              className="object-cover pointer-events-none"
               priority={i === 0}
             />
           </div>
         ))}
       </motion.div>
-    </section>
+    </div>
   );
 }
