@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     canonical: "https://kanoa-group.com",
   },
   icons: {
-    icon: "/kanoa-logo.png",
-    apple: "/kanoa-logo.png",
+    icon: "/kanoa-logo.PNG",
+    apple: "/kanoa-logo.PNG",
   },
   twitter: {
     card: "summary_large_image",
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "@id": "https://kanoa-group.com/#organization",
         "name": "KANOA GROUP",
         "url": "https://kanoa-group.com",
-        "logo": "https://kanoa-group.com/kanoa-logo.png",
+        "logo": "https://kanoa-group.com/kanoa-logo.PNG",
         "description":
           "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物事業・人材紹介・オンラインスクールを展開。",
       },
@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "@type": "LocalBusiness",
         "@id": "https://kanoa-group.com/#local",
         "name": "KANOA GROUP",
-        "image": "https://kanoa-group.com/kanoa-logo.png",
+        "image": "https://kanoa-group.com/kanoa-logo.PNG",
         "url": "https://kanoa-group.com",
         "address": {
           "@type": "PostalAddress",

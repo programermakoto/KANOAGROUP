@@ -112,7 +112,7 @@ export default function Logo() {
               {section.list && (
                 <div className="md:w-[20%] flex justify-center md:justify-end items-start">
                   <Image
-                    src="/kanoa-logo.png"
+                    src="/kanoa-logo.PNG"
                     alt="KANOA GROUP Logo"
                     width={280}
                     height={100}

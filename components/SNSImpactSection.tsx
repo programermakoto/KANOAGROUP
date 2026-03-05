@@ -77,7 +77,7 @@ export default function SNSImpactSection() {
           <div className="flex items-center gap-4 mb-4">
             <div className="relative w-12 h-12">
               <Image
-                src="/kanoa-logo.png"
+                src="/kanoa-logo.PNG"
                 alt="KANOAロゴ"
                 fill
                 className="object-contain"

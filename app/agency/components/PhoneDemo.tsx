@@ -118,7 +118,7 @@ export default function PhoneDemo() {
                 
                 {/* ロゴ */}
                 <div className="flex justify-center mb-3">
-                  <Image src="/kanoa-logo.png" alt="KANOA LOGO" width={100} height={32} />
+                  <Image src="/kanoa-logo.PNG" alt="KANOA LOGO" width={100} height={32} />
                 </div>
 
                 {/* タイトル */}
