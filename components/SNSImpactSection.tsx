@@ -17,7 +17,7 @@ export default function SNSImpactSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0.4, 1]);
 
   return (
-    <section className="relative w-full min-h-[90vh] flex flex-col items-center justify-center bg-white overflow-hidden px-6">
+    <section className="relative w-full h-auto py-30 md:h-[100vh] flex flex-col items-center justify-center bg-white overflow-hidden px-10 md:px-4">
 
       <div className="absolute py-3 inset-0 bg-gradient-to-b from-gray-50 to-white -z-10" />
 

@@ -21,7 +21,7 @@ export default function RecruitmentImpactScroll() {
       {/* 背景画像 */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/kanoa-home.png"
+          src="/kanoa-home.webp"
           alt="KANOA背景"
           fill
           style={{ objectFit: "cover" }}

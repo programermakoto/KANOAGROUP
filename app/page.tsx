@@ -88,13 +88,18 @@ export default async function Home() {
   return (
     <>
       <main>
+
         {/* HERO */}
         <div className="w-full h-screen relative">
+          
           <RenderModel>
             <WorldModel position={[1, 0, 1.2]} />
           </RenderModel>
+
           <Hero />
+
         </div>
+
         {/* 企業情報 */}
         <About />
 

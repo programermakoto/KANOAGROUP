@@ -87,7 +87,7 @@ export default function AgencyPage() {
     "
   >
     好きな場所、
-    好きな時。
+    好きな時。<br className="md:hidden"></br>
     スキマ時間で、
     スマホで仕事。
   </p>
