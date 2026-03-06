@@ -44,41 +44,55 @@ export default function AgencyPage() {
   return (
     <main className="w-full">
       {/* HERO */}
-      <section
-        ref={vantaRef}
-        className="relative h-screen overflow-hidden flex items-center justify-center px-6"
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/30" />
+<section
+  ref={vantaRef}
+  className="relative h-screen overflow-hidden flex items-center justify-center px-6"
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-white/30" />
 
-        <div className="relative z-10 flex flex-col items-center text-center -translate-y-12 md:-translate-y-16">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent drop-shadow-lg">
-            Cloud Pocket
-          </h1>
-          <p className="text-white/90 text-sm md:text-base mb-8 tracking-wide">
-            手軽に始めるクラウドワーク
-          </p>
-          <Link
-            href="/contact"
-            className="backdrop-blur-md bg-white/80 hover:bg-white text-black px-10 py-4 rounded-2xl font-semibold text-lg shadow-2xl hover:scale-105 transition border border-white/40 inline-block"
-          >
-            新規登録
-          </Link>
-        </div>
+  <div className="relative z-10 flex flex-col items-center text-center -translate-y-12 md:-translate-y-16">
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent drop-shadow-lg">
+      Cloud Pocket
+    </h1>
 
-        <div
-          className="absolute top-16 left-1/2 -translate-x-1/2 text-white/90 text-center
-                     md:left-auto md:right-10 md:top-1/3 md:-translate-y-1/2 md:translate-x-0 md:text-left"
-        >
-          <p
-            className="text-sm tracking-[0.28em] md:writing-vertical"
-          >
-            好きな場所、<br className="md:hidden"></br>好きな時。<br />
-            スキマ時間で、<br className="md:hidden"></br>
-            スマホで仕事。
-          </p>
-        </div>
-      </section>
+    <p className="text-white/90 text-sm md:text-base mb-8 tracking-wide">
+      手軽に始めるクラウドワーク
+    </p>
 
+    <Link
+      href="/contact"
+      className="backdrop-blur-md bg-white/80 hover:bg-white text-black px-10 py-4 rounded-2xl font-semibold text-lg shadow-2xl hover:scale-105 transition border border-white/40 inline-block"
+    >
+      新規登録
+    </Link>
+  </div>
+
+  {/* 縦書きキャッチ */}
+  <div
+  className="
+    absolute
+    top-16 left-1/2 -translate-x-1/2
+    md:left-auto md:right-12 md:top-1/3 md:-translate-y-1/3 md:translate-x-0
+    text-white/90
+  "
+>
+  <p
+    className="
+      text-xs md:text-sm
+      leading-loose
+      tracking-[0.2em]
+      text-center md:text-left
+      [writing-mode:vertical-rl]
+      [text-orientation:upright]
+    "
+  >
+    好きな場所、
+    好きな時。
+    スキマ時間で、
+    スマホで仕事。
+  </p>
+</div>
+</section>
       {/* 特徴セクション */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
