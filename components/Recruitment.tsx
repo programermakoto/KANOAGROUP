@@ -17,7 +17,7 @@ export default function RecruitmentImpactScroll() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 2.2]); // スマホでも大きすぎないよう調整
 
   return (
-    <section className="relative w-full h-[50vh] md:min-h-[100vh] flex flex-col items-center justify-start overflow-hidden">
+    <section className="relative w-full min-h-[80vh] md:min-h-[100vh] flex flex-col items-center justify-start overflow-hidden">
       {/* 背景画像 */}
       <div className="absolute inset-0 -z-10">
         <Image

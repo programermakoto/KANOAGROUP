@@ -29,8 +29,8 @@ function NewsList({ items }: { items: NewsItem[] }) {
         最新ニュース
       </h2>
       <p className="text-center text-gray-600 mb-8">
-        KANOA GROUPの動きや新しい挑戦、イベント情報をチェック！<br />
-        気になるトピックはクリックして詳しく読んでみよう。
+        KANOA GROUPの動きや新しい挑戦、<br className="md:hidden"></br>イベント情報をチェック！<br />
+        気になるトピックはクリックして<br className="md:hidden"></br>詳しく読んでみよう。
       </p>
 
       <div className="space-y-4">

@@ -53,13 +53,13 @@ export default function About() {
           </p>
           <div className="text-center space-y-4">
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-              KANOA GROUPは、常にワクワクと自由の中心で、
+              KANOA GROUPは、<br className="md:hidden"></br>常にワクワクと自由の中心で、
             </p>
             <p className="text-sky-600 font-bold text-xl md:text-2xl animate">
               「これは面白い！を創り ∴ 自由を広げる。」
             </p>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-              を体現し続けます。創造と挑戦を通して、誰もが自由に生きられる社会をつくる
+              を体現し続けます。<br className="md:hidden"></br>創造と挑戦を通して、誰もが自由に<br className="md:hidden"></br>生きられる社会をつくる
             </p>
           </div>
           <div className="flex justify-center mt-4">
@@ -84,7 +84,7 @@ export default function About() {
           <p className="text-center font-medium text-gray-600 animate delay">Service</p>
           <div className="text-center space-y-4">
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-            KANOA GROUPは、<br className="sm:hidden" />IT領域とスキル不要型ビジネスの二軸で構成されています。
+            KANOA GROUPは、<br className="sm:hidden" />IT領域とスキル不要型ビジネスの<br className="md:hidden"></br>二軸で構成されています。
             </p>
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
             KANOA GROUP is comprised of two pillars: <br className="sm:hidden" /> IT and skill-free businesses.

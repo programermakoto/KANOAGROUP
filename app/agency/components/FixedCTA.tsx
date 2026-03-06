@@ -11,7 +11,8 @@ export default function FixedCTA() {
 
           {/* テキスト */}
           <div className="text-sm md:text-base text-center md:text-left leading-snug">
-            これが、2軸で構成された KANOA GROUP が推す 1 軸 
+            これが、2軸で構成された KANOA GROUP が推す 1 軸 <br className="md:hidden"></br>
+            <br className="md:hidden"></br>
             <span className="font-semibold m-2 bg-white px-2 py-1 rounded-md">Cloud Pocket</span>
           </div>
 

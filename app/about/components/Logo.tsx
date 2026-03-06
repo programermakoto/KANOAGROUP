@@ -60,7 +60,7 @@ export default function Logo() {
 
   return (
     <section id="value" className="pt-20 container mx-auto space-y-12 text-gray-700">
-      
+
       {/* 言語切替 */}
       <div className="flex justify-end gap-2 mb-6">
         <button
@@ -110,7 +110,7 @@ export default function Logo() {
 
               {/* 画像 */}
               {section.list && (
-                <div className="md:w-[20%] flex justify-center md:justify-end items-start">
+                <div className="md:w-[20%] flex justify-center md:justify-end items-center md:items-start w-full">
                   <Image
                     src="/kanoa-logo.PNG"
                     alt="KANOA GROUP Logo"

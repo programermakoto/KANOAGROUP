@@ -13,7 +13,9 @@ export default function Hero() {
                     className="object-cover  opacity-80  md:opacity-100"
                     priority
                 />
-                <h1 className="animate text-5xl opacity-80 md:opacity-100  lg:text-6xl font-extrabold  text-sky-600 leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight
+drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]
+tracking-tight">
                     KANOA GROUP
                 </h1>
             </div>

@@ -70,11 +70,11 @@ export default function AgencyPage() {
                      md:left-auto md:right-10 md:top-1/3 md:-translate-y-1/2 md:translate-x-0 md:text-left"
         >
           <p
-            className="text-sm tracking-[0.28em]"
-            style={{ writingMode: "vertical-rl", textOrientation: "upright", lineHeight: "2.3" }}
+            className="text-sm tracking-[0.28em] md:writing-vertical"
           >
-            好きな場所、好きな時。<br />
-            スキマ時間で、スマホで仕事。
+            好きな場所、<br className="md:hidden"></br>好きな時。<br />
+            スキマ時間で、<br className="md:hidden"></br>
+            スマホで仕事。
           </p>
         </div>
       </section>
