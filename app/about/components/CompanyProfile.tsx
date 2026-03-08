@@ -101,7 +101,6 @@ export default function CompanyProfile() {
             ・宅内光ファイバー業務<br />
             ・電気通信工事<br />
             ・軽貨物運送<br />
-            ・人材紹介業務<br />
             ・車載機器取付工事<br />
           </p>
         </div>

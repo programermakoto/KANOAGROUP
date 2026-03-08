@@ -22,11 +22,7 @@ export default function Service() {
                     </div>
 
                     <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
-                        <Link href="/optical-fiber" target="_blank" rel="noopener noreferrer">
-                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white hover:text-white transition duration-[500ms]" variant="outline">
-                                Read More
-                            </Button>
-                        </Link>
+                        
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 hover:text-white transition duration-[500ms]" variant="outline">
                                 お問い合わせ
@@ -143,11 +139,7 @@ export default function Service() {
                     </p>
 
                     <div className='flex justify-center gap-5 items-center'>
-                        <Link href="/" target="_blank" rel="noopener noreferrer">
-                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
-                                Read More
-                            </Button>
-                        </Link>
+                       
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
@@ -179,11 +171,7 @@ export default function Service() {
                     </p>
 
                     <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
-                        <Link href="/" target="_blank" rel="noopener noreferrer">
-                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
-                                Read More
-                            </Button>
-                        </Link>
+                       
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
@@ -209,11 +197,7 @@ export default function Service() {
                     <p className='text-gray-700 mb-6 leading-relaxed'>佐川急便から配送業務を受託し、Amazonなどの小口荷物を大阪各エリアでKANOA GROUPのチームが配送します。</p>
 
                     <div className='flex justify-center gap-5 items-center'>
-                        <Link href="/" target="_blank" rel="noopener noreferrer">
-                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
-                                Read More
-                            </Button>
-                        </Link>
+                      
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
@@ -285,11 +269,7 @@ export default function Service() {
                     <p className='text-gray-700 mb-6 leading-relaxed'>お客様宅に訪問して「東京海上日動ドラレコ」を設置します。初めての方でも安心してご利用いただけるよう丁寧に対応します。</p>
 
                     <div className='flex justify-center gap-5 items-center'>
-                        <Link href="/" target="_blank" rel="noopener noreferrer">
-                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
-                                Read More
-                            </Button>
-                        </Link>
+                        
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ

@@ -86,10 +86,13 @@ export default function AgencyPage() {
       [text-orientation:upright]
     "
   >
-    好きな場所、。<br className="md:hidden"></br>
-    好きな時。<br className="md:hidden"></br><br></br>
-    スキマ時間で、。<br className="md:hidden"></br>
-    スマホで仕事。。<br className="md:hidden"></br>
+    好きな場所、
+    <br className="md:hidden"></br>
+    好きな時。
+    <br className="md:hidden"></br>
+    <br></br>
+    スキマ時間で、<br className="md:hidden"></br>
+    スマホで仕事。<br className="md:hidden"></br>
   </p>
 </div>
 </section>
