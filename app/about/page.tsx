@@ -1,35 +1,24 @@
-"use client";
+import type { Metadata } from "next";
+import AboutClient from "./AboutClient";
 
-import ForContact from '@/components/ForContact'
-import React from 'react'
-import President from './components/President';
-import Logo from './components/Logo';
-import CompanyProfile from './components/CompanyProfile';
-import Philosophy from './components/Philosophy';
-import Access from './components/Access';
-import Mission from '@/components/Mission';
-import Attachment from '@/components/ui/Attachment';
-import Value from './components/Value';
+export const metadata: Metadata = {
+  title: "会社概要 | KANOA GROUP",
+  description:
+    "KANOA GROUPの会社概要。大阪を拠点にWeb制作・アプリ開発・人材事業・オンラインスクールなど複数事業を展開しています。",
+  alternates: {
+    canonical: "https://kanoa-group.com/about",
+  },
+  openGraph: {
+    title: "会社概要 | KANOA GROUP",
+    description:
+      "KANOA GROUPの会社概要。Web制作・アプリ開発・人材事業などを展開。",
+    url: "https://kanoa-group.com/about",
+    siteName: "KANOA GROUP",
+    locale: "ja_JP",
+    type: "website",
+  },
+};
 
-
-export default function about() {
-
-  return (
-    <div className='container space-y-40'>
-      {/* 理念 */}
-      <Philosophy />
-      {/* 会社概要 */}
-      <CompanyProfile />
-      {/* アクセス */}
-      <Access />
-      {/* 挨拶 */}
-      <President />
-      {/* バリュー */}
-      <Value />
-      {/* ロゴ由来 */}
-      <Logo />
-      <Mission />
-      <ForContact />
-    </div >
-  );
+export default function Page() {
+  return <AboutClient />;
 }
