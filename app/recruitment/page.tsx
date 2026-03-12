@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import ForContact from '@/components/ForContact'
 import Image from 'next/image'
 import React from 'react'
@@ -5,6 +6,28 @@ import Carousel from './components/Carousel'
 import Mission from '@/components/Mission'
 import CareerGrid from './components/CareerGrid'
 
+export const metadata: Metadata = {
+  title: "大阪のIT企業採用 | エンジニア募集 | KANOA GROUP",
+  description:
+    "KANOA GROUPの採用情報。大阪を拠点にWeb制作・アプリ開発など複数事業を展開する企業で、エンジニア・営業・学生インターンを募集しています。",
+};
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "JobPosting",
+  "title": "Webエンジニア",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "KANOA GROUP"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "大阪市",
+      "addressCountry": "JP"
+    }
+  }
+}
 export default function Recruitment() {
   return (
     <section className='container w-full space-y-20'>
@@ -73,7 +96,7 @@ export default function Recruitment() {
       </article>
 
       {/* 職種グリッド：SPは1列→見やすく、SMは2列、PCは4列（PCは従来通り） */}
-     <CareerGrid/>
+      <CareerGrid />
 
       <Mission />
       <ForContact />
