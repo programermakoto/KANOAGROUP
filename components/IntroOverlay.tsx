@@ -7,6 +7,9 @@ type Props = {
   durationMs?: number;
 };
 
+const LAST_SHOWN_KEY = "kanoa_intro_last_shown";
+const REPLAY_INTERVAL_MS = 10 * 60 * 1000; // 10分
+
 export default function IntroOverlay({ src = "/op.mp4", durationMs = 4000 }: Props) {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
@@ -14,12 +17,30 @@ export default function IntroOverlay({ src = "/op.mp4", durationMs = 4000 }: Pro
   const [loaded, setLoaded] = useState(false);
   const timerRef = useRef<number | null>(null);
 
-  // ルートに来たときだけ ON
+  // ルートに来たときだけ ON（直近10分以内に再生済みならスキップ）
   useEffect(() => {
     if (pathname === "/") {
+      let lastShown = 0;
+      try {
+        lastShown = Number(localStorage.getItem(LAST_SHOWN_KEY)) || 0;
+      } catch {
+        lastShown = 0;
+      }
+
+      if (Date.now() - lastShown < REPLAY_INTERVAL_MS) {
+        setVisible(false);
+        return;
+      }
+
       setLoaded(false);
       setFadeOut(false);
       setVisible(true);
+
+      try {
+        localStorage.setItem(LAST_SHOWN_KEY, String(Date.now()));
+      } catch {
+        // localStorageが使えない環境では毎回再生される
+      }
 
       // duration 経過したらフェードアウト開始
       if (timerRef.current) clearTimeout(timerRef.current);

@@ -22,40 +22,40 @@ export default function About() {
 
   return (
     <section aria-labelledby="company-info" className="container w-full pt-12">
-      <h2 id="company-info" className="animate text-3xl my-6 text-center lg:text-left">
-        KANOA GROUP 企業情報
-      </h2>
+      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 my-10 md:my-16">
+        {/* 企業情報 + 画像 */}
+        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-4">
+          <h2 id="company-info" className="animate text-3xl text-center lg:text-left">
+            KANOA GROUP 企業情報
+          </h2>
+          <div className="w-full rounded-2xl overflow-hidden shadow-lg">
+            <Attachment />
+          </div>
+        </div>
 
-      <Attachment />
-
-      <div className="space-y-2 md:space-y-12">
-        {/* 事業内容 */}
-        <article className="h-screen flex flex-col justify-center items-center max-w-3xl mx-auto text-gray-700 my-20 md:my-32 space-y-6">
+        {/* サービス一覧 */}
+        <article className="w-full lg:w-1/2 flex flex-col items-center text-gray-700 space-y-6">
           <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 animate delay">
             サービス一覧
           </h3>
           <p className="text-center font-medium text-gray-600 animate delay">Service</p>
           <div className="text-center space-y-4">
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-              KANOA GROUPは、<br className="sm:hidden" />IT領域とスキル不要型ビジネスの<br className="md:hidden"></br>二軸で構成されています。
+              KANOA GROUPは、<br className="sm:hidden" />IT領域とスキル不要型ビジネスの<br className="md:hidden" />二軸で構成されています。
             </p>
           </div>
           <Service3D />
-          <div className="flex justify-center mt-4">
-            {/* CTAボタン */}
-            <Link
-              href="/service"
-              className="
-          relative z-20 mt-8 sm:mt-12 rounded-full px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-semibold text-white bg-gradient-to-r from-sky-600 to-sky-500
-            hover:from-orange-500 hover:to-red-500 transition duration-500 font-medium shadow-lg
-        "
-            >
-              事業一覧を見る
-            </Link>
-
-          </div>
+          {/* CTAボタン */}
+          <Link
+            href="/service"
+            className="relative z-20 mt-4 rounded-full px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-semibold text-white bg-gradient-to-r from-sky-600 to-sky-500 hover:from-orange-500 hover:to-red-500 transition duration-500 shadow-lg"
+          >
+            事業一覧を見る
+          </Link>
         </article>
-       
+      </div>
+
+      <div className="space-y-2 md:space-y-12">
         {/* 会社概要 */}
         <article className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12 px-4 lg:px-0 my-50">
           {/* 画像 or 動画 */}
