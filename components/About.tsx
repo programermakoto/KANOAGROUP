@@ -22,20 +22,23 @@ export default function About() {
 
   return (
     <section aria-labelledby="company-info" className="container w-full pt-12">
-      <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 my-10 md:my-16">
+      <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16 my-10 md:my-16">
         {/* 企業情報 + 画像 */}
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-4">
-          <h2 id="company-info" className="animate text-3xl text-center lg:text-left">
+          <h2
+            id="company-info"
+            className="animate text-2xl md:text-3xl font-bold text-gray-800 text-center lg:text-left"
+          >
             KANOA GROUP 企業情報
           </h2>
           <div className="w-full rounded-2xl overflow-hidden shadow-lg">
-            <Attachment />
+            <Attachment className="h-[240px] md:h-[360px]" />
           </div>
         </div>
 
         {/* サービス一覧 */}
         <article className="w-full lg:w-1/2 flex flex-col items-center text-gray-700 space-y-6">
-          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 animate delay">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 text-center lg:text-left w-full">
             サービス一覧
           </h3>
           <p className="text-center font-medium text-gray-600 animate delay">Service</p>

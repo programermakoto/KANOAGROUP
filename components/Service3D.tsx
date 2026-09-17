@@ -56,7 +56,7 @@ export default function Service3D() {
   }, [itemWidth, controls]);
 
   return (
-    <div className="relative w-full overflow-hidden py-20 bg-white select-none">
+    <div className="relative w-full overflow-hidden py-8 md:py-10 bg-white select-none">
       <motion.div
         ref={trackRef}
         animate={controls}

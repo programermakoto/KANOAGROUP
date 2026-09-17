@@ -1,8 +1,13 @@
-
 import React from "react";
-export default function Attachment() {
-    return (
-      <div className="h-[25vh] md:h-[30vh]  md:bg-fixed bg-cover bg-center relative bg-[url('/BeiTower.webp')]"></div>
-    )
-  }
-  
+
+type Props = {
+  className?: string;
+};
+
+export default function Attachment({ className = "h-[25vh] md:h-[30vh]" }: Props) {
+  return (
+    <div
+      className={`${className} md:bg-fixed bg-cover bg-center relative bg-[url('/BeiTower.webp')]`}
+    ></div>
+  );
+}
