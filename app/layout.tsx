@@ -10,15 +10,15 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   title: {
-    default: "大阪のWeb制作・アプリ開発・光回線代理店｜KANOAグループ",
+    default: "株式会社KANOA　GROUP",
     template: "%s｜KANOAグループ",
   },
   description:
-    "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクールを展開。企業の成長支援から人材育成までワンストップ対応。",
+    "株式会社KANOA GROUPは2024年7月22日に創業されたIT事業、インフラ事業、営業代行を運営するグループ会社です",
   openGraph: {
-    title: "大阪のWeb制作・アプリ開発・光回線代理店｜KANOAグループ",
+    title: "株式会社KANOA　GROUP",
     description:
-      "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクールを展開。企業の成長支援から人材育成までワンストップ対応。",
+      "株式会社KANOA GROUPは2024年7月22日に創業されたIT事業、インフラ事業、営業代行を運営するグループ会社です",
     url: "https://kanoa-group.com",
     siteName: "KANOA GROUP",
     images: [
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "大阪のWeb制作・アプリ開発・光回線代理店｜KANOAグループ",
+    title: "株式会社KANOA　GROUP",
     description:
-      "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクールを展開。企業の成長支援から人材育成までワンストップ対応。",
+      "株式会社KANOA GROUPは2024年7月22日に創業されたIT事業、インフラ事業、営業代行を運営するグループ会社です",
     images: ["https://kanoa-group.com/og-image.jpg"],
   },
 };

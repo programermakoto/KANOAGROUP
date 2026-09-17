@@ -19,9 +19,9 @@ export default function Header() {
     },
     {
       href: "/service",
-      label: "サービス一覧",
+      label: "事業一覧",
       en: "Service",
-      detail: "KANOAの全事業をチラッと覗けるよ",
+      detail: "カノアグループの全ての事業をチラッと覗けるよ",
       isCTA: false,
     },
     {
