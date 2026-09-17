@@ -10,14 +10,14 @@ import FAQByBusiness from "@/components/FAQByBusiness";
 
 /* SEO */
 export const metadata: Metadata = {
-  title: "大阪のホームページ制作 0円？!| KANOA GROUP",
+  title: "大阪のホームページ制作 0円？!",
   description:
     "大阪で企業向けホームページ制作ならKANOA GROUP。Web制作・SEO対策・デザイン・集客までワンストップ対応。",
   alternates: {
     canonical: "https://kanoa-group.com/web-create",
   },
   openGraph: {
-    title: "大阪のホームページ制作 | KANOA GROUP",
+    title: "大阪のホームページ制作｜KANOAグループ",
     description:
       "大阪で企業向けホームページ制作ならKANOA GROUP。SEO対策・デザイン・集客まで対応。",
     url: "https://kanoa-group.com/web-create",

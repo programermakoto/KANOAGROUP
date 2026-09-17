@@ -1,4 +1,4 @@
-
+import type { Metadata } from "next";
 import { WorldModel } from "@/components/models/earth";
 import RenderModel from "@/components/RenderModel";
 import PartnerSection from "@/components/PartnerSection";
@@ -12,6 +12,12 @@ import Recruitment from "@/components/Recruitment";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
 import SNSImpactSection from "@/components/SNSImpactSection";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "KANOAグループ",
+  },
+};
 
 
 type NewsItem = {

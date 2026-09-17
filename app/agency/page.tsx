@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import AgencyClient from "./AgencyClient";
 
 export const metadata: Metadata = {
-  title: "Cloud Pocket | スマホでできるクラウドワーク",
+  title: "Cloud Pocket｜スマホでできるクラウドワーク",
   description:
     "Cloud Pocketはスマホ1台で始められるクラウドワークサービス。スキマ時間で収入を得られる新しい働き方。",
   alternates: {
     canonical: "https://kanoa-group.com/agency",
   },
   openGraph: {
-    title: "Cloud Pocket | スマホ副業",
+    title: "Cloud Pocket｜スマホ副業｜KANOAグループ",
     description:
       "スマホだけでできるクラウドワーク。スキマ時間で収入を得られるCloud Pocket。",
     url: "https://kanoa-group.com/agency",

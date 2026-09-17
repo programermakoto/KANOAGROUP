@@ -11,38 +11,51 @@ export default function Header() {
 
   const navLinks = [
     {
+      href: "/",
+      label: "トップ",
+      en: "Top",
+      detail: "ホームページのトップに戻る",
+      isCTA: false,
+    },
+    {
       href: "/service",
       label: "サービス一覧",
+      en: "Service",
       detail: "KANOAの全事業をチラッと覗けるよ",
       isCTA: false,
     },
     {
       href: "/about",
-      label: "会社情報",
+      label: "会社概要",
+      en: "Company",
       detail: "どんな会社？スタッフや雰囲気を軽く覗いてみよう",
       isCTA: false,
     },
     {
       href: "/news",
       label: "お知らせ",
+      en: "News",
       detail: "最新情報や面白い動きをサッとチェック！",
       isCTA: false,
     },
     {
       href: "/recruitment",
       label: "採用情報",
+      en: "Recruit",
       detail: "KANOAで稼ぐチャンス、募集内容をチラ見せ！",
       isCTA: false,
     },
     {
       href: "/agency",
       label: "代理店募集",
+      en: "Agency",
       detail: "初期リスクを抑えて、自分のビジネスを広げるチャンス",
       isCTA: false,
     },
     {
       href: "/contact",
       label: "無料お問合わせ",
+      en: "Contact",
       detail: "気になることはすぐ聞いてOK！簡単相談",
       isCTA: true,
     },
@@ -84,10 +97,23 @@ export default function Header() {
               >
                 <Button
                   variant={link.isCTA ? "default" : "ghost"}
-                  className={link.isCTA ? "bg-sky-600 text-white hover:bg-sky-500" : ""}
+                  className={
+                    link.isCTA
+                      ? "bg-sky-600 text-white hover:bg-sky-500 h-auto py-2"
+                      : "h-auto py-2"
+                  }
                   asChild
                 >
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={link.href} className="flex flex-col items-center leading-tight">
+                    <span>{link.label}</span>
+                    <span
+                      className={`text-[10px] font-normal uppercase tracking-wide ${
+                        link.isCTA ? "text-white/80" : "text-gray-500"
+                      }`}
+                    >
+                      {link.en}
+                    </span>
+                  </Link>
                 </Button>
 
                 {/* サブラベル */}
@@ -150,12 +176,21 @@ export default function Header() {
                     variant={link.isCTA ? "default" : "ghost"}
                     className={
                       link.isCTA
-                        ? "bg-[#0066FF] text-white w-full justify-start"
-                        : "w-full justify-start"
+                        ? "bg-[#0066FF] text-white w-full justify-start h-auto py-2"
+                        : "w-full justify-start h-auto py-2"
                     }
                     asChild
                   >
-                    <span className="w-full text-left">{link.label}</span>
+                    <span className="w-full text-left flex flex-col">
+                      <span>{link.label}</span>
+                      <span
+                        className={`text-[10px] font-normal uppercase tracking-wide ${
+                          link.isCTA ? "text-white/80" : "text-gray-500"
+                        }`}
+                      >
+                        {link.en}
+                      </span>
+                    </span>
                   </Button>
                 </Link>
                 {/* モバイル用小さな詳細 */}

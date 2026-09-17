@@ -7,7 +7,7 @@ import Mission from '@/components/Mission'
 import CareerGrid from './components/CareerGrid'
 
 export const metadata: Metadata = {
-  title: "大阪のIT企業採用 | エンジニア募集 | KANOA GROUP",
+  title: "大阪のIT企業採用｜エンジニア募集",
   description:
     "KANOA GROUPの採用情報。大阪を拠点にWeb制作・アプリ開発など複数事業を展開する企業で、エンジニア・営業・学生インターンを募集しています。",
 };
