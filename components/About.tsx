@@ -22,19 +22,6 @@ export default function About() {
 
   return (
     <section aria-labelledby="company-info" className="container w-full pt-12">
-      <div className="text-center mt-10 space-y-1">
-        <p className="animate delay text-lg md:text-2xl font-semibold text-gray-700 drop-shadow-md">
-          ようこそ。<br className="sm:hidden" />下へ進むとKANOA GROUPの世界が<br className="sm:hidden" />広がります。
-        </p>
-        <p className="animate text-sm md:text-base text-gray-600 tracking-wide drop-shadow">
-          Thanks for visiting. Scroll for more.
-        </p>
-      </div>
-
-      <div className="flex justify-center my-[50px]">
-        <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
-      </div>
-
       <h2 id="company-info" className="animate text-3xl my-6 text-center lg:text-left">
         KANOA GROUP 企業情報
       </h2>
