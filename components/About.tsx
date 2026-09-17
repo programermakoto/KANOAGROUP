@@ -22,7 +22,7 @@ export default function About() {
 
   return (
     <section aria-labelledby="company-info" className="container w-full pt-12">
-      <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16 my-10 md:my-16">
+      <div className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-16 my-10 md:my-16">
         {/* 企業情報 + 画像 */}
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-4">
           <h2
@@ -31,8 +31,8 @@ export default function About() {
           >
             KANOA GROUP 企業情報
           </h2>
-          <div className="w-full rounded-2xl overflow-hidden shadow-lg">
-            <Attachment className="h-[240px] md:h-[360px]" />
+          <div className="w-full flex-1 min-h-[240px] rounded-2xl overflow-hidden shadow-lg">
+            <Attachment className="w-full h-full min-h-[240px]" />
           </div>
         </div>
 
@@ -43,8 +43,8 @@ export default function About() {
           </h3>
           <p className="text-center font-medium text-gray-600 animate delay">Service</p>
           <div className="text-center space-y-4">
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-              KANOA GROUPは、<br className="sm:hidden" />IT領域とスキル不要型ビジネスの<br className="md:hidden" />二軸で構成されています。
+            <p className="text-gray-700 text-lg md:text-xl lg:text-base xl:text-lg leading-relaxed lg:whitespace-nowrap animate">
+              KANOA GROUPは、IT領域とスキル不要型ビジネスの二軸で構成されています。
             </p>
           </div>
           <Service3D />
