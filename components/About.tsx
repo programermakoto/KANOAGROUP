@@ -29,40 +29,6 @@ export default function About() {
       <Attachment />
 
       <div className="space-y-2 md:space-y-12">
-
-        {/* ミッション＆ビジョン */}
-        <article className="h-screen flex flex-col justify-center items-center max-w-3xl mx-auto text-gray-700 my-20 md:my-32 space-y-6">
-          <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 animate delay">
-            ミッション＆ビジョンについて
-          </h3>
-          <p className="text-center font-medium text-gray-600 animate delay">
-            Mission & Vision
-          </p>
-          <div className="text-center space-y-4">
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-              KANOA GROUPは、<br className="md:hidden"></br>常にワクワクと自由の中心で、
-            </p>
-            <p className="text-sky-600 font-bold text-xl md:text-2xl animate">
-              「これは面白い！を創り ∴ 自由を広げる。」
-            </p>
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-              を体現し続けます。<br className="md:hidden"></br>創造と挑戦を通して、誰もが自由に<br className="md:hidden"></br>生きられる社会をつくる
-            </p>
-          </div>
-          <div className="flex justify-center mt-4">
-            {/* CTAボタン */}
-            <Link
-              href="/about/#vision"
-              className="
-          relative z-20 mt-8 sm:mt-12 rounded-full px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-semibold text-white bg-gradient-to-r from-sky-600 to-sky-500
-            hover:from-orange-500 hover:to-red-500 transition duration-500 font-medium shadow-lg
-        "
-            >
-              KANOAについてもっと知る
-            </Link>
-          </div>
-        </article>
-
         {/* 事業内容 */}
         <article className="h-screen flex flex-col justify-center items-center max-w-3xl mx-auto text-gray-700 my-20 md:my-32 space-y-6">
           <h3 className="text-2xl md:text-3xl font-bold text-center text-gray-800 animate delay">
@@ -71,10 +37,7 @@ export default function About() {
           <p className="text-center font-medium text-gray-600 animate delay">Service</p>
           <div className="text-center space-y-4">
             <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-            KANOA GROUPは、<br className="sm:hidden" />IT領域とスキル不要型ビジネスの<br className="md:hidden"></br>二軸で構成されています。
-            </p>
-            <p className="text-gray-700 text-lg md:text-xl leading-relaxed animate">
-            KANOA GROUP is comprised of two pillars: <br className="sm:hidden" /> IT and skill-free businesses.
+              KANOA GROUPは、<br className="sm:hidden" />IT領域とスキル不要型ビジネスの<br className="md:hidden"></br>二軸で構成されています。
             </p>
           </div>
           <Service3D />
@@ -87,12 +50,12 @@ export default function About() {
             hover:from-orange-500 hover:to-red-500 transition duration-500 font-medium shadow-lg
         "
             >
-              事業内容を見る
+              事業一覧を見る
             </Link>
 
           </div>
         </article>
-
+       
         {/* 会社概要 */}
         <article className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-12 px-4 lg:px-0 my-50">
           {/* 画像 or 動画 */}

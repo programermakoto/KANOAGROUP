@@ -99,65 +99,6 @@ export default function SNSImpactSection() {
         </Link>
 
       </div>
-      {/* SNSカード */}
-      <div className="my-6 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl">
-        {/* GK-U */}
-        <Link
-          href="/"
-          target="_blank"
-          className="group border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition duration-500 bg-white"
-        >
-          <div className="flex items-center gap-4 mb-4">
-            <div className="relative w-12 h-12">
-              <Image
-                src="/gku.png"
-                alt="GK-Uロゴ"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div>
-              <div className="text-xs text-gray-400 tracking-widest">
-                TikTok
-              </div>
-              <div className="text-lg font-semibold text-gray-900">
-                @kanoa__group
-              </div>
-            </div>
-          </div>
-
-          <p className="text-gray-500 text-sm leading-relaxed">
-            【海外向け】 IT教育・起業・副業・マネタイズ戦略を発信
-          </p>
-        </Link>
-        {/* MAKOTO */}
-        <Link
-          href="/"
-          target="_blank"
-          className="group border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition duration-500 bg-white"
-        >
-          <div className="flex items-center gap-4 mb-4">
-            <div className="relative w-12 h-12">
-              　M
-            </div>
-            <div>
-              <div className="text-xs text-gray-400 tracking-widest">
-                TikTok
-              </div>
-              <div className="text-lg font-semibold text-gray-900">
-                @makoto_kanoa
-              </div>
-            </div>
-          </div>
-
-          <p className="text-gray-500 text-sm leading-relaxed">
-            「朝は社長｜夜は探求家」
-          </p>
-        </Link>
-
-
-
-      </div>
 
       {/* CTA */}
       <Link
