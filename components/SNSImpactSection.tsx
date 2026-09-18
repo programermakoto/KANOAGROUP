@@ -109,13 +109,7 @@ export default function SNSImpactSection() {
       {/* CTA */}
       <Link
         href="/contact"
-        className="
-          relative z-20
-          rounded-full px-10 py-5 text-lg font-semibold text-white
-          bg-gradient-to-r from-sky-600 to-sky-500
-          shadow-lg shadow-sky-400/50
-          transform transition duration-500 hover:scale-105 hover:shadow-2xl
-        "
+        className="relative z-20 rounded-full px-8 py-3.5 text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap bg-gradient-to-r from-sky-600 to-sky-500 shadow-lg shadow-sky-400/50 transform transition duration-500 hover:scale-105 hover:shadow-2xl"
       >
         お問い合わせはこちらから
       </Link>

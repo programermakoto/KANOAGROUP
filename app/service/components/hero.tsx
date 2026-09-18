@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
         <Link
           href="/contact"
-          className='block mx-auto my-4 bg-sky-600 hover:bg-orange-500 rounded-full px-6 py-3 text-white text-center w-fit transition duration-500'
+          className='block mx-auto my-4 bg-sky-600 hover:bg-orange-500 rounded-full px-5 py-2.5 text-sm sm:text-base text-white text-center w-fit whitespace-nowrap transition duration-500'
         >
           お問い合わせ
         </Link>

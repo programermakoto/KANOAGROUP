@@ -27,7 +27,7 @@ export default function ForContact() {
         <div className="w-full md:w-1/3 flex justify-center md:justify-end px-4 relative">
           <Link
             href="/contact"
-            className="relative z-20 rounded-full px-10 py-5 text-lg font-semibold text-white bg-gradient-to-r from-sky-600 to-sky-500 hover:from-orange-500 hover:to-red-500 shadow-lg transition duration-500"
+            className="relative z-20 rounded-full px-8 py-3.5 text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap bg-gradient-to-r from-sky-600 to-sky-500 hover:from-orange-500 hover:to-red-500 shadow-lg transition duration-500"
           >
             アイデアを送る
           </Link>

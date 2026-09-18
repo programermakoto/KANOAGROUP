@@ -54,10 +54,7 @@ export default function RecruitmentImpactScroll() {
       {/* CTAボタン */}
       <Link
         href="/recruitment"
-        className="
-          relative z-20 mt-8 sm:mt-12 rounded-full px-8 sm:px-12 py-4 sm:py-5 text-base sm:text-lg md:text-xl font-semibold text-white bg-gradient-to-r from-sky-600 to-sky-500
-            hover:from-orange-500 hover:to-red-500 transition duration-500 font-medium shadow-lg
-        "
+        className="relative z-20 mt-8 sm:mt-12 rounded-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap bg-gradient-to-r from-sky-600 to-sky-500 hover:from-orange-500 hover:to-red-500 transition duration-500 shadow-lg"
       >
         採用情報はこちらから
       </Link>
