@@ -41,6 +41,16 @@ export default function About() {
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 text-center lg:text-left w-full">
             サービス一覧
           </h3>
+          <div className="flex flex-wrap justify-center gap-2 animate delay">
+            {["IT事業", "インフラ事業", "営業代行"].map((tag) => (
+              <span
+                key={tag}
+                className="px-4 py-1 rounded-full text-xs md:text-sm font-medium text-sky-700 bg-sky-50 border border-sky-200"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
           <p className="text-center font-medium text-gray-600 animate delay">Service</p>
           <div className="text-center space-y-4">
             <p className="text-gray-700 text-lg md:text-xl lg:text-base xl:text-lg leading-relaxed lg:whitespace-nowrap animate">
