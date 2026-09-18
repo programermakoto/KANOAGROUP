@@ -66,7 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "url": "https://kanoa-group.com",
         "logo": "https://kanoa-group.com/kanoa-logo.PNG",
         "description":
-          "大阪を拠点にWeb制作・アプリ開発・光回線代理店・軽貨物事業・人材紹介・オンラインスクールを展開。",
+          "株式会社KANOA GROUPは2024年7月22日に創業されたIT事業、インフラ事業、営業代行を運営するグループ会社です",
       },
       {
         "@type": "WebSite",
@@ -128,8 +128,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
       {
         "@type": "Service",
-        "name": "軽貨物事業",
-        "description": "軽貨物配送の受注および業務委託ドライバー募集を実施。",
+        "name": "営業代行事業",
+        "description": "営業代行を受託するサービスです",
         "areaServed": { "@type": "Place", "name": "大阪府" },
         "provider": { "@id": "https://kanoa-group.com/#organization" },
         "offers": {

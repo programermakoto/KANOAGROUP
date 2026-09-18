@@ -17,20 +17,26 @@ export default function SNSImpactSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0.4, 1]);
 
   return (
-    <section className="relative w-full h-auto py-30 md:h-[100vh] flex flex-col items-center justify-center bg-white overflow-hidden px-10 md:px-4">
+    <section className="relative w-full h-auto py-30 md:h-[100vh] flex flex-col items-center justify-center overflow-hidden px-10 md:px-4">
 
-      <div className="absolute py-3 inset-0 bg-gradient-to-b from-gray-50 to-white -z-10" />
+      <Image
+        src="/cta-bg.png"
+        alt=""
+        fill
+        className="absolute inset-0 object-cover -z-20"
+      />
+      <div className="absolute inset-0 bg-black/55 -z-10" />
 
       {/* インパクト文字 */}
       <motion.h1
         ref={ref}
         style={{ scale, opacity }}
-        className="text-black font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center tracking-tight"
+        className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center tracking-tight drop-shadow-md"
       >
         毎日知識配信中
       </motion.h1>
 
-      <p className="mt-6 text-gray-500 text-sm sm:text-base md:text-lg text-center max-w-2xl leading-relaxed">
+      <p className="mt-6 text-gray-100 text-sm sm:text-base md:text-lg text-center max-w-2xl leading-relaxed drop-shadow">
         ビジネス・IT・スキル習得に関する情報を<br className="sm:hidden" />
         毎日発信しています。
       </p>
@@ -42,7 +48,7 @@ export default function SNSImpactSection() {
         <Link
           href="https://www.instagram.com/gku_group?igsh=eWJpNXdncWd2aG00&utm_source=qr"
           target="_blank"
-          className="group border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition duration-500 bg-white"
+          className="group border border-white/30 rounded-2xl p-6 hover:shadow-xl transition duration-500 bg-white/90 backdrop-blur-sm"
         >
           <div className="flex items-center gap-4 mb-4">
             <div className="relative w-12 h-12">
@@ -64,7 +70,7 @@ export default function SNSImpactSection() {
           </div>
 
           <p className="text-gray-500 text-sm leading-relaxed">
-          【国内向け】 IT教育・起業・副業・マネタイズ戦略を発信
+            IT教育・起業・副業・マネタイズ戦略を発信しています
           </p>
         </Link>
 
@@ -72,7 +78,7 @@ export default function SNSImpactSection() {
         <Link
           href="https://www.instagram.com/kanoa__group?igsh=MWVzYzlnN2g3aG43dg%3D%3D&utm_source=qr"
           target="_blank"
-          className="group border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition duration-500 bg-white"
+          className="group border border-white/30 rounded-2xl p-6 hover:shadow-xl transition duration-500 bg-white/90 backdrop-blur-sm"
         >
           <div className="flex items-center gap-4 mb-4">
             <div className="relative w-12 h-12">
@@ -94,7 +100,7 @@ export default function SNSImpactSection() {
           </div>
 
           <p className="text-gray-500 text-sm leading-relaxed">
-          【海外向け】 デザインの実績データを発信
+            デザインの実績データを発信しています
           </p>
         </Link>
 
@@ -111,7 +117,7 @@ export default function SNSImpactSection() {
           transform transition duration-500 hover:scale-105 hover:shadow-2xl
         "
       >
-        質問はこちら
+        お問い合わせはこちらから
       </Link>
 
     </section>

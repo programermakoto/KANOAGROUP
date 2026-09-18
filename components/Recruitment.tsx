@@ -59,7 +59,7 @@ export default function RecruitmentImpactScroll() {
             hover:from-orange-500 hover:to-red-500 transition duration-500 font-medium shadow-lg
         "
       >
-        人生が変わるボタン
+        採用情報はこちらから
       </Link>
 
       {/* 下余白 */}

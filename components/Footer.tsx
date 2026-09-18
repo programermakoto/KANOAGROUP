@@ -4,12 +4,12 @@ import React from 'react';
 export default function Footer() {
   const services = [
     
-    { href: '/service/web', label: 'Web制作' },
-    { href: '/service/app', label: 'アプリ開発' },
+    { href: '/service/web', label: 'WEBサイト制作' },
+    { href: '/service/app', label: 'アプリ開発・保守' },
     { href: '/service/online-school', label: 'GK-Uオンラインスクール' },
     { href: '/service/optical', label: '宅内光ファイバー開通業務' },
-    { href: '/service/logistics', label: '軽貨物事業' },
-    { href: '/service/hr', label: '人材紹介' },
+    { href: '/service/logistics', label: '営業代行事業' },
+    { href: '/service/hr', label: 'インフラ事業' },
    
   ];
 

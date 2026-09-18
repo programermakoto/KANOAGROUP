@@ -38,7 +38,7 @@ export default function About() {
 
         {/* サービス一覧 */}
         <article className="w-full lg:w-1/2 flex flex-col items-center text-gray-700 space-y-6">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 text-center lg:text-left w-full">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center lg:text-left w-full">
             サービス一覧
           </h3>
           <p className="text-center font-medium text-gray-600 animate delay">Service</p>
