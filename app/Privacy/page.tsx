@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Mission from '@/components/Mission'
 import React from 'react'
+
+export const metadata: Metadata = {
+  title: "個人情報保護方針・利用規約",
+  description:
+    "KANOA GROUPの個人情報保護方針（プライバシーポリシー）および利用規約のご案内。お客様の個人情報の取り扱いとサービス利用条件について定めています。",
+  alternates: {
+    canonical: "https://kanoa-group.com/Privacy",
+  },
+};
 
 export default function Privacy() {
   return (

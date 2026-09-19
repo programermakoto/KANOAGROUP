@@ -10,7 +10,19 @@ import Movie from "@/components/ui/movie";
 export const metadata: Metadata = {
   title: "事業一覧",
   description:
-    "KANOA GROUPの事業一覧。Web制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクール。",
+    "KANOA GROUPの事業一覧。ホームページ制作・システムアプリ開発・インフラ事業（通信回線の営業管理）・営業代行事業・GK-Uオンラインスクール・未来塾など、大阪を拠点にIT領域とスキル不要型ビジネスの両軸で事業を展開しています。",
+  alternates: {
+    canonical: "https://kanoa-group.com/service",
+  },
+  openGraph: {
+    title: "事業一覧｜KANOAグループ",
+    description:
+      "ホームページ制作・システムアプリ開発・インフラ事業・営業代行・GK-Uオンラインスクールなど、KANOA GROUPが展開する全事業をご紹介します。",
+    url: "https://kanoa-group.com/service",
+    siteName: "KANOA GROUP",
+    locale: "ja_JP",
+    type: "website",
+  },
 };
 
 const jsonLd = {

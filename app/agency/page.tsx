@@ -4,14 +4,14 @@ import AgencyClient from "./AgencyClient";
 export const metadata: Metadata = {
   title: "Cloud Pocket｜スマホでできるクラウドワーク",
   description:
-    "Cloud Pocketはスマホ1台で始められるクラウドワークサービス。スキマ時間で収入を得られる新しい働き方。",
+    "KANOA GROUPが運営するCloud Pocketは、スマホ1台で始められる代理店・クラウドワークサービス。初期リスクを抑えてスキマ時間で収入を得られる新しい働き方を提供します。",
   alternates: {
     canonical: "https://kanoa-group.com/agency",
   },
   openGraph: {
     title: "Cloud Pocket｜スマホ副業｜KANOAグループ",
     description:
-      "スマホだけでできるクラウドワーク。スキマ時間で収入を得られるCloud Pocket。",
+      "スマホだけでできるクラウドワーク。スキマ時間で収入を得られるKANOA GROUPのCloud Pocket。",
     url: "https://kanoa-group.com/agency",
     siteName: "KANOA GROUP",
     locale: "ja_JP",
