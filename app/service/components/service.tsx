@@ -235,6 +235,39 @@ export default function Service() {
             </div>
 
 
+            {/* 営業代行事業 */}
+            <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
+                {/* テキスト */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>営業代行事業</h1>
+                    <small className='block text-gray-700 text-sm mb-2'>営業を外注できる営業会社</small>
+                    <p className='text-gray-700 mb-6 leading-relaxed'>
+                        営業人材の採用・教育・固定費などの負担を抑えながら、貴社の商品・サービスの営業活動を外部に任せられる「営業支援事業」。案件をいただければ、SNSでのDM営業やLPを活用したWeb集客、既存顧客へのアプローチなど複数のチャネルを組み合わせて、集客からアポイント獲得、商談・成約までを一貫して代行します。
+                    </p>
+
+                    <div className='flex justify-center gap-5 items-center'>
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
+                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
+                                お問い合わせ
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 画像（仮：後日差し替え予定） */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
+                    <div className="w-full h-full min-h-[200px] rounded-lg bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
+                        画像準備中
+                    </div>
+                </div>
+            </section>
+
+
+            <div className="flex justify-center my-[50px]">
+                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
+            </div>
+
+
             {/* Cloud Pocket */}
             <section className='flex flex-col-reverse md:flex-row items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
                 {/* テキスト */}
