@@ -155,8 +155,8 @@ export default function Header() {
 
       {/* モバイルドロワー */}
       <div
-        className={`md:hidden transition-max-h duration-200 ease-in-out overflow-hidden bg-white border-t border-gray-200 ${
-          open ? "max-h-[480px] shadow-md" : "max-h-0"
+        className={`md:hidden transition-max-h duration-200 ease-in-out overflow-y-auto bg-white border-t border-gray-200 ${
+          open ? "max-h-[90vh] shadow-md" : "max-h-0 overflow-hidden"
         }`}
       >
         <div className="px-4 pt-4 pb-6 space-y-2">

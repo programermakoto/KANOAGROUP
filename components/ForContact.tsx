@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ForContact() {
   return (
-    <div className="relative container my-20 md:my-30 h-auto md:h-[60vh] w-full md:w-4/5 mx-auto flex justify-center items-center perspective-1000">
+    <div className="relative container my-20 md:my-30 h-auto md:h-[60vh] w-full md:w-4/5 mx-auto flex justify-center items-center perspective-1000 overflow-hidden">
       <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 w-full">
 
         {/* テキスト部分 */}
