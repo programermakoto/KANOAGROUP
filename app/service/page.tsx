@@ -25,10 +25,18 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationRef = {
+  "@type": "Organization",
+  "@id": "https://kanoa-group.com/#organization",
+  "name": "KANOA GROUP",
+  "url": "https://kanoa-group.com",
+};
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "url": "https://kanoa-group.com/service",
+  "inLanguage": "ja",
   "itemListElement": [
     { "name": "インフラ事業", "description": "光回線をはじめとした通信インフラの営業・管理業務" },
     { "name": "宅内光ファイバー開通業務", "description": "EO光のWi-Fi訪問設定サポート" },
@@ -45,7 +53,7 @@ const jsonLd = {
       "@type": "Service",
       name: item.name,
       description: item.description,
-      provider: { "@id": "https://kanoa-group.com/#organization" },
+      provider: organizationRef,
     },
   })),
 };

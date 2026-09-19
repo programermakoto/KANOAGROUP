@@ -34,8 +34,14 @@ const jsonLd = {
   "description":
     "初期費用0円、月額15,000円からのホームページ制作サービス。最短1週間で高クオリティなWebサイトを提供。",
   "url": "https://kanoa-group.com/hp-create",
-  "provider": { "@id": "https://kanoa-group.com/#organization" },
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://kanoa-group.com/#organization",
+    "name": "KANOA GROUP",
+    "url": "https://kanoa-group.com",
+  },
   "areaServed": { "@type": "Place", "name": "大阪府" },
+  "inLanguage": "ja",
   "offers": {
     "@type": "Offer",
     "price": "15000",

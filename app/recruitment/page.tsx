@@ -11,16 +11,25 @@ export const metadata: Metadata = {
   description:
     "KANOA GROUPの採用情報。大阪を拠点にWeb制作・アプリ開発など複数事業を展開する企業で、エンジニア・営業・学生インターンを募集しています。",
 };
+const datePosted = new Date();
+const validThrough = new Date(datePosted);
+validThrough.setDate(validThrough.getDate() + 180);
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
   "title": "Webエンジニア",
   "description":
     "KANOA GROUPでは裁量権を持って事業を推し進めていける方を募集しています。エンジニア・営業・学生インターンを幅広く募集中です。",
+  "datePosted": datePosted.toISOString().slice(0, 10),
+  "validThrough": validThrough.toISOString().slice(0, 10),
+  "employmentType": ["FULL_TIME", "CONTRACTOR", "INTERN"],
   "hiringOrganization": {
     "@type": "Organization",
+    "@id": "https://kanoa-group.com/#organization",
     "name": "KANOA GROUP",
-    "sameAs": "https://kanoa-group.com"
+    "sameAs": "https://kanoa-group.com",
+    "logo": "https://kanoa-group.com/kanoa-logo.PNG"
   },
   "jobLocation": {
     "@type": "Place",
@@ -30,8 +39,7 @@ const jsonLd = {
       "addressRegion": "大阪府",
       "addressCountry": "JP"
     }
-  },
-  "employmentType": ["FULL_TIME", "CONTRACTOR", "INTERN"]
+  }
 }
 export default function Recruitment() {
   return (

@@ -12,7 +12,20 @@ const jsonLd = {
   "@type": "ContactPage",
   "url": "https://kanoa-group.com/contact",
   "name": "KANOA GROUPへお問い合わせ",
-  "about": { "@id": "https://kanoa-group.com/#organization" },
+  "inLanguage": "ja",
+  "about": {
+    "@type": "Organization",
+    "@id": "https://kanoa-group.com/#organization",
+    "name": "KANOA GROUP",
+    "url": "https://kanoa-group.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+81-50-8887-2035",
+      "contactType": "customer service",
+      "areaServed": "JP",
+      "availableLanguage": "Japanese",
+    },
+  },
 };
 
 export default function Contact() {

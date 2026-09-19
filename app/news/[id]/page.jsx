@@ -49,11 +49,30 @@ export default async function NewsDetailPage({ params }) {
     "@type": "NewsArticle",
     headline: item.title,
     datePublished: item.date,
+    dateModified: item.date,
     description: item.description,
+    inLanguage: "ja",
     image: [`https://kanoa-group.com${item.image}`],
-    author: { "@id": "https://kanoa-group.com/#organization" },
-    publisher: { "@id": "https://kanoa-group.com/#organization" },
-    mainEntityOfPage: `https://kanoa-group.com/news/${id}`,
+    author: {
+      "@type": "Organization",
+      "@id": "https://kanoa-group.com/#organization",
+      name: "KANOA GROUP",
+      url: "https://kanoa-group.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://kanoa-group.com/#organization",
+      name: "KANOA GROUP",
+      url: "https://kanoa-group.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://kanoa-group.com/kanoa-logo.PNG",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://kanoa-group.com/news/${id}`,
+    },
   };
 
   return (

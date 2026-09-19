@@ -87,6 +87,7 @@ export default function FAQByBusiness() {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    inLanguage: "ja",
     mainEntity: data.flatMap(cat =>
       cat.faqs.map(f => ({
         "@type": "Question",

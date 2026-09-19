@@ -30,8 +30,14 @@ const jsonLd = {
   "description":
     "個人事業主や新規事業を立ち上げる企業向けに、最先端のサービス提供や協業支援を行う起業支援プラットフォーム。",
   "url": "https://kanoa-group.com/agency",
-  "provider": { "@id": "https://kanoa-group.com/#organization" },
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://kanoa-group.com/#organization",
+    "name": "KANOA GROUP",
+    "url": "https://kanoa-group.com",
+  },
   "areaServed": { "@type": "Place", "name": "日本" },
+  "inLanguage": "ja",
 };
 
 export default function Page() {
