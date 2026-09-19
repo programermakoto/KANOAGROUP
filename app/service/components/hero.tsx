@@ -1,14 +1,25 @@
+"use client";
+
 import Link from 'next/link'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      videoRef.current?.pause()
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
     <div className='relative w-full h-auto my-30 md:my-0 md:h-screen overflow-hidden'>
       <video
+        ref={videoRef}
         src="/leaf.mp4"
         autoPlay
-        loop
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover -z-20"
@@ -23,7 +34,7 @@ export default function Hero() {
             「これは面白い！を創り ∴ 自由を広げる。」
           </small>
           <h1 className='text-center font-bold py-3 text-4xl sm:text-5xl text-white drop-shadow-md'>
-            KANOA GROUP Service
+            KANOA GROUP 事業一覧
           </h1>
           <Link
             href="/contact"

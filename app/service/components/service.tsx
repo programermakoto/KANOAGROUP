@@ -9,46 +9,6 @@ export default function Service() {
     return (
         <div className='container'>
 
-            {/* EO光 */}
-            <section className='flex flex-col-reverse md:flex-row items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
-                {/* テキスト */}
-                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
-                    <div>
-                        <h1 className='text-gray-700 text-2xl md:text-3xl font-bold'>宅内光ファイバー開通業務</h1>
-                        <small className='block text-gray-700 text-sm mb-2'>EO光のWi-Fi訪問設定サポート</small>
-                        <p className='text-gray-700 mb-6 leading-relaxed'>
-                        お客様宅に訪問し、光ファイバー（EO光）の開通に伴うWi-Fi設定や通信環境の最適化を行います。接続設定から動作確認まで一貫してサポートし、初めての方でも安心してご利用いただけます。
-                        </p>
-                    </div>
-
-                    <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
-                        
-                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
-                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 hover:text-white transition duration-[500ms]" variant="outline">
-                                お問い合わせ
-                            </Button>
-                        </Link>
-                    </div>
-                </div>
-
-                {/* 画像 */}
-                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
-                    <Image
-                        src="/eo-image.webp"
-                        alt="EO光業務風景画像"
-                        width={300}
-                        height={150}
-                        className="mx-auto h-full w-full object-cover"
-                    />
-                </div>
-            </section>
-
-
-            <div className="flex justify-center my-[50px]">
-                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
-            </div>
-
-
             {/* インフラ事業 */}
             <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
                 {/* テキスト */}
@@ -73,6 +33,46 @@ export default function Service() {
                     <div className="w-full h-full min-h-[200px] rounded-lg bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
                         画像準備中
                     </div>
+                </div>
+            </section>
+
+
+            <div className="flex justify-center my-[50px]">
+                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
+            </div>
+
+
+            {/* EO光 */}
+            <section className='flex flex-col-reverse md:flex-row items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
+                {/* テキスト */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
+                    <div>
+                        <h1 className='text-gray-700 text-2xl md:text-3xl font-bold'>宅内光ファイバー開通業務</h1>
+                        <small className='block text-gray-700 text-sm mb-2'>EO光のWi-Fi訪問設定サポート</small>
+                        <p className='text-gray-700 mb-6 leading-relaxed'>
+                        お客様宅に訪問し、光ファイバー（EO光）の開通に伴うWi-Fi設定や通信環境の最適化を行います。接続設定から動作確認まで一貫してサポートし、初めての方でも安心してご利用いただけます。
+                        </p>
+                    </div>
+
+                    <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
+
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
+                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 hover:text-white transition duration-[500ms]" variant="outline">
+                                お問い合わせ
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 画像 */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
+                    <Image
+                        src="/eo-image.webp"
+                        alt="EO光業務風景画像"
+                        width={300}
+                        height={150}
+                        className="mx-auto h-full w-full object-cover"
+                    />
                 </div>
             </section>
 
@@ -204,7 +204,11 @@ export default function Service() {
                     </p>
 
                     <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
-                       
+                        <Link href="https://general-knowledge-university.app/" target="_blank" rel="noopener noreferrer">
+                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
+                                Read More
+                            </Button>
+                        </Link>
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ
