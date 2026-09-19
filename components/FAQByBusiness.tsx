@@ -84,8 +84,27 @@ export default function FAQByBusiness() {
     setOpen(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: data.flatMap(cat =>
+      cat.faqs.map(f => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: f.a,
+        },
+      }))
+    ),
+  };
+
   return (
     <section className="container mx-auto px-6 py-12" id="faq">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <h2 className="text-center text-2xl md:text-3xl font-bold mb-6">よくある質問（F&Q）</h2>
 
       <div className="flex flex-col md:flex-row gap-6">
