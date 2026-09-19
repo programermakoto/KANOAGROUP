@@ -13,9 +13,38 @@ export const metadata: Metadata = {
     "KANOA GROUPの事業一覧。Web制作・アプリ開発・光回線代理店・軽貨物・人材紹介・オンラインスクール。",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "url": "https://kanoa-group.com/service",
+  "itemListElement": [
+    { "name": "インフラ事業", "description": "光回線をはじめとした通信インフラの営業・管理業務" },
+    { "name": "宅内光ファイバー開通業務", "description": "EO光のWi-Fi訪問設定サポート" },
+    { "name": "未来塾", "description": "プログラミング・マーケティング・デザインなどを学べる教育スクール" },
+    { "name": "HP-CREATE", "description": "ホームページ制作事業" },
+    { "name": "システムアプリ開発事業", "description": "オーダーメイドのアプリ・システム開発" },
+    { "name": "GK-Uオンラインスクール", "description": "Web/SNSマーケティング・プログラミング・デザインなどを学べるオンラインスクール" },
+    { "name": "営業代行事業", "description": "営業を外注できる営業会社" },
+    { "name": "Cloud Pocket", "description": "個人事業主・新規事業向けの起業支援プラットフォーム" },
+  ].map((item, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Service",
+      name: item.name,
+      description: item.description,
+      provider: { "@id": "https://kanoa-group.com/#organization" },
+    },
+  })),
+};
+
 export default function ServicePage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <Service />
       <Mission />

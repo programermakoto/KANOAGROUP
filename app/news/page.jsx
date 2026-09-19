@@ -5,6 +5,23 @@ import { getAllNews } from "../../lib/news";
 import Mission from "@/components/Mission";
 import ForContact from "@/components/ForContact";
 
+export const metadata = {
+  title: "お知らせ",
+  description:
+    "KANOA GROUPの最新ニュース・お知らせ一覧。事業展開や採用情報などの最新情報をお届けします。",
+  alternates: {
+    canonical: "https://kanoa-group.com/news",
+  },
+  openGraph: {
+    title: "お知らせ｜KANOAグループ",
+    description: "KANOA GROUPの最新ニュース・お知らせ一覧。",
+    url: "https://kanoa-group.com/news",
+    siteName: "KANOA GROUP",
+    locale: "ja_JP",
+    type: "website",
+  },
+};
+
 export default async function NewsPage() {
   const news = await getAllNews();
 

@@ -14,22 +14,48 @@ export const metadata: Metadata = {
   description:
     "大阪で企業向けホームページ制作ならKANOA GROUP。Web制作・SEO対策・デザイン・集客までワンストップ対応。",
   alternates: {
-    canonical: "https://kanoa-group.com/web-create",
+    canonical: "https://kanoa-group.com/hp-create",
   },
   openGraph: {
     title: "大阪のホームページ制作｜KANOAグループ",
     description:
       "大阪で企業向けホームページ制作ならKANOA GROUP。SEO対策・デザイン・集客まで対応。",
-    url: "https://kanoa-group.com/web-create",
+    url: "https://kanoa-group.com/hp-create",
     siteName: "KANOA GROUP",
     locale: "ja_JP",
     type: "website",
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "ホームページ制作（HP-CREATE）",
+  "description":
+    "初期費用0円、月額15,000円からのホームページ制作サービス。最短1週間で高クオリティなWebサイトを提供。",
+  "url": "https://kanoa-group.com/hp-create",
+  "provider": { "@id": "https://kanoa-group.com/#organization" },
+  "areaServed": { "@type": "Place", "name": "大阪府" },
+  "offers": {
+    "@type": "Offer",
+    "price": "15000",
+    "priceCurrency": "JPY",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "15000",
+      "priceCurrency": "JPY",
+      "unitText": "MONTH",
+    },
+  },
+};
+
 export default function Page() {
   return (
     <section className="container">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <TopWrapper />
       <MainWrapper />
       <WebsiteFourStep />

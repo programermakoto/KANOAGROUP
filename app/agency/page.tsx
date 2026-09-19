@@ -23,6 +23,25 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Cloud Pocket",
+  "description":
+    "個人事業主や新規事業を立ち上げる企業向けに、最先端のサービス提供や協業支援を行う起業支援プラットフォーム。",
+  "url": "https://kanoa-group.com/agency",
+  "provider": { "@id": "https://kanoa-group.com/#organization" },
+  "areaServed": { "@type": "Place", "name": "日本" },
+};
+
 export default function Page() {
-  return <AgencyClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <AgencyClient />
+    </>
+  );
 }

@@ -10,6 +10,28 @@ export async function generateStaticParams() {
   return all.map(item => ({ id: item.id }));
 }
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const item = await getNewsById(id);
+  if (!item) return {};
+
+  return {
+    title: item.title,
+    description: item.description,
+    alternates: {
+      canonical: `https://kanoa-group.com/news/${id}`,
+    },
+    openGraph: {
+      title: item.title,
+      description: item.description,
+      url: `https://kanoa-group.com/news/${id}`,
+      siteName: "KANOA GROUP",
+      images: [`https://kanoa-group.com${item.image}`],
+      type: "article",
+    },
+  };
+}
+
 export default async function NewsDetailPage({ params }) {
   const { id } = await params;          // ← Promise を await
   const item = await getNewsById(id);   // ← ここが重要
@@ -22,8 +44,24 @@ export default async function NewsDetailPage({ params }) {
     );
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: item.title,
+    datePublished: item.date,
+    description: item.description,
+    image: [`https://kanoa-group.com${item.image}`],
+    author: { "@id": "https://kanoa-group.com/#organization" },
+    publisher: { "@id": "https://kanoa-group.com/#organization" },
+    mainEntityOfPage: `https://kanoa-group.com/news/${id}`,
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link href="/news" className="text-sm text-gray-500 inline-block mb-4">
         ← 一覧へ戻る
       </Link>

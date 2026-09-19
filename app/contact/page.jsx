@@ -7,9 +7,21 @@ import { Toaster } from "sonner";
 import ToastProvider from './components/ToastProvider.jsx';
 
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://kanoa-group.com/contact",
+  "name": "KANOA GROUPへお問い合わせ",
+  "about": { "@id": "https://kanoa-group.com/#organization" },
+};
+
 export default function Contact() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="w-full py-20 md:py-32 relative flex items-center justify-center px-4 md:px-12 lg:px-24">
         <h1>
           <span className="text-4xl text-center text-sky-600 sm:text-5xl md:text-6xl lg:text-7xl font-bold opacity-80">

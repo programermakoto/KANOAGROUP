@@ -15,22 +15,31 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "JobPosting",
   "title": "Webエンジニア",
+  "description":
+    "KANOA GROUPでは裁量権を持って事業を推し進めていける方を募集しています。エンジニア・営業・学生インターンを幅広く募集中です。",
   "hiringOrganization": {
     "@type": "Organization",
-    "name": "KANOA GROUP"
+    "name": "KANOA GROUP",
+    "sameAs": "https://kanoa-group.com"
   },
   "jobLocation": {
     "@type": "Place",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "大阪市",
+      "addressRegion": "大阪府",
       "addressCountry": "JP"
     }
-  }
+  },
+  "employmentType": ["FULL_TIME", "CONTRACTOR", "INTERN"]
 }
 export default function Recruitment() {
   return (
     <section className='container w-full space-y-20'>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* ヘッダー画像＋重ねテキスト（PCは完全にそのまま、SPは縦並びで中央寄せ） */}
       <article className='w-full relative py-10 text-gray-700'>
