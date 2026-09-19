@@ -49,6 +49,39 @@ export default function Service() {
             </div>
 
 
+            {/* インフラ事業 */}
+            <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
+                {/* テキスト */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
+                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>インフラ事業</h1>
+                    <small className='block text-gray-700 text-sm mb-2'>通信インフラの営業・管理業務</small>
+                    <p className='text-gray-700 mb-6 leading-relaxed'>
+                        光回線をはじめとした通信インフラの新規提案営業から、契約後の運用・保守管理までを一貫して担当します。お客様に安心してインフラを使い続けていただけるよう、継続的なフォロー体制を整えています。
+                    </p>
+
+                    <div className='flex justify-center gap-5 items-center'>
+                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
+                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
+                                お問い合わせ
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 画像（仮：後日差し替え予定） */}
+                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
+                    <div className="w-full h-full min-h-[200px] rounded-lg bg-gray-100 flex items-center justify-center text-gray-400 text-sm">
+                        画像準備中
+                    </div>
+                </div>
+            </section>
+
+
+            <div className="flex justify-center my-[50px]">
+                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
+            </div>
+
+
             {/* 未来塾 */}
             <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
                 {/* テキスト */}
@@ -185,36 +218,6 @@ export default function Service() {
                     <Image src="/gku.png" alt="GK-Uオンラインスクール Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
                 </div>
             </section>
-            <div className="flex justify-center my-[50px]">
-                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
-            </div>
-            {/* 軽貨物運送事業 */}
-            <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
-                {/* テキスト */}
-                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
-                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>軽貨物運送事業</h1>
-                    <small className='block text-gray-700 text-sm mb-2'>ヤマト運輸、佐川急便から軽貨物</small>
-                    <p className='text-gray-700 mb-6 leading-relaxed'>佐川急便から配送業務を受託し、Amazonなどの小口荷物を大阪各エリアでKANOA GROUPのチームが配送します。</p>
-
-                    <div className='flex justify-center gap-5 items-center'>
-                      
-                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
-                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
-                                お問い合わせ
-                            </Button>
-                        </Link>
-                    </div>
-                </div>
-
-                {/* 画像 */}
-                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
-                    <Image src="/truck.webp" alt="軽貨物運送Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
-                </div>
-            </section>
-
-
-
-
 
 
 
@@ -257,33 +260,6 @@ export default function Service() {
                     <Image src="/cloud.webp" alt="GK-Uオンラインスクール Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
                 </div>
             </section>
-            <div className="flex justify-center my-[50px]">
-                <Image src="/scroll-movie.gif" alt="スクロールバー" width={300} height={150} className="rotate-90" />
-            </div>
-            {/* 東京海上日動 */}
-            <section className='flex flex-col-reverse md:flex-row-reverse items-center w-9/10 mx-auto h-auto md:h-96 gap-6 my-[50px]'>
-                {/* テキスト */}
-                <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
-                    <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>載機器取付工事</h1>
-                    <small className='block text-gray-700 text-sm mb-2'>東京海上日動ドラレコ設置</small>
-                    <p className='text-gray-700 mb-6 leading-relaxed'>お客様宅に訪問して「東京海上日動ドラレコ」を設置します。初めての方でも安心してご利用いただけるよう丁寧に対応します。</p>
-
-                    <div className='flex justify-center gap-5 items-center'>
-                        
-                        <Link href="/contact" target="_blank" rel="noopener noreferrer">
-                            <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
-                                お問い合わせ
-                            </Button>
-                        </Link>
-                    </div>
-                </div>
-
-                {/* 画像 */}
-                <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
-                    <Image src="/setting.webp" alt="軽貨物運送Logo" width={300} height={150} className="mx-auto h-full w-full object-cover" />
-                </div>
-            </section>
-            
         </div>
     )
 }

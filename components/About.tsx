@@ -38,14 +38,10 @@ export default function About() {
 
         {/* サービス一覧 */}
         <article className="w-full lg:w-1/2 flex flex-col items-center text-gray-700 space-y-6">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center lg:text-left w-full">
-            KANOA GROUP 会社概要
-          </h3>
-          <p className="text-center font-medium text-gray-600 animate delay">About</p>
+          <h3 className="text-xl md:text-2xl font-bold text-gray-800 text-center lg:text-left w-full">KANOA GROUP 会社概要</h3>
+          <p className="text-center font-medium text-gray-600 animate delay">Service</p>
           <div className="text-center space-y-4">
-            <p className="text-sm text-gray-500 leading-relaxed lg:whitespace-nowrap animate">
-              KANOA GROUPは、IT領域とスキル不要型ビジネスの二軸で構成されています。
-            </p>
+            <p className="text-sm text-gray-500 leading-relaxed lg:whitespace-nowrap animate">KANOA GROUPは、IT領域とスキル不要型ビジネスの二軸で構成されています。</p>
           </div>
           <div className="flex flex-wrap justify-center gap-2 animate delay">
             {["IT事業", "インフラ事業", "営業代行"].map((tag) => (
