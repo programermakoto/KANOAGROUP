@@ -73,7 +73,7 @@ export default function Home() {
         <p className="p-5 text-center mb-12">あなたの業務はこれだけです</p>
         <div className="grid md:grid-cols-3 gap-8 text-center">
           <div className="p-6  rounded-lg shadow-md">
-            <h3 className="font-semibold text-xl mb-2">EO光ネット開通</h3>
+            <h3 className="font-semibold text-xl mb-2">光ファイバーネット開通</h3>
             <p>設置されたルーターから「スマホ、PC、TV、ゲーム機、プリンターやその他の機器」のWi-Fi設定を行います。</p>
           </div>
           <div className="p-6  rounded-lg shadow-md">

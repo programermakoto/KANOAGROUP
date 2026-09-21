@@ -59,7 +59,9 @@ export default function AgencyClient() {
           </p>
 
           <Link
-            href="/contact"
+            href="https://general-knowledge-university.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="backdrop-blur-md bg-white/80 hover:bg-white text-black px-10 py-4 rounded-2xl font-semibold text-lg shadow-2xl hover:scale-105 transition border border-white/40 inline-block"
           >
             新規登録

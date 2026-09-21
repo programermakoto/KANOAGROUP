@@ -94,14 +94,13 @@ export default function CompanyProfile() {
 
             【WEB制作】<br />
             ・ホームページ制作<br />
-            ・LP制作<br />
+            ・LP制作｜ECサイト制作<br />
             ・システム・アプリ開発<br /><br />
 
             【通信インフラ】<br />
             ・宅内光ファイバー業務<br />
             ・電気通信工事<br />
-            ・軽貨物運送<br />
-            ・車載機器取付工事<br />
+            ・ライフライン切替案内<br />
           </p>
         </div>
 

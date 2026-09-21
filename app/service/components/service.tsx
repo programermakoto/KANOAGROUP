@@ -227,9 +227,9 @@ export default function Service() {
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
                     <div>
                         <h1 className='text-gray-700 text-2xl md:text-3xl font-bold'>宅内光ファイバー開通業務</h1>
-                        <small className='block text-gray-700 text-sm mb-2'>EO光のWi-Fi訪問設定サポート</small>
+                        <small className='block text-gray-700 text-sm mb-2'>光ファイバーのWi-Fi訪問設定サポート</small>
                         <p className='text-gray-700 mb-6 leading-relaxed'>
-                        お客様宅に訪問し、光ファイバー（EO光）の開通に伴うWi-Fi設定や通信環境の最適化を行います。接続設定から動作確認まで一貫してサポートし、初めての方でも安心してご利用いただけます。
+                        お客様宅に訪問し、光ファイバーの開通に伴うWi-Fi設定や通信環境の最適化を行います。接続設定から動作確認まで一貫してサポートし、初めての方でも安心してご利用いただけます。
                         </p>
                     </div>
 
@@ -246,7 +246,7 @@ export default function Service() {
                 <div className='w-full md:w-1/2 p-[18px] h-full flex items-center justify-center'>
                     <Image
                         src="/eo-image.webp"
-                        alt="EO光業務風景画像"
+                        alt="光ファイバー業務風景画像"
                         width={300}
                         height={150}
                         className="mx-auto h-full w-full object-cover"

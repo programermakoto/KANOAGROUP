@@ -7,7 +7,6 @@ export default function DiagonalHeroLang() {
     smallTitle: "企業メッセージ",
     mainTitle: "未来をデザインする\n戦略的ビジョンで",
     body: "私たちは、人と企業の可能性を最大化するシステムを構築します。テクノロジー、教育、イノベーションを通じて、次世代にスケーラブルな価値を創造します。",
-    button: "詳しく見る",
   };
 
   return (
@@ -58,10 +57,6 @@ export default function DiagonalHeroLang() {
           <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto md:mx-0">
             {content.body}
           </p>
-
-          <button className="px-8 py-3 bg-black text-white rounded-full text-sm tracking-wide hover:bg-gray-800 transition">
-            {content.button}
-          </button>
         </motion.div>
       </div>
     </section>
