@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
-import { newsData } from "@/lib/news";
+import { getAllNews } from "@/lib/news";
 
 const baseUrl = "https://kanoa-group.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     "",
     "/about",
@@ -22,7 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.8,
   }));
 
-  const newsRoutes: MetadataRoute.Sitemap = newsData.map((item: { id: string; date: string }) => ({
+  const allNews = await getAllNews();
+  const newsRoutes: MetadataRoute.Sitemap = allNews.map((item) => ({
     url: `${baseUrl}/news/${item.id}`,
     lastModified: new Date(item.date),
     changeFrequency: "monthly",

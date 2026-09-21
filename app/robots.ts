@@ -3,16 +3,16 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
-      { userAgent: "GPTBot", allow: "/" },
-      { userAgent: "ChatGPT-User", allow: "/" },
-      { userAgent: "ClaudeBot", allow: "/" },
-      { userAgent: "Claude-Web", allow: "/" },
-      { userAgent: "anthropic-ai", allow: "/" },
-      { userAgent: "PerplexityBot", allow: "/" },
-      { userAgent: "Google-Extended", allow: "/" },
-      { userAgent: "CCBot", allow: "/" },
-      { userAgent: "Bytespider", allow: "/" },
+      { userAgent: "*", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "GPTBot", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "ChatGPT-User", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "ClaudeBot", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "Claude-Web", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "anthropic-ai", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "PerplexityBot", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "Google-Extended", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "CCBot", allow: "/", disallow: ["/admin", "/sign-in"] },
+      { userAgent: "Bytespider", allow: "/", disallow: ["/admin", "/sign-in"] },
     ],
     sitemap: "https://kanoa-group.com/sitemap.xml",
   };
