@@ -10,14 +10,14 @@ import Movie from "@/components/ui/movie";
 export const metadata: Metadata = {
   title: "事業一覧",
   description:
-    "KANOA GROUPの事業一覧。ホームページ制作・システムアプリ開発・インフラ事業（通信回線の営業管理）・営業代行事業・GK-Uオンラインスクール・未来塾など、大阪を拠点にIT領域とスキル不要型ビジネスの両軸で事業を展開しています。",
+    "KANOA GROUPの事業一覧。WEB制作（ホームページ制作・LP/ECサイト制作・アプリ開発）、IT教育（社会人向け教育アプリ・未来塾）、通信インフラ（営業代行・宅内光ファイバー開通業務・電気通信工事・ライフライン切替案内）の3領域で事業を展開しています。",
   alternates: {
     canonical: "https://kanoa-group.com/service",
   },
   openGraph: {
     title: "事業一覧｜KANOAグループ",
     description:
-      "ホームページ制作・システムアプリ開発・インフラ事業・営業代行・GK-Uオンラインスクールなど、KANOA GROUPが展開する全事業をご紹介します。",
+      "WEB制作・IT教育・通信インフラの3領域で、KANOA GROUPが展開する全事業をご紹介します。",
     url: "https://kanoa-group.com/service",
     siteName: "KANOA GROUP",
     locale: "ja_JP",
@@ -38,13 +38,15 @@ const jsonLd = {
   "url": "https://kanoa-group.com/service",
   "inLanguage": "ja",
   "itemListElement": [
-    { "name": "インフラ事業", "description": "光回線をはじめとした通信インフラの営業・管理業務" },
-    { "name": "宅内光ファイバー開通業務", "description": "EO光のWi-Fi訪問設定サポート" },
-    { "name": "未来塾", "description": "プログラミング・マーケティング・デザインなどを学べる教育スクール" },
-    { "name": "HP-CREATE", "description": "ホームページ制作事業" },
-    { "name": "システムアプリ開発事業", "description": "オーダーメイドのアプリ・システム開発" },
-    { "name": "GK-Uオンラインスクール", "description": "Web/SNSマーケティング・プログラミング・デザインなどを学べるオンラインスクール" },
-    { "name": "営業代行事業", "description": "営業を外注できる営業会社" },
+    { "name": "ホームページ制作", "category": "WEB制作", "description": "最短1週間で高クオリティなWebサイトを制作するHP-CREATE事業" },
+    { "name": "LP・ECサイト制作", "category": "WEB制作", "description": "集客・販売に特化したランディングページ／ECサイト制作" },
+    { "name": "アプリ開発", "category": "WEB制作", "description": "クライアント仕様に合わせたオーダーメイドのアプリ・システム開発" },
+    { "name": "社会人向け教育アプリ", "category": "IT教育", "description": "GK-Uオンラインスクール。Web/SNSマーケティング・プログラミング・デザインなどを学べるオンラインスクール" },
+    { "name": "未来塾", "category": "IT教育", "description": "プログラミング・マーケティング・デザインなどを学べる教育スクール" },
+    { "name": "営業代行", "category": "通信インフラ", "description": "営業を外注できる営業会社" },
+    { "name": "宅内光ファイバー開通業務", "category": "通信インフラ", "description": "EO光のWi-Fi訪問設定サポート" },
+    { "name": "電気通信工事", "category": "通信インフラ", "description": "光回線・LAN配線など通信設備の施工・工事対応" },
+    { "name": "ライフライン切替案内", "category": "通信インフラ", "description": "ガス・電気・Wi-Fiなど生活インフラの乗り換えご案内" },
     { "name": "Cloud Pocket", "description": "個人事業主・新規事業向けの起業支援プラットフォーム" },
   ].map((item, i) => ({
     "@type": "ListItem",
@@ -52,6 +54,7 @@ const jsonLd = {
     item: {
       "@type": "Service",
       name: item.name,
+      ...(item.category ? { category: item.category } : {}),
       description: item.description,
       provider: organizationRef,
     },

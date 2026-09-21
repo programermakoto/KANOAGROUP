@@ -3,14 +3,15 @@ import React from 'react';
 
 export default function Footer() {
   const services = [
-    
-    { href: '/service/web', label: 'WEBサイト制作' },
-    { href: '/service/app', label: 'アプリ開発・保守' },
-    { href: '/service/online-school', label: 'GK-Uオンラインスクール' },
-    { href: '/service/optical', label: '宅内光ファイバー開通業務' },
-    { href: '/service/logistics', label: '営業代行事業' },
-    { href: '/service/hr', label: 'インフラ事業' },
-   
+    { href: '/service', label: 'ホームページ制作' },
+    { href: '/service', label: 'LP・ECサイト制作' },
+    { href: '/service', label: 'アプリ開発' },
+    { href: '/service', label: '社会人向け教育アプリ' },
+    { href: '/service', label: '未来塾' },
+    { href: '/service', label: '営業代行' },
+    { href: '/service', label: '宅内光ファイバー開通業務' },
+    { href: '/service', label: '電気通信工事' },
+    { href: '/service', label: 'ライフライン切替案内' },
   ];
 
   return (
@@ -40,7 +41,7 @@ export default function Footer() {
         <div className="flex flex-col space-y-2">
           <h3 className="font-bold text-gray-800 border-b pb-2">事業内容 (SERVICES)</h3>
           {services.map((s) => (
-            <Link key={s.href} href={s.href} className="text-sm text-gray-600 hover:underline">{s.label}</Link>
+            <Link key={s.label} href={s.href} className="text-sm text-gray-600 hover:underline">{s.label}</Link>
           ))}
         </div>
 

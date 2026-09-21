@@ -44,7 +44,7 @@ export default function About() {
             <p className="text-sm text-gray-500 leading-relaxed lg:whitespace-nowrap animate">KANOA GROUPは、IT領域とスキル不要型ビジネスの二軸で構成されています。</p>
           </div>
           <div className="flex flex-wrap justify-center gap-2 animate delay">
-            {["IT事業", "インフラ事業", "営業代行"].map((tag) => (
+            {["WEB制作", "IT教育", "通信インフラ"].map((tag) => (
               <span
                 key={tag}
                 className="px-4 py-1 text-sm text-gray-500 bg-sky-50 border border-sky-200"
