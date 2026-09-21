@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div className='relative w-full h-auto my-30 md:my-0 md:h-screen overflow-hidden'>
+    <div className='relative w-full h-[70vh] min-h-[480px] md:h-screen overflow-hidden'>
       <video
         src="/leaf.mp4"
         autoPlay
