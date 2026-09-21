@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -157,12 +156,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh`}
       >
-        <ClerkProvider>
-          <IntroOverlay src="/leaf.mp4" durationMs={4000} />
-          <Header />
-          <main className="pt-16 min-h-screen">{children}</main>
-          <Footer />
-        </ClerkProvider>
+        <IntroOverlay src="/leaf.mp4" durationMs={4000} />
+        <Header />
+        <main className="pt-16 min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );

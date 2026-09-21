@@ -13,8 +13,6 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import SNSImpactSection from "@/components/SNSImpactSection";
 
-export const revalidate = 60;
-
 export const metadata: Metadata = {
   title: {
     absolute: "KANOAグループ",

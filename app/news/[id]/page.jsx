@@ -3,8 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getAllNews, getNewsById } from "../../../lib/news";
 
-export const dynamicParams = true;
-export const revalidate = 60;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const all = await getAllNews();
