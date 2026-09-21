@@ -1,24 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function DiagonalHeroLang() {
-  const [lang, setLang] = useState<"ja" | "en">("en");
-
   const content = {
-    en: {
-      smallTitle: "CORPORATE MESSAGE",
-      mainTitle: "Designing the Future\nwith Strategic Vision",
-      body: "We build systems that empower individuals and businesses. Through technology, education, and innovation, we create scalable value for the next generation.",
-      button: "Learn More",
-    },
-    ja: {
-      smallTitle: "企業メッセージ",
-      mainTitle: "未来をデザインする\n戦略的ビジョンで",
-      body: "私たちは、人と企業の可能性を最大化するシステムを構築します。テクノロジー、教育、イノベーションを通じて、次世代にスケーラブルな価値を創造します。",
-      button: "詳しく見る",
-    },
+    smallTitle: "企業メッセージ",
+    mainTitle: "未来をデザインする\n戦略的ビジョンで",
+    body: "私たちは、人と企業の可能性を最大化するシステムを構築します。テクノロジー、教育、イノベーションを通じて、次世代にスケーラブルな価値を創造します。",
+    button: "詳しく見る",
   };
 
   return (
@@ -54,54 +43,26 @@ export default function DiagonalHeroLang() {
         </motion.div>
 
         {/* テキスト側 */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={lang}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="text-center md:text-left"
-          >
-            {/* 言語切替ボタン */}
-            <div className="flex justify-end gap-2 mb-4">
-              <button
-                onClick={() => setLang("ja")}
-                className={`px-3 py-1 rounded-full border ${
-                  lang === "ja"
-                    ? "bg-gray-900 text-white"
-                    : "bg-white text-gray-900 border-gray-300"
-                } transition`}
-              >
-                日本語
-              </button>
-              <button
-                onClick={() => setLang("en")}
-                className={`px-3 py-1 rounded-full border ${
-                  lang === "en"
-                    ? "bg-gray-900 text-white"
-                    : "bg-white text-gray-900 border-gray-300"
-                } transition`}
-              >
-                English
-              </button>
-            </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center md:text-left"
+        >
+          <h2 className="text-sm tracking-widest text-gray-500 mb-3">
+            {content.smallTitle}
+          </h2>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 whitespace-pre-line">
+            {content.mainTitle}
+          </h1>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto md:mx-0">
+            {content.body}
+          </p>
 
-            <h2 className="text-sm tracking-widest text-gray-500 mb-3">
-              {content[lang].smallTitle}
-            </h2>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 whitespace-pre-line">
-              {content[lang].mainTitle}
-            </h1>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto md:mx-0">
-              {content[lang].body}
-            </p>
-
-            <button className="px-8 py-3 bg-black text-white rounded-full text-sm tracking-wide hover:bg-gray-800 transition">
-              {content[lang].button}
-            </button>
-          </motion.div>
-        </AnimatePresence>
+          <button className="px-8 py-3 bg-black text-white rounded-full text-sm tracking-wide hover:bg-gray-800 transition">
+            {content.button}
+          </button>
+        </motion.div>
       </div>
     </section>
   );

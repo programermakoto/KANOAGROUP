@@ -1,17 +1,14 @@
 "use client";
 
 import Image from 'next/image'
-import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React from 'react'
+import { motion } from 'framer-motion'
 
 export default function President() {
-  const [lang, setLang] = useState<'ja' | 'en'>('en');
-
   const content = {
-    ja: {
-      title: "寺内 誠将 グループ代表挨拶",
-      subtitle: "Greetings from Group Representative Makoto Terauchi",
-      body: `
+    title: "寺内 誠将 グループ代表挨拶",
+    subtitle: "Greetings from Group Representative Makoto Terauchi",
+    body: `
 私たちKANOA GROUPにとって最も大切なのは、「人とテクノロジーの可能性を最大化し、自由な社会を創造すること」です。
 この“自由”とは、単に時間や場所の制約からの解放ではなく、自らの意志とスキルで未来を切り拓く“精神的自由”を意味します。
 
@@ -25,93 +22,54 @@ KANOA GROUPの理念は、ITの力で人の可能性を解き放ち、“面白�
 テクノロジーは冷たいものではなく、“人を自由にするための道具”。
 私たちはその力を最大限に活かし、働き方・学び・暮らしの在り方を変えていく革新を生み出していきます。
       `,
-    },
-    en: {
-      title: "Makoto Terauchi - Greetings from Group Representative",
-      subtitle: "Greetings from Group Representative Makoto Terauchi",
-      body: `
-At KANOA GROUP, our core mission is to maximize the potential of people and technology, creating a society of freedom.
-This "freedom" does not just mean liberation from time or location constraints, but the "mental freedom" to shape your future with your own will and skills.
-
-During high school, I realized the limitations of working just to sell time through part-time jobs.
-In a reality where neither freedom nor growth was possible, I chose to create value through my skills and live a life evaluated by results and speed.
-
-I started learning IT through video editing, and during university I gained extensive practical experience in web development, system development, and marketing through corporate projects.
-Later, I engaged in a wide range of businesses including e-commerce, app development, event management, and educational schools, which strengthened my belief in the potential of people and technology.
-
-KANOA GROUP's philosophy is to unleash human potential with the power of IT and circulate "fun" into society.
-Technology is not cold; it is a tool to free people.
-We harness this power to innovate and transform the way we work, learn, and live.
-      `,
-    }
   }
 
   return (
     <section id='message' className="pt-[10%] relative h-auto md:h-screen w-full flex items-center justify-center bg-white text-gray-700 transition-all duration-500">
       <article className="container space-y-8">
 
-        {/* トグルボタン */}
-        <div className="flex justify-end gap-3 mb-4">
-          <button
-            onClick={() => setLang('ja')}
-            className={`px-4 py-2 rounded-full border ${lang === 'ja' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 border-gray-300'} transition`}
-          >
-            日本語
-          </button>
-          <button
-            onClick={() => setLang('en')}
-            className={`px-4 py-2 rounded-full border ${lang === 'en' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 border-gray-300'} transition`}
-          >
-            English
-          </button>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="w-full md:w-[50%] text-2xl md:text-4xl font-bold border-b-2 border-black">
+            {content.title}
+          </h2>
+          <small className="block w-full md:w-[50%] text-sm">{content.subtitle}</small>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={lang} // 言語切替ごとに新しいmotion.divにする
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="w-full md:w-[50%] text-2xl md:text-4xl font-bold border-b-2 border-black">
-              {content[lang].title}
-            </h2>
-            <small className="block w-full md:w-[50%] text-sm">{content[lang].subtitle}</small>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-around gap-6 mt-4">
 
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-around gap-6 mt-4">
+            {/* テキスト部分 */}
+            <p className="leading-loose w-full md:w-2/3 p-5 whitespace-pre-line">
+              {content.body}
+            </p>
 
-              {/* テキスト部分 */}
-              <p className="leading-loose w-full md:w-2/3 p-5 whitespace-pre-line">
-                {content[lang].body}
-              </p>
+            {/* 画像＋署名 */}
+            <div className="w-full md:w-1/3 flex flex-col items-center justify-start gap-4 p-5">
+              <div className="w-36 h-36 md:w-full md:h-full relative overflow-hidden">
+                <Image
+                  src="/makoto.webp"
+                  className="opacity-40 object-cover"
+                  alt="寺内誠将"
+                  fill={false}
+                  width={400}
+                  height={160}
+                />
+              </div>
 
-              {/* 画像＋署名 */}
-              <div className="w-full md:w-1/3 flex flex-col items-center justify-start gap-4 p-5">
-                <div className="w-36 h-36 md:w-full md:h-full relative overflow-hidden">
-                  <Image
-                    src="/makoto.webp"
-                    className="opacity-40 object-cover"
-                    alt="寺内誠将"
-                    fill={false}
-                    width={400}
-                    height={160}
-                  />
+              <div className='w-full flex flex-col items-center md:items-center my-4 pb-3 border-b-0 md:border-b-1'>
+                <div className="flex items-center gap-3">
+                  <Image src="/kanoa-logo.PNG" className="object-cover" alt="かのあロゴ" width={60} height={60} />
                 </div>
-
-                <div className='w-full flex flex-col items-center md:items-center my-4 pb-3 border-b-0 md:border-b-1'>
-                  <div className="flex items-center gap-3">
-                    <Image src="/kanoa-logo.PNG" className="object-cover" alt="かのあロゴ" width={60} height={60} />
-                  </div>
-                  <h2 className="text-center text-2xl mt-4 text-gray-800">
-                    <small className="block text-sm">代表取締役</small>
-                    寺内 誠将
-                  </h2>
-                </div>
+                <h2 className="text-center text-2xl mt-4 text-gray-800">
+                  <small className="block text-sm">代表取締役</small>
+                  寺内 誠将
+                </h2>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </motion.div>
       </article>
 
       {/* 泡アニメーション */}
