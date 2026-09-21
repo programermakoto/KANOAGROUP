@@ -227,16 +227,16 @@ export default function Service() {
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
                     <div>
                         <h1 className='text-gray-700 text-2xl md:text-3xl font-bold'>宅内光ファイバー開通業務</h1>
-                        <small className='block text-gray-700 text-sm mb-2'>光ファイバーのWi-Fi訪問設定サポート</small>
+                        <small className='block text-gray-700 text-sm mb-2'>個人事業主として働ける方を募集中</small>
                         <p className='text-gray-700 mb-6 leading-relaxed'>
-                        お客様宅に訪問し、光ファイバーの開通に伴うWi-Fi設定や通信環境の最適化を行います。接続設定から動作確認まで一貫してサポートし、初めての方でも安心してご利用いただけます。
+                        提携先から受託する宅内光ファイバー開通に伴うWi-Fi設定業務を、個人事業主として担っていただける方を募集しています（3次受け）。週4日以上稼働できる方であれば経験を問わず活躍でき、車・パソコンの支給など安心して始められる体制を整えています。
                         </p>
                     </div>
 
                     <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 hover:text-white transition duration-[500ms]" variant="outline">
-                                お問い合わせ
+                                ご応募・お問い合わせ
                             </Button>
                         </Link>
                     </div>
@@ -261,15 +261,15 @@ export default function Service() {
                 {/* テキスト */}
                 <div className='w-full md:w-1/2 p-[18px] h-full flex flex-col justify-center'>
                     <h1 className='text-2xl md:text-3xl text-gray-700 font-bold'>電気通信工事</h1>
-                    <small className='block text-gray-700 text-sm mb-2'>通信設備の施工・工事対応</small>
+                    <small className='block text-gray-700 text-sm mb-2'>個人事業主として働ける方を募集中</small>
                     <p className='text-gray-700 mb-6 leading-relaxed'>
-                        光回線やLAN配線など、通信インフラに関わる各種工事に対応。宅内配線から設備設置まで、有資格スタッフが安全・確実に施工します。
+                        光回線やLAN配線など通信インフラに関わる各種工事を、提携先から3次受けで担っていただける個人事業主の方を募集しています。宅内配線から設備設置まで、現場経験を活かして活躍いただけます。
                     </p>
 
                     <div className='flex justify-center gap-5 items-center'>
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
-                                お問い合わせ
+                                ご応募・お問い合わせ
                             </Button>
                         </Link>
                     </div>

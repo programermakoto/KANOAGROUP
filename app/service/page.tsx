@@ -44,8 +44,8 @@ const jsonLd = {
     { "name": "社会人向け教育アプリ", "category": "IT教育", "description": "GK-Uオンラインスクール。Web/SNSマーケティング・プログラミング・デザインなどを学べるオンラインスクール" },
     { "name": "未来塾", "category": "IT教育", "description": "プログラミング・マーケティング・デザインなどを学べる教育スクール" },
     { "name": "営業代行", "category": "通信インフラ", "description": "営業を外注できる営業会社" },
-    { "name": "宅内光ファイバー開通業務", "category": "通信インフラ", "description": "光ファイバーのWi-Fi訪問設定サポート" },
-    { "name": "電気通信工事", "category": "通信インフラ", "description": "光回線・LAN配線など通信設備の施工・工事対応" },
+    { "name": "宅内光ファイバー開通業務", "category": "通信インフラ", "description": "宅内Wi-Fi設定業務を3次受けで担う個人事業主を募集" },
+    { "name": "電気通信工事", "category": "通信インフラ", "description": "光回線・LAN配線など通信設備工事を3次受けで担う個人事業主を募集" },
     { "name": "ライフライン切替案内", "category": "通信インフラ", "description": "ガス・電気・Wi-Fiなど生活インフラの乗り換えご案内" },
     { "name": "Cloud Pocket", "description": "個人事業主・新規事業向けの起業支援プラットフォーム" },
   ].map((item, i) => ({
