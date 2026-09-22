@@ -46,9 +46,11 @@ const defaultSteps: Step[] = [
 export default function WebsiteFourStep({
   steps = defaultSteps,
   className = "",
+  linkLabel = "公式LINEで詳細確認",
 }: {
   steps?: Step[];
   className?: string;
+  linkLabel?: string;
 }) {
   return (
     <section className={"max-w-6xl mx-auto p-6 " + className} aria-labelledby="four-step-title">
@@ -81,7 +83,7 @@ export default function WebsiteFourStep({
                     <p className="text-sm text-gray-500 mt-4 flex-1">{s.description}</p>
 
                     <div className="mt-6 flex items-center justify-between">
-                      <span className="text-sm text-sky-600 font-medium">公式LINEで詳細確認</span>
+                      <span className="text-sm text-sky-600 font-medium">{linkLabel}</span>
                       <span className="text-xs text-gray-400">→</span>
                     </div>
                   </div>

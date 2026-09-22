@@ -73,7 +73,12 @@ export default function Service() {
                         商品・サービスの魅力を伝えるランディングページや、ネット販売に対応したECサイトを制作します。集客からコンバージョンまでを意識した設計で、売上につながるWebページを提供します。
                     </p>
 
-                    <div className='flex justify-center gap-5 items-center'>
+                    <div className='flex justify-center gap-5 items-center w-1/2 mx-auto'>
+                        <Link href="/lp-create" target="_blank" rel="noopener noreferrer">
+                            <Button className="block bg-lime-500 hover:bg-orange-500 text-white transition duration-[500ms]" variant="outline">
+                                Read More
+                            </Button>
+                        </Link>
                         <Link href="/contact" target="_blank" rel="noopener noreferrer">
                             <Button className="block text-white bg-sky-600 hover:bg-orange-500 transition duration-[500ms]" variant="outline">
                                 お問い合わせ

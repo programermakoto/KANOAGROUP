@@ -11,6 +11,8 @@
 - [代理店募集](https://kanoa-group.com/agency): Cloud Pocket 起業支援サービス
 - [お知らせ](https://kanoa-group.com/news): 最新ニュース
 - [お問い合わせ](https://kanoa-group.com/contact): 問い合わせフォーム
+- [ホームページ制作](https://kanoa-group.com/hp-create): HP-CREATE詳細ページ
+- [LP・ECサイト制作](https://kanoa-group.com/lp-create): ランディングページ／ECサイト制作詳細ページ
 
 ## 事業内容
 
