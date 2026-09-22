@@ -13,6 +13,7 @@
 - [お問い合わせ](https://kanoa-group.com/contact): 問い合わせフォーム
 - [ホームページ制作](https://kanoa-group.com/hp-create): HP-CREATE詳細ページ
 - [LP・ECサイト制作](https://kanoa-group.com/lp-create): ランディングページ／ECサイト制作詳細ページ
+- [アプリ開発](https://kanoa-group.com/app-create): オーダーメイドのアプリ・システム開発詳細ページ
 
 ## 事業内容
 

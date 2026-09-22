@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/hp-create",
     "/lp-create",
+    "/app-create",
     "/optical-fiber",
     "/Privacy",
   ].map((path) => ({
